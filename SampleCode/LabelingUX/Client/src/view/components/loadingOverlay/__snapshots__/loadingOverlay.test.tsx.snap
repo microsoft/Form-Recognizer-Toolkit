@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingOverlay /> Rendering should render correctly 1`] = `
+<div
+  className="loading-overlay"
+>
+  <StyledSpinnerBase
+    label="mock-loading-text"
+    labelPosition="top"
+    size={3}
+    styles={
+      Object {
+        "label": Object {
+          "fontSize": 16,
+          "padding": 20,
+        },
+      }
+    }
+  />
+</div>
+`;

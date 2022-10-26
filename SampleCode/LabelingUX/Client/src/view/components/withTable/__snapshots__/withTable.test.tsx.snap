@@ -1,0 +1,1983 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withTable Rendering should render with table correctly 1`] = `
+<Fragment>
+  <Icon
+    className="icon-table-hidden"
+    iconName="Table"
+  />
+  <ImageMap
+    currentDocument={
+      Object {
+        "currentPage": 1,
+        "name": "test.pdf",
+        "numPages": 10,
+        "states": Object {
+          "loadingStatus": "Loaded",
+        },
+        "thumbnail": "",
+        "type": "application/pdf",
+        "url": "<url>",
+      }
+    }
+    handleTableToolTipChange={[Function]}
+    hoveringFeature={null}
+    predictions={
+      Object {
+        "test.pdf": Object {
+          "analyzeResponse": Object {},
+          "name": "test.pdf",
+          "selectionMarksOffsetSet": Object {},
+        },
+      }
+    }
+    setImageMap={[Function]}
+    tableBorderFeatureStyler={[Function]}
+    tableIconFeatureStyler={[Function]}
+  />
+  <StyledTooltipHostBase
+    content="Rows: undefined, Columns: undefined"
+    styles={
+      Object {
+        "root": Object {
+          "display": "none",
+          "height": 0,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 0,
+        },
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="tooltip-container"
+      onClick={[Function]}
+    />
+  </StyledTooltipHostBase>
+  <TableView
+    handleTableViewClose={[Function]}
+    tableToView={
+      Object {
+        "boundingRegions": Array [
+          Object {
+            "pageNumber": 1,
+            "polygon": Array [
+              104,
+              708,
+              2501,
+              708,
+              2502,
+              3145,
+              105,
+              3144,
+            ],
+          },
+        ],
+        "cells": Array [
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  184,
+                  753,
+                  1202,
+                  731,
+                  1202,
+                  816,
+                  179,
+                  838,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Document",
+            "kind": "content",
+            "rowIndex": 0,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 8,
+                "offset": 369,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  731,
+                  2301,
+                  713,
+                  2306,
+                  801,
+                  1202,
+                  816,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Share with",
+            "kind": "content",
+            "rowIndex": 0,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 10,
+                "offset": 378,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  179,
+                  838,
+                  1202,
+                  816,
+                  1202,
+                  906,
+                  177,
+                  926,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Adoption or guardianship papers*
+:unselected:",
+            "kind": "content",
+            "rowIndex": 1,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 32,
+                "offset": 389,
+              },
+              Object {
+                "length": 12,
+                "offset": 1421,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  816,
+                  2306,
+                  801,
+                  2309,
+                  891,
+                  1202,
+                  906,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Personal attorney, executor",
+            "kind": "content",
+            "rowIndex": 1,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 27,
+                "offset": 422,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  177,
+                  926,
+                  1202,
+                  906,
+                  1202,
+                  993,
+                  174,
+                  1011,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Annuity contracts
+:selected:",
+            "kind": "content",
+            "rowIndex": 2,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 17,
+                "offset": 450,
+              },
+              Object {
+                "length": 10,
+                "offset": 1434,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  906,
+                  2309,
+                  891,
+                  2314,
+                  976,
+                  1202,
+                  993,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Financial advisor",
+            "kind": "content",
+            "rowIndex": 2,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 17,
+                "offset": 468,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  174,
+                  1011,
+                  1202,
+                  993,
+                  1202,
+                  1083,
+                  172,
+                  1098,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Bank account documents
+:selected:",
+            "kind": "content",
+            "rowIndex": 3,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 22,
+                "offset": 486,
+              },
+              Object {
+                "length": 10,
+                "offset": 1445,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  993,
+                  2314,
+                  976,
+                  2319,
+                  1066,
+                  1202,
+                  1083,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s) Ardak Sultan",
+            "kind": "content",
+            "rowIndex": 3,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 24,
+                "offset": 509,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  172,
+                  1098,
+                  1202,
+                  1083,
+                  1202,
+                  1171,
+                  169,
+                  1181,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Bank loan agreements
+:unselected:",
+            "kind": "content",
+            "rowIndex": 4,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 20,
+                "offset": 534,
+              },
+              Object {
+                "length": 12,
+                "offset": 1456,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  1083,
+                  2319,
+                  1066,
+                  2323,
+                  1153,
+                  1202,
+                  1171,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 4,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 555,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  169,
+                  1181,
+                  1202,
+                  1171,
+                  1202,
+                  1258,
+                  164,
+                  1271,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Bank statements
+:selected:",
+            "kind": "content",
+            "rowIndex": 5,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 15,
+                "offset": 567,
+              },
+              Object {
+                "length": 10,
+                "offset": 1469,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  1171,
+                  2323,
+                  1153,
+                  2326,
+                  1243,
+                  1202,
+                  1258,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)
+Parvesh Giri",
+            "kind": "content",
+            "rowIndex": 5,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 24,
+                "offset": 583,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  164,
+                  1271,
+                  1202,
+                  1258,
+                  1202,
+                  1348,
+                  162,
+                  1358,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Birth certificates*
+:unselected:",
+            "kind": "content",
+            "rowIndex": 6,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 19,
+                "offset": 608,
+              },
+              Object {
+                "length": 12,
+                "offset": 1480,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  1258,
+                  2326,
+                  1243,
+                  2331,
+                  1331,
+                  1202,
+                  1348,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 6,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 628,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  162,
+                  1358,
+                  1202,
+                  1348,
+                  1202,
+                  1438,
+                  160,
+                  1443,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "2 Business licence*
+:selected:",
+            "kind": "content",
+            "rowIndex": 7,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 19,
+                "offset": 640,
+              },
+              Object {
+                "length": 10,
+                "offset": 1493,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  1348,
+                  2331,
+                  1331,
+                  2336,
+                  1421,
+                  1202,
+                  1438,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s) Jerome Rivard",
+            "kind": "content",
+            "rowIndex": 7,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 25,
+                "offset": 660,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  160,
+                  1443,
+                  1202,
+                  1438,
+                  1205,
+                  1526,
+                  157,
+                  1536,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Cancelled checks
+:selected:",
+            "kind": "content",
+            "rowIndex": 8,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 16,
+                "offset": 686,
+              },
+              Object {
+                "length": 10,
+                "offset": 1504,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1202,
+                  1438,
+                  2336,
+                  1421,
+                  2338,
+                  1513,
+                  1205,
+                  1526,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 8,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 703,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  157,
+                  1536,
+                  1205,
+                  1526,
+                  1205,
+                  1616,
+                  152,
+                  1626,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Cemetery deeds
+:unselected:",
+            "kind": "content",
+            "rowIndex": 9,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 14,
+                "offset": 715,
+              },
+              Object {
+                "length": 12,
+                "offset": 1515,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1526,
+                  2338,
+                  1513,
+                  2343,
+                  1603,
+                  1205,
+                  1616,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Heir",
+            "kind": "content",
+            "rowIndex": 9,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 4,
+                "offset": 730,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  152,
+                  1626,
+                  1205,
+                  1616,
+                  1205,
+                  1706,
+                  150,
+                  1716,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Citizen papers*
+:unselected:",
+            "kind": "content",
+            "rowIndex": 10,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 15,
+                "offset": 735,
+              },
+              Object {
+                "length": 12,
+                "offset": 1528,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1616,
+                  2343,
+                  1603,
+                  2348,
+                  1693,
+                  1205,
+                  1706,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Executor",
+            "kind": "content",
+            "rowIndex": 10,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 8,
+                "offset": 751,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  150,
+                  1716,
+                  1205,
+                  1706,
+                  1205,
+                  1796,
+                  147,
+                  1801,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Credit card statements
+:selected:",
+            "kind": "content",
+            "rowIndex": 11,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 22,
+                "offset": 760,
+              },
+              Object {
+                "length": 10,
+                "offset": 1541,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1706,
+                  2348,
+                  1693,
+                  2353,
+                  1786,
+                  1205,
+                  1796,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)
+Marta Galvan",
+            "kind": "content",
+            "rowIndex": 11,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 24,
+                "offset": 783,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  147,
+                  1801,
+                  1205,
+                  1796,
+                  1205,
+                  1888,
+                  145,
+                  1896,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Death certificates
+:selected:",
+            "kind": "content",
+            "rowIndex": 12,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 18,
+                "offset": 808,
+              },
+              Object {
+                "length": 10,
+                "offset": 1552,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1796,
+                  2353,
+                  1786,
+                  2355,
+                  1883,
+                  1205,
+                  1888,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Executor",
+            "kind": "content",
+            "rowIndex": 12,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 8,
+                "offset": 827,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  145,
+                  1896,
+                  1205,
+                  1888,
+                  1205,
+                  1980,
+                  140,
+                  1985,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Degree and diploma certificates
+:selected:",
+            "kind": "content",
+            "rowIndex": 13,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 31,
+                "offset": 836,
+              },
+              Object {
+                "length": 10,
+                "offset": 1563,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1888,
+                  2355,
+                  1883,
+                  2360,
+                  1975,
+                  1205,
+                  1980,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 13,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 868,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  140,
+                  1985,
+                  1205,
+                  1980,
+                  1205,
+                  2070,
+                  137,
+                  2078,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Divorce decree and settlement papers
+:unselected:",
+            "kind": "content",
+            "rowIndex": 14,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 36,
+                "offset": 880,
+              },
+              Object {
+                "length": 12,
+                "offset": 1574,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  1980,
+                  2360,
+                  1975,
+                  2365,
+                  2068,
+                  1205,
+                  2070,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Personal attorney
+TBD",
+            "kind": "content",
+            "rowIndex": 14,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 21,
+                "offset": 917,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  137,
+                  2078,
+                  1205,
+                  2070,
+                  1205,
+                  2165,
+                  135,
+                  2170,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Employee benefits
+:unselected:",
+            "kind": "content",
+            "rowIndex": 15,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 17,
+                "offset": 939,
+              },
+              Object {
+                "length": 12,
+                "offset": 1587,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2070,
+                  2365,
+                  2068,
+                  2370,
+                  2163,
+                  1205,
+                  2165,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 15,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 957,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  135,
+                  2170,
+                  1205,
+                  2165,
+                  1205,
+                  2260,
+                  130,
+                  2265,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Employment contract
+:selected:",
+            "kind": "content",
+            "rowIndex": 16,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 19,
+                "offset": 969,
+              },
+              Object {
+                "length": 10,
+                "offset": 1600,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2165,
+                  2370,
+                  2163,
+                  2375,
+                  2258,
+                  1205,
+                  2260,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)
+TBD",
+            "kind": "content",
+            "rowIndex": 16,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 15,
+                "offset": 989,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  130,
+                  2265,
+                  1205,
+                  2260,
+                  1205,
+                  2355,
+                  128,
+                  2358,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Health or medical records
+:unselected:",
+            "kind": "content",
+            "rowIndex": 17,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 25,
+                "offset": 1005,
+              },
+              Object {
+                "length": 12,
+                "offset": 1611,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2260,
+                  2375,
+                  2258,
+                  2380,
+                  2355,
+                  1205,
+                  2355,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Family doctor",
+            "kind": "content",
+            "rowIndex": 17,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 13,
+                "offset": 1031,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  128,
+                  2358,
+                  1205,
+                  2355,
+                  1205,
+                  2450,
+                  125,
+                  2453,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Home improvement documents
+:unselected:",
+            "kind": "content",
+            "rowIndex": 18,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 26,
+                "offset": 1045,
+              },
+              Object {
+                "length": 12,
+                "offset": 1624,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2355,
+                  2380,
+                  2355,
+                  2382,
+                  2450,
+                  1205,
+                  2450,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 18,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 1072,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  125,
+                  2453,
+                  1205,
+                  2450,
+                  1205,
+                  2548,
+                  120,
+                  2545,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "House and real estate deeds and titles*
+:selected:",
+            "kind": "content",
+            "rowIndex": 19,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 39,
+                "offset": 1084,
+              },
+              Object {
+                "length": 10,
+                "offset": 1637,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2450,
+                  2382,
+                  2450,
+                  2387,
+                  2548,
+                  1205,
+                  2548,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)
+Not sure",
+            "kind": "content",
+            "rowIndex": 19,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 20,
+                "offset": 1124,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  120,
+                  2545,
+                  1205,
+                  2548,
+                  1205,
+                  2645,
+                  118,
+                  2643,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Identity documents*
+:unselected:",
+            "kind": "content",
+            "rowIndex": 20,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 19,
+                "offset": 1145,
+              },
+              Object {
+                "length": 12,
+                "offset": 1648,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2548,
+                  2387,
+                  2548,
+                  2392,
+                  2645,
+                  1205,
+                  2645,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 20,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 1165,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  118,
+                  2643,
+                  1205,
+                  2645,
+                  1205,
+                  2743,
+                  115,
+                  2738,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Immunization records
+:unselected:",
+            "kind": "content",
+            "rowIndex": 21,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 20,
+                "offset": 1177,
+              },
+              Object {
+                "length": 12,
+                "offset": 1661,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2645,
+                  2392,
+                  2645,
+                  2397,
+                  2743,
+                  1205,
+                  2743,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Family doctor",
+            "kind": "content",
+            "rowIndex": 21,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 13,
+                "offset": 1198,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  115,
+                  2738,
+                  1205,
+                  2743,
+                  1205,
+                  2840,
+                  110,
+                  2835,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Insurance policies
+:selected:",
+            "kind": "content",
+            "rowIndex": 22,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 18,
+                "offset": 1212,
+              },
+              Object {
+                "length": 10,
+                "offset": 1674,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2743,
+                  2397,
+                  2743,
+                  2402,
+                  2840,
+                  1205,
+                  2840,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Financial advisor
+Ask",
+            "kind": "content",
+            "rowIndex": 22,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 21,
+                "offset": 1231,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  110,
+                  2835,
+                  1205,
+                  2840,
+                  1205,
+                  2940,
+                  108,
+                  2930,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Investment account statements/portfolios
+:unselected:",
+            "kind": "content",
+            "rowIndex": 23,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 40,
+                "offset": 1253,
+              },
+              Object {
+                "length": 12,
+                "offset": 1685,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2840,
+                  2402,
+                  2840,
+                  2407,
+                  2938,
+                  1205,
+                  2940,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Financial advisor",
+            "kind": "content",
+            "rowIndex": 23,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 17,
+                "offset": 1294,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  108,
+                  2930,
+                  1205,
+                  2940,
+                  1205,
+                  3038,
+                  105,
+                  3030,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Inventory of household items
+:selected:",
+            "kind": "content",
+            "rowIndex": 24,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 28,
+                "offset": 1312,
+              },
+              Object {
+                "length": 10,
+                "offset": 1698,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  2940,
+                  2407,
+                  2938,
+                  2412,
+                  3040,
+                  1205,
+                  3038,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Financial advisor
+TBD",
+            "kind": "content",
+            "rowIndex": 24,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 21,
+                "offset": 1341,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  105,
+                  3030,
+                  1205,
+                  3038,
+                  1205,
+                  3135,
+                  101,
+                  3130,
+                ],
+              },
+            ],
+            "columnIndex": 0,
+            "columnSpan": 1,
+            "content": "Inventory of documents - use this checklist
+:unselected:",
+            "kind": "content",
+            "rowIndex": 25,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 43,
+                "offset": 1363,
+              },
+              Object {
+                "length": 12,
+                "offset": 1709,
+              },
+            ],
+          },
+          Object {
+            "boundingRegions": Array [
+              Object {
+                "pageNumber": 1,
+                "polygon": Array [
+                  1205,
+                  3038,
+                  2412,
+                  3040,
+                  2417,
+                  3140,
+                  1205,
+                  3135,
+                ],
+              },
+            ],
+            "columnIndex": 1,
+            "columnSpan": 2,
+            "content": "Add name(s)",
+            "kind": "content",
+            "rowIndex": 25,
+            "rowSpan": 1,
+            "spans": Array [
+              Object {
+                "length": 11,
+                "offset": 1407,
+              },
+            ],
+          },
+        ],
+        "columnCount": 3,
+        "rowCount": 26,
+        "spans": Array [
+          Object {
+            "length": 52,
+            "offset": 369,
+          },
+          Object {
+            "length": 12,
+            "offset": 1421,
+          },
+          Object {
+            "length": 45,
+            "offset": 422,
+          },
+          Object {
+            "length": 10,
+            "offset": 1434,
+          },
+          Object {
+            "length": 40,
+            "offset": 468,
+          },
+          Object {
+            "length": 10,
+            "offset": 1445,
+          },
+          Object {
+            "length": 45,
+            "offset": 509,
+          },
+          Object {
+            "length": 12,
+            "offset": 1456,
+          },
+          Object {
+            "length": 27,
+            "offset": 555,
+          },
+          Object {
+            "length": 10,
+            "offset": 1469,
+          },
+          Object {
+            "length": 44,
+            "offset": 583,
+          },
+          Object {
+            "length": 12,
+            "offset": 1480,
+          },
+          Object {
+            "length": 31,
+            "offset": 628,
+          },
+          Object {
+            "length": 10,
+            "offset": 1493,
+          },
+          Object {
+            "length": 42,
+            "offset": 660,
+          },
+          Object {
+            "length": 10,
+            "offset": 1504,
+          },
+          Object {
+            "length": 26,
+            "offset": 703,
+          },
+          Object {
+            "length": 12,
+            "offset": 1515,
+          },
+          Object {
+            "length": 20,
+            "offset": 730,
+          },
+          Object {
+            "length": 12,
+            "offset": 1528,
+          },
+          Object {
+            "length": 31,
+            "offset": 751,
+          },
+          Object {
+            "length": 10,
+            "offset": 1541,
+          },
+          Object {
+            "length": 43,
+            "offset": 783,
+          },
+          Object {
+            "length": 10,
+            "offset": 1552,
+          },
+          Object {
+            "length": 40,
+            "offset": 827,
+          },
+          Object {
+            "length": 10,
+            "offset": 1563,
+          },
+          Object {
+            "length": 48,
+            "offset": 868,
+          },
+          Object {
+            "length": 12,
+            "offset": 1574,
+          },
+          Object {
+            "length": 39,
+            "offset": 917,
+          },
+          Object {
+            "length": 12,
+            "offset": 1587,
+          },
+          Object {
+            "length": 31,
+            "offset": 957,
+          },
+          Object {
+            "length": 10,
+            "offset": 1600,
+          },
+          Object {
+            "length": 41,
+            "offset": 989,
+          },
+          Object {
+            "length": 12,
+            "offset": 1611,
+          },
+          Object {
+            "length": 40,
+            "offset": 1031,
+          },
+          Object {
+            "length": 12,
+            "offset": 1624,
+          },
+          Object {
+            "length": 51,
+            "offset": 1072,
+          },
+          Object {
+            "length": 10,
+            "offset": 1637,
+          },
+          Object {
+            "length": 40,
+            "offset": 1124,
+          },
+          Object {
+            "length": 12,
+            "offset": 1648,
+          },
+          Object {
+            "length": 32,
+            "offset": 1165,
+          },
+          Object {
+            "length": 12,
+            "offset": 1661,
+          },
+          Object {
+            "length": 32,
+            "offset": 1198,
+          },
+          Object {
+            "length": 10,
+            "offset": 1674,
+          },
+          Object {
+            "length": 62,
+            "offset": 1231,
+          },
+          Object {
+            "length": 12,
+            "offset": 1685,
+          },
+          Object {
+            "length": 46,
+            "offset": 1294,
+          },
+          Object {
+            "length": 10,
+            "offset": 1698,
+          },
+          Object {
+            "length": 65,
+            "offset": 1341,
+          },
+          Object {
+            "length": 12,
+            "offset": 1709,
+          },
+          Object {
+            "length": 11,
+            "offset": 1407,
+          },
+        ],
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`withTable Rendering should render without table correctly 1`] = `
+<Fragment>
+  <Icon
+    className="icon-table-hidden"
+    iconName="Table"
+  />
+  <ImageMap
+    currentDocument={
+      Object {
+        "currentPage": 1,
+        "name": "test.pdf",
+        "numPages": 10,
+        "states": Object {
+          "loadingStatus": "Loaded",
+        },
+        "thumbnail": "",
+        "type": "application/pdf",
+        "url": "<url>",
+      }
+    }
+    handleTableToolTipChange={[Function]}
+    hoveringFeature={null}
+    predictions={Object {}}
+    setImageMap={[Function]}
+    tableBorderFeatureStyler={[Function]}
+    tableIconFeatureStyler={[Function]}
+  />
+  <StyledTooltipHostBase
+    content="Rows: undefined, Columns: undefined"
+    styles={
+      Object {
+        "root": Object {
+          "display": "none",
+          "height": 0,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 0,
+        },
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="tooltip-container"
+      onClick={[Function]}
+    />
+  </StyledTooltipHostBase>
+</Fragment>
+`;

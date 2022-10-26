@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelList /> Rendering should match snapshot, when there's no fields 1`] = `
+<div
+  className="label-list"
+>
+  <DragDropContext
+    onDragEnd={[Function]}
+  >
+    <Connect(Droppable)
+      direction="vertical"
+      droppableId="droppable"
+      getContainerForClone={[Function]}
+      ignoreContainerClipping={false}
+      isCombineEnabled={false}
+      isDropDisabled={false}
+      mode="standard"
+      renderClone={null}
+      type="DEFAULT"
+    >
+      <Component />
+    </Connect(Droppable)>
+  </DragDropContext>
+</div>
+`;
+
+exports[`<LabelList /> Rendering should match snapshot, when there's no fields 2`] = `<div />`;
+
+exports[`<LabelList /> Rendering should render correctly 1`] = `
+<div
+  className="label-list"
+>
+  <DragDropContext
+    onDragEnd={[Function]}
+  >
+    <Connect(Droppable)
+      direction="vertical"
+      droppableId="droppable"
+      getContainerForClone={[Function]}
+      ignoreContainerClipping={false}
+      isCombineEnabled={false}
+      isDropDisabled={false}
+      mode="standard"
+      renderClone={null}
+      type="DEFAULT"
+    >
+      <Component />
+    </Connect(Droppable)>
+  </DragDropContext>
+</div>
+`;
+
+exports[`<LabelList /> Rendering should render correctly 2`] = `
+<div>
+  <div
+    key="Address"
+  >
+    <PublicDraggable
+      draggableId="Address"
+      index={0}
+      key="Address"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+  <div
+    key="SelectionMark"
+  >
+    <PublicDraggable
+      draggableId="SelectionMark"
+      index={1}
+      key="SelectionMark"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+  <div
+    key="Signature"
+  >
+    <PublicDraggable
+      draggableId="Signature"
+      index={2}
+      key="Signature"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+  <div
+    key="DynamicTable/abc"
+  >
+    <PublicDraggable
+      draggableId="DynamicTable/abc"
+      index={3}
+      key="DynamicTable/abc"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+  <div
+    key="FixedRowTable"
+  >
+    <PublicDraggable
+      draggableId="FixedRowTable"
+      index={4}
+      key="FixedRowTable"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+  <div
+    key="FixedColumnTable"
+  >
+    <PublicDraggable
+      draggableId="FixedColumnTable"
+      index={5}
+      key="FixedColumnTable"
+    >
+      <Component />
+    </PublicDraggable>
+  </div>
+</div>
+`;
+
+exports[`<LabelList /> Rendering should render correctly 3`] = `
+<div>
+  <Connect(LabelItem)
+    color="#a0aeb2"
+    dragHandleProps={Array []}
+    field={
+      Object {
+        "fieldFormat": "not-specified",
+        "fieldKey": "Address",
+        "fieldType": "string",
+      }
+    }
+    label={
+      Object {
+        "label": "Address",
+        "value": Array [
+          Object {
+            "boundingBoxes": Array [
+              Array [
+                0.8573176470588235,
+                0.1557818181818182,
+                0.8605529411764706,
+                0.1557818181818182,
+                0.8605529411764706,
+                0.1626909090909091,
+                0.8573176470588235,
+                0.1626909090909091,
+              ],
+            ],
+            "page": 1,
+            "text": "NEW",
+          },
+          Object {
+            "boundingBoxes": Array [
+              Array [
+                0.8705411764705883,
+                0.1557818181818182,
+                0.8902823529411765,
+                0.1557818181818182,
+                0.8902823529411765,
+                0.1628,
+                0.8705411764705883,
+                0.1628,
+              ],
+            ],
+            "page": 1,
+            "text": "BELGIUM",
+          },
+          Object {
+            "boundingBoxes": Array [
+              Array [
+                0.8986117647058824,
+                0.1557818181818182,
+                0.918364705882353,
+                0.1557818181818182,
+                0.918364705882353,
+                0.1628,
+                0.8986117647058824,
+                0.1628,
+              ],
+            ],
+            "page": 1,
+            "text": "BREWERY",
+          },
+        ],
+      }
+    }
+    onClickField={[Function]}
+    onClickTableField={[Function]}
+    onDeleteField={[Function]}
+    onDeleteLabel={[Function]}
+    onGetRenameErrorMessage={[Function]}
+    onItemMouseEnter={[Function]}
+    onItemMouseLeave={[Function]}
+    onRenameField={[Function]}
+    onSwitchSubType={[Function]}
+  />
+</div>
+`;

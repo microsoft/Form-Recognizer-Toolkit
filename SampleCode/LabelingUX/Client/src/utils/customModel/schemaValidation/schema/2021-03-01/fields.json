@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "fields.json schema",
+  "type": "object",
+  "properties": {
+    "fields": {
+      "description": "A list of top level fields, including ordinary fields and tables.",
+      "type": "array",
+      "items": { "$ref": "#/definitions/Field" }
+    },
+    "definitions": {
+      "description": "A dictionary from names of custom fields (fieldType) to field definitions. Keys cannot be primitive types",
+      "type": "object",
+      "patternProperties": { 
+        "^(?!(string$|number$|date$|time$|object$|array$|integer$|selectionMark$))": { "$ref": "#/definitions/FieldWithoutKey" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [ "fields" ],
+  "definitions": {
+    "FieldWithoutKey": {
+      "oneOf": [
+        { "$ref": "#/definitions/PrimitiveField" },
+        { "$ref": "#/definitions/ObjectField" },
+        { "$ref": "#/definitions/ArrayField" },
+        { "$ref": "#/definitions/CustomField" }
+      ]
+    },
+    "Field": {
+      "allOf": [
+        { 
+          "properties": {
+            "fieldKey": {
+              "description": "",
+              "type": "string"
+            }
+          },
+          "required": [ "fieldKey" ]
+        },
+        { "$ref": "#/definitions/FieldWithoutKey" }
+      ]
+    },
+    "PrimitiveField": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "fieldType": {
+          "description": "",
+          "type": "string",
+          "enum": [ "string", "number", "date", "time", "integer", "selectionMark" ]
+        },
+        "fieldFormat": {
+          "$ref":  "#/definitions/FieldFormat"
+        }
+      },
+      "required": [ "fieldType" ]
+    },
+    "FieldFormat": {
+      "description": "Secondary specification of a primitive value",
+      "type": "string",
+      "enum": [ "not-specified", "currency", "decimal", "decimal-comma-separated", "no-whitespaces", "alphanumeric", "dmy", "mdy", "ymd" ],
+      "default": "not-specified"
+    },
+    "ObjectField": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "fieldType": {
+          "description": "",
+          "type": "string",
+          "enum": [ "object" ]
+        },
+        "fields": {
+          "description": "",
+          "type": "array",
+          "items": { "$ref": "#/definitions/Field" }
+        },
+        "visualizationHint": {
+          "description": "",
+          "type": "string",
+          "enum": [ "horizontal", "vertical" ]
+        }
+      },
+      "required": [ "fieldType", "fields" ]
+    },
+    "ArrayField": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "fieldType": {
+          "description": "",
+          "type": "string",
+          "enum": [ "array" ]
+        },
+        "itemType": {
+          "description": "",
+          "type": "string"
+        },
+        "visualizationHint": {
+          "description": "",
+          "type": "string",
+          "enum": [ "horizontal", "vertical" ]
+        }
+      },
+      "required": [ "fieldType", "itemType" ]
+    },
+    "CustomField": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "fieldType": {
+          "description": "",
+          "type": "string",
+          "pattern": "^(?!(string$|number$|date$|time$|object$|array$|integer$|selectionMark$))"
+        }
+      },
+      "required": [ "fieldType" ]
+    }
+  }
+}

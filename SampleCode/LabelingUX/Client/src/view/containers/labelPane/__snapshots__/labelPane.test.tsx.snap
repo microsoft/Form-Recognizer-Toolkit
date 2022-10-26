@@ -1,0 +1,764 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelPane /> Rendering should match snapshot, when FieldCallout is open 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="label-pane-command-bar"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <div />
+    <Stack
+      horizontal={true}
+    >
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Add",
+          }
+        }
+        id="add-button"
+        menuProps={
+          Object {
+            "directionalHint": 6,
+            "items": Array [
+              Object {
+                "fieldType": "string",
+                "iconProps": Object {
+                  "iconName": "GroupList",
+                },
+                "key": "field",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "fieldType": "selectionMark",
+                "iconProps": Object {
+                  "iconName": "CheckboxComposite",
+                },
+                "key": "selectionMark",
+                "onClick": [Function],
+                "text": "Selection Mark",
+              },
+              Object {
+                "fieldType": "signature",
+                "iconProps": Object {
+                  "iconName": "WhiteBoardApp16",
+                },
+                "key": "signature",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+              Object {
+                "iconProps": Object {
+                  "iconName": "Table",
+                },
+                "key": "table",
+                "onClick": [Function],
+                "text": "Table",
+              },
+            ],
+            "onMenuOpened": [Function],
+          }
+        }
+        styles={
+          Object {
+            "menuIcon": Object {
+              "height": 0,
+              "margin": 0,
+              "overflow": "hidden",
+              "width": 0,
+            },
+          }
+        }
+        title="Add field"
+      />
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Filter",
+          }
+        }
+        onClick={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "display": "none",
+            },
+          }
+        }
+      />
+    </Stack>
+  </Stack>
+  <Stack
+    grow={1}
+    style={
+      Object {
+        "height": 0,
+      }
+    }
+  >
+    <Connect(LabelList)
+      onTablePaneOpen={[Function]}
+    />
+  </Stack>
+  <FieldCallout
+    directionalHint={6}
+    directionalHintFixed={true}
+    onCreateField={[Function]}
+    onDismiss={[Function]}
+    onGetErrorMessage={[Function]}
+    target="#add-button"
+    width={268}
+  />
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;
+
+exports[`<LabelPane /> Rendering should match snapshot, when showAllFields is false 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="label-pane-command-bar"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <div />
+    <Stack
+      horizontal={true}
+    >
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Add",
+          }
+        }
+        id="add-button"
+        menuProps={
+          Object {
+            "directionalHint": 6,
+            "items": Array [
+              Object {
+                "fieldType": "string",
+                "iconProps": Object {
+                  "iconName": "GroupList",
+                },
+                "key": "field",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "fieldType": "selectionMark",
+                "iconProps": Object {
+                  "iconName": "CheckboxComposite",
+                },
+                "key": "selectionMark",
+                "onClick": [Function],
+                "text": "Selection Mark",
+              },
+              Object {
+                "fieldType": "signature",
+                "iconProps": Object {
+                  "iconName": "WhiteBoardApp16",
+                },
+                "key": "signature",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+              Object {
+                "iconProps": Object {
+                  "iconName": "Table",
+                },
+                "key": "table",
+                "onClick": [Function],
+                "text": "Table",
+              },
+            ],
+            "onMenuOpened": [Function],
+          }
+        }
+        styles={
+          Object {
+            "menuIcon": Object {
+              "height": 0,
+              "margin": 0,
+              "overflow": "hidden",
+              "width": 0,
+            },
+          }
+        }
+        title="Add field"
+      />
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "ClearFilter",
+          }
+        }
+        onClick={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "display": "none",
+            },
+          }
+        }
+      />
+    </Stack>
+  </Stack>
+  <Stack
+    grow={1}
+    style={
+      Object {
+        "height": 0,
+      }
+    }
+  >
+    <Connect(LabelList)
+      onTablePaneOpen={[Function]}
+    />
+  </Stack>
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;
+
+exports[`<LabelPane /> Rendering should match snapshot, when table pane is open with fieldType array 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="table-pane"
+    grow={1}
+  >
+    <Stack
+      className="table-pane-header"
+      horizontal={true}
+      horizontalAlign="space-between"
+      verticalAlign="center"
+    >
+      <Stack
+        horizontal={true}
+        tokens={
+          Object {
+            "childrenGap": 8,
+          }
+        }
+      >
+        <Text
+          className="table-pane-title"
+        >
+          DynamicTable/abc
+        </Text>
+        <Text
+          className="table-pane-type"
+        >
+          Table
+        </Text>
+      </Stack>
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Cancel",
+          }
+        }
+        id="table-close-button"
+        onClick={[Function]}
+        title="Close"
+      />
+    </Stack>
+    <Stack
+      grow={1}
+    >
+      <ol>
+        <li
+          key="0"
+        >
+          In your document, select the words you want to label.
+        </li>
+        <li
+          key="1"
+        >
+          In the labeling pane, click the table cell to assign them to that cell.
+        </li>
+      </ol>
+      <Stack
+        className="table-label-item-container"
+        grow={1}
+      >
+        <Connect(TableLabelItem)
+          definition={
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+              "fieldType": "object",
+              "fields": Array [
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "CUSTOMER#",
+                  "fieldType": "number",
+                },
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "LICNESE#",
+                  "fieldType": "number",
+                },
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "TERMS",
+                  "fieldType": "string",
+                },
+              ],
+              "itemType": null,
+            }
+          }
+          field={
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "DynamicTable/abc",
+              "fieldType": "array",
+              "fields": null,
+              "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+            }
+          }
+          onClickCell={[Function]}
+          onDeleteField={[Function]}
+          onDeleteLabel={[Function]}
+          onInsertField={[Function]}
+          onItemMouseEnter={[Function]}
+          onItemMouseLeave={[Function]}
+          onRenameField={[Function]}
+          tableLabels={
+            Object {
+              "DynamicTable~1abc/0/CUSTOMER#": Object {
+                "label": "DynamicTable~1abc/0/CUSTOMER#",
+                "value": Array [
+                  Object {
+                    "boundingBoxes": Array [
+                      Array [
+                        0.8563411764705883,
+                        0.18608181818181818,
+                        0.8621529411764706,
+                        0.18608181818181818,
+                        0.8621529411764706,
+                        0.1929909090909091,
+                        0.8563411764705883,
+                        0.1929909090909091,
+                      ],
+                    ],
+                    "page": 1,
+                    "text": "13267",
+                  },
+                ],
+              },
+            }
+          }
+        />
+      </Stack>
+    </Stack>
+  </Stack>
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;
+
+exports[`<LabelPane /> Rendering should match snapshot, when table pane is open with fieldType object 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="table-pane"
+    grow={1}
+  >
+    <Stack
+      className="table-pane-header"
+      horizontal={true}
+      horizontalAlign="space-between"
+      verticalAlign="center"
+    >
+      <Stack
+        horizontal={true}
+        tokens={
+          Object {
+            "childrenGap": 8,
+          }
+        }
+      >
+        <Text
+          className="table-pane-title"
+        >
+          FixedRowTable
+        </Text>
+        <Text
+          className="table-pane-type"
+        >
+          Table
+        </Text>
+      </Stack>
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Cancel",
+          }
+        }
+        id="table-close-button"
+        onClick={[Function]}
+        title="Close"
+      />
+    </Stack>
+    <Stack
+      grow={1}
+    >
+      <ol>
+        <li
+          key="0"
+        >
+          In your document, select the words you want to label.
+        </li>
+        <li
+          key="1"
+        >
+          In the labeling pane, click the table cell to assign them to that cell.
+        </li>
+      </ol>
+      <Stack
+        className="table-label-item-container"
+        grow={1}
+      >
+        <Connect(TableLabelItem)
+          definition={
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+              "fieldType": "object",
+              "fields": Array [
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "DATE",
+                  "fieldType": "date",
+                },
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "INVOICE#",
+                  "fieldType": "number",
+                },
+              ],
+            }
+          }
+          field={
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "FixedRowTable",
+              "fieldType": "object",
+              "fields": Array [
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "abc",
+                  "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+                },
+                Object {
+                  "fieldFormat": "not-specified",
+                  "fieldKey": "def",
+                  "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+                },
+              ],
+              "itemType": null,
+              "visualizationHint": "horizontal",
+            }
+          }
+          onClickCell={[Function]}
+          onDeleteField={[Function]}
+          onDeleteLabel={[Function]}
+          onInsertField={[Function]}
+          onItemMouseEnter={[Function]}
+          onItemMouseLeave={[Function]}
+          onRenameField={[Function]}
+          tableLabels={
+            Object {
+              "FixedRowTable/abc/DATE": Object {
+                "label": "FixedRowTable/abc/DATE",
+                "value": Array [
+                  Object {
+                    "boundingBoxes": Array [
+                      Array [
+                        0.10788235294117647,
+                        0.6268090909090909,
+                        0.1326,
+                        0.6268090909090909,
+                        0.1326,
+                        0.6343545454545455,
+                        0.10788235294117647,
+                        0.6343545454545455,
+                      ],
+                    ],
+                    "page": 1,
+                    "text": "130",
+                  },
+                ],
+              },
+            }
+          }
+        />
+      </Stack>
+    </Stack>
+  </Stack>
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;
+
+exports[`<LabelPane /> Rendering should match snapshot, when there's no current document 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="label-pane-command-bar"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <div />
+    <Stack
+      horizontal={true}
+    >
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Add",
+          }
+        }
+        id="add-button"
+        menuProps={
+          Object {
+            "directionalHint": 6,
+            "items": Array [
+              Object {
+                "fieldType": "string",
+                "iconProps": Object {
+                  "iconName": "GroupList",
+                },
+                "key": "field",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "fieldType": "selectionMark",
+                "iconProps": Object {
+                  "iconName": "CheckboxComposite",
+                },
+                "key": "selectionMark",
+                "onClick": [Function],
+                "text": "Selection Mark",
+              },
+              Object {
+                "fieldType": "signature",
+                "iconProps": Object {
+                  "iconName": "WhiteBoardApp16",
+                },
+                "key": "signature",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+              Object {
+                "iconProps": Object {
+                  "iconName": "Table",
+                },
+                "key": "table",
+                "onClick": [Function],
+                "text": "Table",
+              },
+            ],
+            "onMenuOpened": [Function],
+          }
+        }
+        styles={
+          Object {
+            "menuIcon": Object {
+              "height": 0,
+              "margin": 0,
+              "overflow": "hidden",
+              "width": 0,
+            },
+          }
+        }
+        title="Add field"
+      />
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Filter",
+          }
+        }
+        onClick={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "display": "none",
+            },
+          }
+        }
+      />
+    </Stack>
+  </Stack>
+  <Stack
+    grow={1}
+    style={
+      Object {
+        "height": 0,
+      }
+    }
+  >
+    <Connect(LabelList)
+      onTablePaneOpen={[Function]}
+    />
+  </Stack>
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;
+
+exports[`<LabelPane /> Rendering should render correctly 1`] = `
+<Stack
+  className="label-pane"
+  grow={1}
+>
+  <Stack
+    className="label-pane-command-bar"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <div />
+    <Stack
+      horizontal={true}
+    >
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Add",
+          }
+        }
+        id="add-button"
+        menuProps={
+          Object {
+            "directionalHint": 6,
+            "items": Array [
+              Object {
+                "fieldType": "string",
+                "iconProps": Object {
+                  "iconName": "GroupList",
+                },
+                "key": "field",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "fieldType": "selectionMark",
+                "iconProps": Object {
+                  "iconName": "CheckboxComposite",
+                },
+                "key": "selectionMark",
+                "onClick": [Function],
+                "text": "Selection Mark",
+              },
+              Object {
+                "fieldType": "signature",
+                "iconProps": Object {
+                  "iconName": "WhiteBoardApp16",
+                },
+                "key": "signature",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+              Object {
+                "iconProps": Object {
+                  "iconName": "Table",
+                },
+                "key": "table",
+                "onClick": [Function],
+                "text": "Table",
+              },
+            ],
+            "onMenuOpened": [Function],
+          }
+        }
+        styles={
+          Object {
+            "menuIcon": Object {
+              "height": 0,
+              "margin": 0,
+              "overflow": "hidden",
+              "width": 0,
+            },
+          }
+        }
+        title="Add field"
+      />
+      <CustomizedIconButton
+        iconProps={
+          Object {
+            "iconName": "Filter",
+          }
+        }
+        onClick={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "display": "none",
+            },
+          }
+        }
+      />
+    </Stack>
+  </Stack>
+  <Stack
+    grow={1}
+    style={
+      Object {
+        "height": 0,
+      }
+    }
+  >
+    <Connect(LabelList)
+      onTablePaneOpen={[Function]}
+    />
+  </Stack>
+  <CreateTableModal
+    isOpen={false}
+    onClose={[Function]}
+    onCreateField={[Function]}
+    onGetNameErrorMessage={[Function]}
+  />
+</Stack>
+`;

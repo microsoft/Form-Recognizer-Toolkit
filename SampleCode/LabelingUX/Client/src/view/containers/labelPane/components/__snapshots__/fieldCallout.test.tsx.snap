@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FieldCallout /> Rendering should render correctly 1`] = `
+<Callout
+  isBeakVisible={false}
+  onCreateField={[MockFunction]}
+  onDismiss={[MockFunction]}
+  setInitialFocus={true}
+  styles={
+    Object {
+      "calloutMain": Object {
+        "width": 200,
+      },
+    }
+  }
+>
+  <Stack
+    className="field-callout-container"
+    grow={1}
+  >
+    <div
+      className="textfield-container"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onGetErrorMessage={[MockFunction]}
+        onKeyDown={[Function]}
+        placeholder="Create new field and hit enter"
+      />
+    </div>
+  </Stack>
+</Callout>
+`;

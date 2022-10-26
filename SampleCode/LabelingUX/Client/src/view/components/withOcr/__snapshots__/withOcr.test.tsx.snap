@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withOcr Rendering should render correctly 1`] = `
+<ImageMap
+  checkboxFeatureStyler={[Function]}
+  currentDocument={
+    Object {
+      "currentPage": 1,
+      "name": "test.pdf",
+      "numPages": 10,
+      "states": Object {
+        "loadingStatus": "Loaded",
+      },
+      "thumbnail": "",
+      "type": "application/pdf",
+      "url": "<url>",
+    }
+  }
+  predictions={Object {}}
+  setImageMap={[Function]}
+  visibleAnalyzedElement={
+    Object {
+      "Lines": false,
+      "Words": true,
+    }
+  }
+/>
+`;

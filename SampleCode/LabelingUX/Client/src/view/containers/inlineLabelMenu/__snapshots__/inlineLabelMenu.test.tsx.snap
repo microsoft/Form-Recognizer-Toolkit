@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with create-field items 1`] = `
+<Fragment>
+  <Callout
+    calloutMaxHeight={180}
+    isBeakVisible={false}
+    setInitialFocus={true}
+    styles={
+      Object {
+        "calloutMain": Object {
+          "boxShadow": "0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108)",
+          "display": "flex",
+          "flexDirection": "column",
+          "left": 300,
+          "position": "absolute",
+          "top": 200,
+          "width": 250,
+        },
+      }
+    }
+  >
+    <Stack
+      className="inline-label-menu-input"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Search existing or create new"
+        value="mockNewFieldText"
+      />
+    </Stack>
+    <Stack
+      className="inline-label-menu-list"
+      grow={1}
+    >
+      <FocusZone
+        direction={0}
+        isCircularNavigation={false}
+        shouldRaiseClicks={true}
+      >
+        <List
+          items={
+            Array [
+              Object {
+                "iconName": "GroupList",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "iconName": "CheckboxComposite",
+                "onClick": [Function],
+                "text": "Select a subscription",
+              },
+              Object {
+                "iconName": "WhiteBoardApp16",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+            ]
+          }
+          onRenderCell={[Function]}
+          renderedWindowsAhead={2}
+          renderedWindowsBehind={2}
+          startIndex={0}
+        />
+      </FocusZone>
+    </Stack>
+  </Callout>
+</Fragment>
+`;
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with field items 1`] = `
+<Fragment>
+  <Callout
+    calloutMaxHeight={180}
+    isBeakVisible={false}
+    setInitialFocus={true}
+    styles={
+      Object {
+        "calloutMain": Object {
+          "boxShadow": "0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108)",
+          "display": "flex",
+          "flexDirection": "column",
+          "left": 300,
+          "position": "absolute",
+          "top": 200,
+          "width": 250,
+        },
+      }
+    }
+  >
+    <Stack
+      className="inline-label-menu-input"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Search existing or create new"
+        value=""
+      />
+    </Stack>
+    <Stack
+      className="inline-label-menu-list"
+      grow={1}
+    >
+      <FocusZone
+        direction={0}
+        isCircularNavigation={false}
+        shouldRaiseClicks={true}
+      >
+        <List
+          items={
+            Array [
+              Object {
+                "iconName": "GroupList",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "iconName": "CheckboxComposite",
+                "onClick": [Function],
+                "text": "Select a subscription",
+              },
+              Object {
+                "iconName": "WhiteBoardApp16",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+            ]
+          }
+          onRenderCell={[Function]}
+          renderedWindowsAhead={2}
+          renderedWindowsBehind={2}
+          startIndex={0}
+        />
+      </FocusZone>
+    </Stack>
+  </Callout>
+</Fragment>
+`;
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with filtered items 1`] = `
+<Fragment>
+  <Callout
+    calloutMaxHeight={180}
+    isBeakVisible={false}
+    setInitialFocus={true}
+    styles={
+      Object {
+        "calloutMain": Object {
+          "boxShadow": "0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108)",
+          "display": "flex",
+          "flexDirection": "column",
+          "left": 300,
+          "position": "absolute",
+          "top": 200,
+          "width": 250,
+        },
+      }
+    }
+  >
+    <Stack
+      className="inline-label-menu-input"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Search existing or create new"
+        value="Address"
+      />
+    </Stack>
+    <Stack
+      className="inline-label-menu-list"
+      grow={1}
+    >
+      <FocusZone
+        direction={0}
+        isCircularNavigation={false}
+        shouldRaiseClicks={true}
+      >
+        <List
+          items={
+            Array [
+              Object {
+                "iconName": "GroupList",
+                "onClick": [Function],
+                "text": "Field",
+              },
+              Object {
+                "iconName": "CheckboxComposite",
+                "onClick": [Function],
+                "text": "Select a subscription",
+              },
+              Object {
+                "iconName": "WhiteBoardApp16",
+                "onClick": [Function],
+                "text": "Signature",
+              },
+            ]
+          }
+          onRenderCell={[Function]}
+          renderedWindowsAhead={2}
+          renderedWindowsBehind={2}
+          startIndex={0}
+        />
+      </FocusZone>
+    </Stack>
+  </Callout>
+</Fragment>
+`;
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with filtered items by selected checkbox field 1`] = `
+<Fragment>
+  <Callout
+    calloutMaxHeight={180}
+    isBeakVisible={false}
+    setInitialFocus={true}
+    styles={
+      Object {
+        "calloutMain": Object {
+          "boxShadow": "0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108)",
+          "display": "flex",
+          "flexDirection": "column",
+          "left": 300,
+          "position": "absolute",
+          "top": 200,
+          "width": 250,
+        },
+      }
+    }
+  >
+    <Stack
+      className="inline-label-menu-input"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Search existing or create new"
+        value=""
+      />
+    </Stack>
+    <Stack
+      className="inline-label-menu-list"
+      grow={1}
+    >
+      <FocusZone
+        direction={0}
+        isCircularNavigation={false}
+        shouldRaiseClicks={true}
+      >
+        <List
+          items={
+            Array [
+              Object {
+                "iconColor": "#a0aeb2",
+                "iconName": "CircleFill",
+                "onClick": [Function],
+                "text": "SelectionMark",
+                "type": "selectionMark",
+              },
+            ]
+          }
+          onRenderCell={[Function]}
+          renderedWindowsAhead={2}
+          renderedWindowsBehind={2}
+          startIndex={0}
+        />
+      </FocusZone>
+    </Stack>
+  </Callout>
+</Fragment>
+`;
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with filtered items by selected text field 1`] = `
+<Fragment>
+  <Callout
+    calloutMaxHeight={180}
+    isBeakVisible={false}
+    setInitialFocus={true}
+    styles={
+      Object {
+        "calloutMain": Object {
+          "boxShadow": "0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108)",
+          "display": "flex",
+          "flexDirection": "column",
+          "left": 300,
+          "position": "absolute",
+          "top": 200,
+          "width": 250,
+        },
+      }
+    }
+  >
+    <Stack
+      className="inline-label-menu-input"
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Search existing or create new"
+        value=""
+      />
+    </Stack>
+    <Stack
+      className="inline-label-menu-list"
+      grow={1}
+    >
+      <FocusZone
+        direction={0}
+        isCircularNavigation={false}
+        shouldRaiseClicks={true}
+      >
+        <List
+          items={
+            Array [
+              Object {
+                "iconColor": "#a0aeb2",
+                "iconName": "CircleFill",
+                "onClick": [Function],
+                "text": "Address",
+                "type": "string",
+              },
+            ]
+          }
+          onRenderCell={[Function]}
+          renderedWindowsAhead={2}
+          renderedWindowsBehind={2}
+          startIndex={0}
+        />
+      </FocusZone>
+    </Stack>
+  </Callout>
+</Fragment>
+`;
+
+exports[`<InlineLabelMenu /> Rendering should render correctly with hideInlineLabelMenu is true 1`] = `<Fragment />`;

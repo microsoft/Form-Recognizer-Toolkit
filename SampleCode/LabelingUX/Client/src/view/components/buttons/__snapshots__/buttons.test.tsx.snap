@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttons Close Button should renders correctly 1`] = `
+<CustomizedIconButton
+  ariaLabel="Close"
+  className="close-button"
+  iconProps={
+    Object {
+      "iconName": "Cancel",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "rootHovered": Object {
+        "color": "#605e5c",
+      },
+      "rootPressed": Object {
+        "color": "#605e5c",
+      },
+    }
+  }
+/>
+`;
+
+exports[`Buttons DefaultIconButton Button should match snapshot, when default icon button is disabled 1`] = `
+<CustomizedIconButton
+  disabled={true}
+  iconProps={
+    Object {
+      "iconName": "Add",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "root": Object {
+        "color": "#323130",
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+        "color": "#c8c6c4",
+      },
+      "rootHovered": Object {
+        "color": "#323130",
+      },
+      "rootPressed": Object {
+        "color": "#323130",
+      },
+    }
+  }
+  title="title"
+/>
+`;
+
+exports[`Buttons DefaultIconButton Button should match snapshot, when default icon button is enabled 1`] = `
+<CustomizedIconButton
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "Add",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "root": Object {
+        "color": "#323130",
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+        "color": "#c8c6c4",
+      },
+      "rootHovered": Object {
+        "color": "#323130",
+      },
+      "rootPressed": Object {
+        "color": "#323130",
+      },
+    }
+  }
+  title="title"
+/>
+`;
+
+exports[`Buttons DrawRegionButton Button should match snapshot, when draw region button is disabled 1`] = `
+<CustomizedDefaultButton
+  ariaLabel="Draw Region"
+  checked={false}
+  disabled={true}
+  iconProps={
+    Object {
+      "iconName": "SingleColumnEdit",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+      },
+    }
+  }
+  toggle={true}
+>
+  Region
+</CustomizedDefaultButton>
+`;
+
+exports[`Buttons DrawRegionButton Button should match snapshot, when draw region button is enabled and checked 1`] = `
+<CustomizedDefaultButton
+  ariaLabel="Draw Region"
+  checked={true}
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "SingleColumnEdit",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+      },
+    }
+  }
+  toggle={true}
+>
+  Region
+</CustomizedDefaultButton>
+`;
+
+exports[`Buttons DrawRegionButton Button should match snapshot, when draw region button is enabled but not checked 1`] = `
+<CustomizedDefaultButton
+  ariaLabel="Draw Region"
+  checked={false}
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "SingleColumnEdit",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "root": Object {
+        "border": 0,
+      },
+    }
+  }
+  toggle={true}
+>
+  Region
+</CustomizedDefaultButton>
+`;

@@ -1,0 +1,22 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.custom-doc-label-page {
+    padding: 0 20px;
+
+    .label-page-header {
+        padding: 10px 0 15px;
+    }
+
+    .label-page-main {
+        border-top: 1px solid $ms-color-gray30;
+
+        .label-page-gallery {
+            flex: 0 180px;
+        }
+
+        .label-page-canvas {
+            border-left: 1px solid $ms-color-gray30;
+            border-right: 1px solid $ms-color-gray30;
+        }
+    }
+}

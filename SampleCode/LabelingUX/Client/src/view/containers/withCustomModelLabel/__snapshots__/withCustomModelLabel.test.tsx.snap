@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withCustomModelLabel Rendering should render correctly 1`] = `
+<Fragment>
+  <ImageMap
+    addDrawnRegionFeatureProps={[Function]}
+    colorForFields={
+      Array [
+        Object {
+          "firstField": "#d13438",
+        },
+        Object {
+          "secondField": "#ffaa44",
+        },
+        Object {
+          "thirdField": "#a0aeb2",
+        },
+      ]
+    }
+    currentDocument={
+      Object {
+        "currentPage": 1,
+        "name": "test.pdf",
+        "numPages": 10,
+        "states": Object {
+          "loadingStatus": "Loaded",
+        },
+        "thumbnail": "",
+        "type": "application/pdf",
+        "url": "<url>",
+      }
+    }
+    drawRegionStyler={[Function]}
+    drawnRegionStyler={[Function]}
+    enableFeatureSelection={true}
+    fields={
+      Array [
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "Address",
+          "fieldType": "string",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "SelectionMark",
+          "fieldType": "selectionMark",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "Signature",
+          "fieldType": "signature",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "DynamicTable/abc",
+          "fieldType": "array",
+          "fields": null,
+          "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "FixedRowTable",
+          "fieldType": "object",
+          "fields": Array [
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "abc",
+              "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+            },
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "def",
+              "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+            },
+          ],
+          "itemType": null,
+          "visualizationHint": "horizontal",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "FixedColumnTable",
+          "fieldType": "object",
+          "fields": Array [
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "addr",
+              "fieldType": "b7085826-ef9a-656d-d26e-567fd5a6ccb9",
+            },
+          ],
+          "itemType": null,
+          "visualizationHint": "vertical",
+        },
+      ]
+    }
+    groupSelectMode={false}
+    handleDrawing={[Function]}
+    handleFeatureSelect={[Function]}
+    handleFeatureSelectByGroup={[Function]}
+    handleIsPointerOnImage={[Function]}
+    handleIsSnapped={[Function]}
+    handleVertexDrag={[Function]}
+    initEditorMap={true}
+    isDrawing={false}
+    isPointerOnImage={false}
+    isSnapped={false}
+    isVertexDragging={false}
+    labelFeatureStyler={[Function]}
+    modifyStyler={[Function]}
+    onDrawnRegionFeatureHovered={[Function]}
+    onFinishFeatureSelect={[Function]}
+    predictions={Object {}}
+    setImageMap={[Function]}
+    setLabelValueCandidates={[MockFunction]}
+    updateFeatureAfterModify={[Function]}
+  />
+  <Connect(InlineLabelMenu)
+    enabledTypes={Array []}
+    positionLeft={0}
+    positionTop={0}
+    showPopup={false}
+  />
+</Fragment>
+`;
+
+exports[`withCustomModelLabel Rendering should render correctly with InlineLabelingMenu 1`] = `
+<Fragment>
+  <ImageMap
+    addDrawnRegionFeatureProps={[Function]}
+    colorForFields={
+      Array [
+        Object {
+          "firstField": "#d13438",
+        },
+        Object {
+          "secondField": "#ffaa44",
+        },
+        Object {
+          "thirdField": "#a0aeb2",
+        },
+      ]
+    }
+    currentDocument={
+      Object {
+        "currentPage": 1,
+        "name": "test.pdf",
+        "numPages": 10,
+        "states": Object {
+          "loadingStatus": "Loaded",
+        },
+        "thumbnail": "",
+        "type": "application/pdf",
+        "url": "<url>",
+      }
+    }
+    drawRegionStyler={[Function]}
+    drawnRegionStyler={[Function]}
+    enableFeatureSelection={true}
+    fields={
+      Array [
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "Address",
+          "fieldType": "string",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "SelectionMark",
+          "fieldType": "selectionMark",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "Signature",
+          "fieldType": "signature",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "DynamicTable/abc",
+          "fieldType": "array",
+          "fields": null,
+          "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "FixedRowTable",
+          "fieldType": "object",
+          "fields": Array [
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "abc",
+              "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+            },
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "def",
+              "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+            },
+          ],
+          "itemType": null,
+          "visualizationHint": "horizontal",
+        },
+        Object {
+          "fieldFormat": "not-specified",
+          "fieldKey": "FixedColumnTable",
+          "fieldType": "object",
+          "fields": Array [
+            Object {
+              "fieldFormat": "not-specified",
+              "fieldKey": "addr",
+              "fieldType": "b7085826-ef9a-656d-d26e-567fd5a6ccb9",
+            },
+          ],
+          "itemType": null,
+          "visualizationHint": "vertical",
+        },
+      ]
+    }
+    groupSelectMode={false}
+    handleDrawing={[Function]}
+    handleFeatureSelect={[Function]}
+    handleFeatureSelectByGroup={[Function]}
+    handleIsPointerOnImage={[Function]}
+    handleIsSnapped={[Function]}
+    handleVertexDrag={[Function]}
+    initEditorMap={true}
+    isDrawing={false}
+    isPointerOnImage={false}
+    isSnapped={false}
+    isVertexDragging={false}
+    labelFeatureStyler={[Function]}
+    modifyStyler={[Function]}
+    onDrawnRegionFeatureHovered={[Function]}
+    onFinishFeatureSelect={[Function]}
+    predictions={Object {}}
+    setImageMap={[Function]}
+    setLabelValueCandidates={[MockFunction]}
+    updateFeatureAfterModify={[Function]}
+  />
+  <Connect(InlineLabelMenu)
+    enabledTypes={Array []}
+    positionLeft={400}
+    positionTop={200}
+    showPopup={true}
+  />
+</Fragment>
+`;

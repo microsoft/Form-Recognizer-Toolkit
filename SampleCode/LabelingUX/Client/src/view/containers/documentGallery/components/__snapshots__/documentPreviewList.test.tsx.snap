@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentPreviewList /> Rendering should match snapshot. 1`] = `
+<List
+  className="listStyles-110"
+  componentRef={
+    Object {
+      "current": null,
+    }
+  }
+  items={
+    Array [
+      Object {
+        "name": "item 0",
+        "status": "Loaded",
+        "url": "/item_0.jpg",
+      },
+      Object {
+        "name": "item 1",
+        "status": "Loaded",
+        "url": "/item_1.jpg",
+      },
+      Object {
+        "name": "item 2",
+        "status": "Loaded",
+        "url": "/item_2.jpg",
+      },
+      Object {
+        "name": "item 3",
+        "status": "Loaded",
+        "url": "/item_3.jpg",
+      },
+      Object {
+        "name": "item 4",
+        "status": "Loaded",
+        "url": "/item_4.jpg",
+      },
+      Object {
+        "name": "item 5",
+        "status": "Analyzing",
+        "url": "/item_5.jpg",
+      },
+      Object {
+        "name": "item 6",
+        "status": "Analyzing",
+        "url": "/item_6.jpg",
+      },
+      Object {
+        "name": "item 7",
+        "status": "Analyzing",
+        "url": "/item_7.jpg",
+      },
+      Object {
+        "name": "item 8",
+        "status": "Analyzing",
+        "url": "/item_8.jpg",
+      },
+      Object {
+        "name": "item 9",
+        "status": "Analyzing",
+        "url": "/item_9.jpg",
+      },
+    ]
+  }
+  onRenderCell={[Function]}
+  renderedWindowsAhead={2}
+  renderedWindowsBehind={2}
+  startIndex={0}
+/>
+`;

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageMapToolbar /> Rendering should match snapshot, when it is disabled 1`] = `
+<div
+  className="image-map-tool-bar"
+>
+  <DefaultIconButton
+    ariaLabel="120%"
+    disabled={true}
+    name="ZoomIn"
+    onClick={[MockFunction]}
+    title="Zoom in"
+  />
+  <DefaultIconButton
+    ariaLabel="120%"
+    disabled={true}
+    name="ZoomOut"
+    onClick={[MockFunction]}
+    title="Zoom out"
+  />
+  <DefaultIconButton
+    disabled={true}
+    name="ZoomToFit"
+    onClick={[MockFunction]}
+    title="Zoom to fit"
+  />
+  <DefaultIconButton
+    ariaLabel="0°"
+    disabled={true}
+    name="Rotate"
+    onClick={[MockFunction]}
+    title="Rotate"
+  />
+</div>
+`;
+
+exports[`<ImageMapToolbar /> Rendering should render correctly 1`] = `
+<div
+  className="image-map-tool-bar"
+>
+  <DefaultIconButton
+    ariaLabel="120%"
+    disabled={false}
+    name="ZoomIn"
+    onClick={[MockFunction]}
+    title="Zoom in"
+  />
+  <DefaultIconButton
+    ariaLabel="120%"
+    disabled={false}
+    name="ZoomOut"
+    onClick={[MockFunction]}
+    title="Zoom out"
+  />
+  <DefaultIconButton
+    disabled={false}
+    name="ZoomToFit"
+    onClick={[MockFunction]}
+    title="Zoom to fit"
+  />
+  <DefaultIconButton
+    ariaLabel="0°"
+    disabled={false}
+    name="Rotate"
+    onClick={[MockFunction]}
+    title="Rotate"
+  />
+</div>
+`;

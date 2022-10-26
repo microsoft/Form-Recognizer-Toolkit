@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentGallery /> Rendering should match snapshot, when delete error is set. 1`] = `
+<div
+  className="document-gallery-container"
+>
+  <div
+    className="document-gallery-list"
+  >
+    <DocumentPreviewList
+      currentDocument={null}
+      documents={
+        Array [
+          Object {
+            "name": "mock-image-1",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-1.jpg",
+          },
+          Object {
+            "name": "mock-image-2",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-2.jpg",
+          },
+        ]
+      }
+      onDocumentClick={[Function]}
+      onDocumentDelete={[Function]}
+    />
+  </div>
+  <MessageModal
+    actionButtonText="Delete"
+    body={
+      <Text
+        variant="medium"
+      >
+        Labels and OCR results associated with this file will be deleted as well. Are you sure to delete 
+        test.pdf
+        ,
+      </Text>
+    }
+    isOpen={true}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Delete Document"
+  />
+</div>
+`;
+
+exports[`<DocumentGallery /> Rendering should match snapshot, when documents are not provided. 1`] = `
+<div
+  className="document-gallery-container"
+>
+  <div
+    className="document-gallery-list"
+  >
+    <DocumentPreviewList
+      currentDocument={null}
+      documents={Array []}
+      onDocumentClick={[Function]}
+      onDocumentDelete={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`<DocumentGallery /> Rendering should match snapshot, when hideAddButton is set. 1`] = `
+<div
+  className="document-gallery-container"
+>
+  <div
+    className="document-gallery-list"
+  >
+    <DocumentPreviewList
+      currentDocument={null}
+      documents={
+        Array [
+          Object {
+            "name": "mock-image-1",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-1.jpg",
+          },
+          Object {
+            "name": "mock-image-2",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-2.jpg",
+          },
+        ]
+      }
+      onDocumentClick={[Function]}
+      onDocumentDelete={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`<DocumentGallery /> Rendering should match snapshot, when upload error is set. 1`] = `
+<div
+  className="document-gallery-container"
+>
+  <div
+    className="document-gallery-list"
+  >
+    <DocumentPreviewList
+      currentDocument={null}
+      documents={
+        Array [
+          Object {
+            "name": "mock-image-1",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-1.jpg",
+          },
+          Object {
+            "name": "mock-image-2",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-2.jpg",
+          },
+        ]
+      }
+      onDocumentClick={[Function]}
+      onDocumentDelete={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`<DocumentGallery /> Rendering should match snapshot. 1`] = `
+<div
+  className="document-gallery-container"
+>
+  <div
+    className="document-gallery-list"
+  >
+    <DocumentPreviewList
+      currentDocument={null}
+      documents={
+        Array [
+          Object {
+            "name": "mock-image-1",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-1.jpg",
+          },
+          Object {
+            "name": "mock-image-2",
+            "states": Object {
+              "loadingStatus": "Loaded",
+            },
+            "type": "image/jpg",
+            "url": "mock-image-2.jpg",
+          },
+        ]
+      }
+      onDocumentClick={[Function]}
+      onDocumentDelete={[Function]}
+    />
+  </div>
+</div>
+`;

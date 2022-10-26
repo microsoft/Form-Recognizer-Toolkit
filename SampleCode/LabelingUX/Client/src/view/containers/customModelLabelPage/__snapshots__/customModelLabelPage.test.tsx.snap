@@ -1,0 +1,545 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomModelLabelPage /> Rendering should match snapshot, when error is StorageRequestError 1`] = `
+<Stack
+  className="custom-doc-label-page"
+  grow={1}
+>
+  <Stack
+    className="label-page-header"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <Text
+      aria-label="Label Page"
+      as="h2"
+      className="page-title"
+      tabIndex={0}
+    >
+      Label Page
+    </Text>
+  </Stack>
+  <Stack
+    className="label-page-main"
+    grow={1}
+    horizontal={true}
+  >
+    <Stack
+      className="label-page-gallery"
+    >
+      <Connect(DocumentGallery)
+        hideAddButton={false}
+        onDocumentDeleted={[Function]}
+        shouldConfirmDeleteDocument={true}
+      />
+    </Stack>
+    <SplitWrapper
+      className="react-split-container"
+      gutterSize={8}
+      maxSize={
+        Array [
+          Infinity,
+          900,
+        ]
+      }
+      minSize={
+        Array [
+          540,
+          270,
+        ]
+      }
+      onDragEnd={[Function]}
+      sizes={
+        Array [
+          80,
+          20,
+        ]
+      }
+    >
+      <Stack
+        className="label-page-canvas"
+        grow={1}
+      >
+        <Connect(LabelCanvas) />
+      </Stack>
+      <Stack
+        className="label-page-pane"
+      >
+        <Connect(LabelPane)
+          isTablePaneOpen={false}
+          setIsTablePaneOpen={[Function]}
+        />
+      </Stack>
+    </SplitWrapper>
+  </Stack>
+  <link
+    as="image"
+    href="/images/customModels/dynamic-table.png"
+  />
+  <link
+    as="image"
+    href="/images/customModels/fixed-table.png"
+  />
+  <MessageModal
+    actionButtonText="Delete fields.json file"
+    body={
+      <Text
+        variant="medium"
+      >
+        The fields.json file of this project does not align with the expected schema. Please correct the file and re-enter the project, or delete fields.json file and create fields again.
+      </Text>
+    }
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Incorrect fields format"
+  />
+  <MessageModal
+    body={
+      <Text
+        variant="medium"
+      />
+    }
+    isOpen={true}
+    onClose={[Function]}
+    rejectButtonText="Close"
+    title="REQUEST_SEND_ERROR"
+  />
+</Stack>
+`;
+
+exports[`<CustomModelLabelPage /> Rendering should render correctly 1`] = `
+<Stack
+  className="custom-doc-label-page"
+  grow={1}
+>
+  <Stack
+    className="label-page-header"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <Text
+      aria-label="Label Page"
+      as="h2"
+      className="page-title"
+      tabIndex={0}
+    >
+      Label Page
+    </Text>
+  </Stack>
+  <Stack
+    className="label-page-main"
+    grow={1}
+    horizontal={true}
+  >
+    <Stack
+      className="label-page-gallery"
+    >
+      <Connect(DocumentGallery)
+        hideAddButton={false}
+        onDocumentDeleted={[Function]}
+        shouldConfirmDeleteDocument={true}
+      />
+    </Stack>
+    <SplitWrapper
+      className="react-split-container"
+      gutterSize={8}
+      maxSize={
+        Array [
+          Infinity,
+          900,
+        ]
+      }
+      minSize={
+        Array [
+          540,
+          270,
+        ]
+      }
+      onDragEnd={[Function]}
+      sizes={
+        Array [
+          80,
+          20,
+        ]
+      }
+    >
+      <Stack
+        className="label-page-canvas"
+        grow={1}
+      >
+        <Connect(LabelCanvas) />
+      </Stack>
+      <Stack
+        className="label-page-pane"
+      >
+        <Connect(LabelPane)
+          isTablePaneOpen={false}
+          setIsTablePaneOpen={[Function]}
+        />
+      </Stack>
+    </SplitWrapper>
+  </Stack>
+  <link
+    as="image"
+    href="/images/customModels/dynamic-table.png"
+  />
+  <link
+    as="image"
+    href="/images/customModels/fixed-table.png"
+  />
+  <MessageModal
+    actionButtonText="Delete fields.json file"
+    body={
+      <Text
+        variant="medium"
+      >
+        The fields.json file of this project does not align with the expected schema. Please correct the file and re-enter the project, or delete fields.json file and create fields again.
+      </Text>
+    }
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Incorrect fields format"
+  />
+</Stack>
+`;
+
+exports[`<CustomModelLabelPage /> Rendering should render correctly without documents 1`] = `
+<Stack
+  className="custom-doc-label-page"
+  grow={1}
+>
+  <Stack
+    className="label-page-header"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <Text
+      aria-label="Label Page"
+      as="h2"
+      className="page-title"
+      tabIndex={0}
+    >
+      Label Page
+    </Text>
+  </Stack>
+  <Stack
+    className="label-page-main"
+    grow={1}
+    horizontal={true}
+  >
+    <Stack
+      className="label-page-gallery"
+    >
+      <Connect(DocumentGallery)
+        hideAddButton={false}
+        onDocumentDeleted={[Function]}
+        shouldConfirmDeleteDocument={true}
+      />
+    </Stack>
+    <SplitWrapper
+      className="react-split-container"
+      gutterSize={8}
+      maxSize={
+        Array [
+          Infinity,
+          900,
+        ]
+      }
+      minSize={
+        Array [
+          540,
+          270,
+        ]
+      }
+      onDragEnd={[Function]}
+      sizes={
+        Array [
+          80,
+          20,
+        ]
+      }
+    >
+      <Stack
+        className="label-page-canvas"
+        grow={1}
+      >
+        <Connect(LabelCanvas) />
+      </Stack>
+      <Stack
+        className="label-page-pane"
+      >
+        <Connect(LabelPane)
+          isTablePaneOpen={false}
+          setIsTablePaneOpen={[Function]}
+        />
+      </Stack>
+    </SplitWrapper>
+  </Stack>
+  <link
+    as="image"
+    href="/images/customModels/dynamic-table.png"
+  />
+  <link
+    as="image"
+    href="/images/customModels/fixed-table.png"
+  />
+  <MessageModal
+    actionButtonText="Delete fields.json file"
+    body={
+      <Text
+        variant="medium"
+      >
+        The fields.json file of this project does not align with the expected schema. Please correct the file and re-enter the project, or delete fields.json file and create fields again.
+      </Text>
+    }
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Incorrect fields format"
+  />
+  <MessageModal
+    body={
+      <Text
+        variant="medium"
+      >
+        Please provide documents and their corresponding OCR file in 
+        <b>
+          Server/data
+        </b>
+         to start labeling.
+      </Text>
+    }
+    isOpen={true}
+    onClose={[Function]}
+    rejectButtonText="Close"
+    title="No document found in data folder"
+  />
+</Stack>
+`;
+
+exports[`<CustomModelLabelPage /> Rendering should render message modal, when labelError is set 1`] = `
+<Stack
+  className="custom-doc-label-page"
+  grow={1}
+>
+  <Stack
+    className="label-page-header"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <Text
+      aria-label="Label Page"
+      as="h2"
+      className="page-title"
+      tabIndex={0}
+    >
+      Label Page
+    </Text>
+  </Stack>
+  <Stack
+    className="label-page-main"
+    grow={1}
+    horizontal={true}
+  >
+    <Stack
+      className="label-page-gallery"
+    >
+      <Connect(DocumentGallery)
+        hideAddButton={false}
+        onDocumentDeleted={[Function]}
+        shouldConfirmDeleteDocument={true}
+      />
+    </Stack>
+    <SplitWrapper
+      className="react-split-container"
+      gutterSize={8}
+      maxSize={
+        Array [
+          Infinity,
+          900,
+        ]
+      }
+      minSize={
+        Array [
+          540,
+          270,
+        ]
+      }
+      onDragEnd={[Function]}
+      sizes={
+        Array [
+          80,
+          20,
+        ]
+      }
+    >
+      <Stack
+        className="label-page-canvas"
+        grow={1}
+      >
+        <Connect(LabelCanvas) />
+      </Stack>
+      <Stack
+        className="label-page-pane"
+      >
+        <Connect(LabelPane)
+          isTablePaneOpen={false}
+          setIsTablePaneOpen={[Function]}
+        />
+      </Stack>
+    </SplitWrapper>
+  </Stack>
+  <MessageModal
+    body={
+      <Text
+        variant="medium"
+      >
+        SelectionMark field only supports one draw region or checkbox per field.
+      </Text>
+    }
+    isOpen={true}
+    onClose={[Function]}
+    rejectButtonText="Close"
+    title="Label assignment warning"
+  />
+  <link
+    as="image"
+    href="/images/customModels/dynamic-table.png"
+  />
+  <link
+    as="image"
+    href="/images/customModels/fixed-table.png"
+  />
+  <MessageModal
+    actionButtonText="Delete fields.json file"
+    body={
+      <Text
+        variant="medium"
+      >
+        The fields.json file of this project does not align with the expected schema. Please correct the file and re-enter the project, or delete fields.json file and create fields again.
+      </Text>
+    }
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Incorrect fields format"
+  />
+</Stack>
+`;
+
+exports[`<CustomModelLabelPage /> Rendering should render message modal, when labelError is set with messageVariable 1`] = `
+<Stack
+  className="custom-doc-label-page"
+  grow={1}
+>
+  <Stack
+    className="label-page-header"
+    horizontal={true}
+    horizontalAlign="space-between"
+    verticalAlign="center"
+  >
+    <Text
+      aria-label="Label Page"
+      as="h2"
+      className="page-title"
+      tabIndex={0}
+    >
+      Label Page
+    </Text>
+  </Stack>
+  <Stack
+    className="label-page-main"
+    grow={1}
+    horizontal={true}
+  >
+    <Stack
+      className="label-page-gallery"
+    >
+      <Connect(DocumentGallery)
+        hideAddButton={false}
+        onDocumentDeleted={[Function]}
+        shouldConfirmDeleteDocument={true}
+      />
+    </Stack>
+    <SplitWrapper
+      className="react-split-container"
+      gutterSize={8}
+      maxSize={
+        Array [
+          Infinity,
+          900,
+        ]
+      }
+      minSize={
+        Array [
+          540,
+          270,
+        ]
+      }
+      onDragEnd={[Function]}
+      sizes={
+        Array [
+          80,
+          20,
+        ]
+      }
+    >
+      <Stack
+        className="label-page-canvas"
+        grow={1}
+      >
+        <Connect(LabelCanvas) />
+      </Stack>
+      <Stack
+        className="label-page-pane"
+      >
+        <Connect(LabelPane)
+          isTablePaneOpen={false}
+          setIsTablePaneOpen={[Function]}
+        />
+      </Stack>
+    </SplitWrapper>
+  </Stack>
+  <MessageModal
+    body={
+      <Text
+        variant="medium"
+      >
+        Sorry, we don't support cross-page labeling with the same field. You have label regions with same field name 
+      </Text>
+    }
+    isOpen={true}
+    onClose={[Function]}
+    rejectButtonText="Close"
+    title="Cross-page label error"
+  />
+  <link
+    as="image"
+    href="/images/customModels/dynamic-table.png"
+  />
+  <link
+    as="image"
+    href="/images/customModels/fixed-table.png"
+  />
+  <MessageModal
+    actionButtonText="Delete fields.json file"
+    body={
+      <Text
+        variant="medium"
+      >
+        The fields.json file of this project does not align with the expected schema. Please correct the file and re-enter the project, or delete fields.json file and create fields again.
+      </Text>
+    }
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    title="Incorrect fields format"
+  />
+</Stack>
+`;

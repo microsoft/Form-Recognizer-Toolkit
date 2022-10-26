@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageControl /> Rendering should match snapshot, when current page is the first page 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={false}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value="1"
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of 10
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={false}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;
+
+exports[`<PageControl /> Rendering should match snapshot, when current page is the last page 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={false}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={false}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value="10"
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of 10
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;
+
+exports[`<PageControl /> Rendering should match snapshot, when number of pages is 1 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={true}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value="1"
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of 1
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;
+
+exports[`<PageControl /> Rendering should match snapshot, when page control is disabled 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={true}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value="3"
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of 10
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;
+
+exports[`<PageControl /> Rendering should match snapshot, when there's no current page and number of pages 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={true}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value=""
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of ##
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={true}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;
+
+exports[`<PageControl /> Rendering should render correctly 1`] = `
+<div
+  className="page-control"
+>
+  <DefaultIconButton
+    disabled={false}
+    name="ChevronLeft"
+    onClick={[MockFunction]}
+    title="Previous page"
+  />
+  <div
+    className="page-number"
+  >
+    <div
+      className="current-page"
+    >
+      <StyledTextFieldBase
+        ariaLabel="Current page"
+        componentRef={
+          Object {
+            "current": null,
+          }
+        }
+        disabled={false}
+        onChange={[Function]}
+        onKeyPress={[Function]}
+        styles={
+          Object {
+            "root": Object {
+              "width": 60,
+            },
+          }
+        }
+        type="number"
+        value="3"
+      />
+    </div>
+    <div
+      className="total-page"
+    >
+      of 10
+    </div>
+  </div>
+  <DefaultIconButton
+    disabled={false}
+    name="ChevronRight"
+    onClick={[MockFunction]}
+    title="Next page"
+  />
+</div>
+`;

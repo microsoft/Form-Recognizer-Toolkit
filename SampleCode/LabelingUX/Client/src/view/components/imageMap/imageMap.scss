@@ -1,0 +1,12 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.map-wrapper {
+    display: flex;
+    flex-grow: 1;
+    background-color: $ms-color-gray20;
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.label-pane {
+    .label-pane-command-bar {
+        height: 44px;
+        border-bottom: 1px solid $ms-color-gray30;
+    }
+
+    .table-pane {
+        .table-pane-header {
+            height: 44px;
+            border-bottom: 1px solid $ms-color-gray30;
+
+            .table-pane-title {
+                max-width: 350px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-left: 12px;
+            }
+
+            .table-pane-type {
+                color: $ms-color-gray80;
+            }
+        }
+
+        .table-label-item-container {
+            height: 0;
+            margin: 20px;
+        }
+    }
+}

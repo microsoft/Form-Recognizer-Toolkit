@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalChoiceGroup /> Rendering renders correctly 1`] = `
+<StyledChoiceGroup
+  styles={
+    Object {
+      "flexContainer": Object {
+        "display": "flex",
+        "gap": 12,
+        "selectors": Object {
+          "& .ms-ChoiceField": Object {
+            "marginTop": 0,
+          },
+        },
+      },
+      "root": Object {
+        "selectors": Object {
+          "& > div": Object {
+            "alignItems": "center",
+            "display": "flex",
+            "gap": 12,
+          },
+        },
+      },
+    }
+  }
+/>
+`;
