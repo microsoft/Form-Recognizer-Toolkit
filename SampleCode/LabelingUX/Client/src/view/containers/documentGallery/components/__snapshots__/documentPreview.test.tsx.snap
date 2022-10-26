@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentPreview /> Rendering should match snapshot with delete Icon, when mouse enter document card 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Loaded"
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "none",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+    <FontIcon
+      className="documentcard-delete-icon"
+      iconName="delete"
+      onClick={[Function]}
+      title="Delete"
+    />
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-badge"
+  />
+</StyledDocumentCardBase>
+`;
+
+exports[`<DocumentPreview /> Rendering should match snapshot, when the document is analyzed 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Analyzed"
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "none",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-badge"
+  >
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "#0F703B",
+          "fontSize": 14,
+        }
+      }
+      title="Analyzed"
+    />
+  </div>
+</StyledDocumentCardBase>
+`;
+
+exports[`<DocumentPreview /> Rendering should match snapshot, when the document is analyzing 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Analyzing..."
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "none",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-overlay"
+  >
+    <StyledSpinnerBase
+      className="analyze-spinner"
+      label="Analyzing..."
+      size={2}
+      styles={
+        Object {
+          "label": Object {
+            "fontSize": 14,
+          },
+        }
+      }
+    />
+  </div>
+  <div
+    className="documentcard-badge"
+  />
+</StyledDocumentCardBase>
+`;
+
+exports[`<DocumentPreview /> Rendering should match snapshot, when the document is labeled 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Analyzed"
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "none",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-badge"
+  >
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "#6C179A",
+          "fontSize": 14,
+        }
+      }
+      title="Labeled"
+    />
+  </div>
+</StyledDocumentCardBase>
+`;
+
+exports[`<DocumentPreview /> Rendering should match snapshot, when the document is selected 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Loaded"
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "1px solid #000000",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-badge"
+  />
+</StyledDocumentCardBase>
+`;
+
+exports[`<DocumentPreview /> Rendering should match snapshot. 1`] = `
+<StyledDocumentCardBase
+  aria-label="titleDocument Status:Loaded"
+  key="title"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  styles={
+    Object {
+      "root": Object {
+        "border": "none",
+        "borderRadius": "2px",
+        "boxShadow": "0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108)",
+        "boxSizing": "border-box",
+        "height": 124,
+        "marginLeft": 16,
+        "marginRight": "auto",
+        "minWidth": 124,
+        "position": "relative",
+        "width": 124,
+      },
+    }
+  }
+  tabIndex={0}
+  title="title"
+>
+  <StyledDocumentCardImageBase
+    height={100}
+    imageFit={1}
+    imageSrc="sample.jpg"
+  />
+  <StyledDocumentCardDetailsBase
+    styles={
+      Object {
+        "root": Object {
+          "alignItems": "center",
+        },
+      }
+    }
+  >
+    <Text
+      styles={
+        Object {
+          "root": Object {
+            "fontSize": "12px",
+            "height": 20,
+            "lineHeight": 20,
+            "overflow": "hidden",
+            "padding": 0,
+            "textAlign": "center",
+            "textOverflow": "ellipsis",
+            "whiteSpace": "nowrap",
+            "width": 110,
+          },
+        }
+      }
+      title="title"
+    >
+      title
+    </Text>
+  </StyledDocumentCardDetailsBase>
+  <div
+    className="documentcard-badge"
+  />
+</StyledDocumentCardBase>
+`;

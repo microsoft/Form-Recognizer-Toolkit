@@ -1,0 +1,76 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.table-label-item {
+    height: 0;
+    overflow: auto;
+
+    .table-body-container {
+        height: 0;
+        overflow: auto;
+        padding-bottom: 10px;
+
+        .table-body {
+            border-collapse: collapse;
+
+            thead {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+                box-shadow: inset 0 1px 0 $ms-color-gray30, inset 0 -2px 0 $ms-color-gray30;
+            }
+
+            .empty-header {
+                background-color: white;
+            }
+
+            .general-header {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 200px;
+                text-align: center;
+                font-weight: 600;
+                background-color: $ms-color-gray10;
+                border: 2px solid $ms-color-gray30;
+            }
+
+            .row-index-header {
+                border: none;
+                color: $ms-color-gray110;
+                font-weight: 400;
+                padding: 12px;
+            }
+
+            .table-cell {
+                position: relative;
+                text-align: center;
+                color: $ms-color-gray140;
+                border: 2px solid $ms-color-gray30;
+                padding: 12px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $ms-color-themeLighterAlt;
+                }
+
+                &:active {
+                    background-color: $ms-color-themeLighter;
+                }
+            }
+
+            .delete-cell-button {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .table-cell:hover .delete-cell-button {
+                display: block;
+            }
+        }
+    }
+
+    #add-row-button {
+        margin: 4px;
+    }
+}

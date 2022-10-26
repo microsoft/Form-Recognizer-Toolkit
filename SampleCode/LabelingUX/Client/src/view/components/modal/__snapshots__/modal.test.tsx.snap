@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> Rendering should match snapshot, when it does not have close button 1`] = `
+<Modal
+  isOpen={true}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 560,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> Rendering should match snapshot, when it has close button 1`] = `
+<Modal
+  isOpen={true}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 560,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+      <CloseButton
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> Rendering should match snapshot, when it is closed 1`] = `
+<Modal
+  isOpen={false}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 560,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> Rendering should match snapshot, when it is draggable 1`] = `
+<Modal
+  dragOptions={
+    Object {
+      "closeMenuItemText": "Close",
+      "menu": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      },
+      "moveMenuItemText": "Move",
+    }
+  }
+  isOpen={true}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 560,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> Rendering should match snapshot, when it is loading 1`] = `
+<Modal
+  isOpen={true}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 560,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+    <div
+      className="modal-loading"
+    >
+      <StyledSpinnerBase
+        className="modal-spinner"
+        size={2}
+      />
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`<Modal /> Rendering should match snapshot, when width is set 1`] = `
+<Modal
+  isOpen={true}
+  styles={
+    Object {
+      "main": Object {
+        "minHeight": "auto",
+        "width": 700,
+      },
+    }
+  }
+>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="modal-header"
+    >
+      <div>
+        Title
+      </div>
+    </div>
+    <div
+      className="modal-body"
+    >
+      <div>
+        Body Content
+      </div>
+    </div>
+    <div
+      className="modal-footer"
+    >
+      <div>
+        Footer Message
+      </div>
+      <div
+        className="modal-button-group"
+      >
+        <div>
+          Button 1
+        </div>
+        <div>
+          Button 2
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;

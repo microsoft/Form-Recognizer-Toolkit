@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageMap /> Rendering should match snapshot 1`] = `
+<ImageMap
+  checkboxFeatureStyler={[Function]}
+  drawRegionStyler={[Function]}
+  drawnRegionStyler={[Function]}
+  featureStyler={[Function]}
+  imageHeight={400}
+  imageUri="test.jpg"
+  imageWidth={300}
+  labelFeatureStyler={[Function]}
+  modifyStyler={[Function]}
+  onFinishFeatureSelect={[MockFunction]}
+  onMapReady={[Function]}
+  tableBorderFeatureStyler={[Function]}
+  tableIconBorderFeatureStyler={[Function]}
+  tableIconFeatureStyler={[Function]}
+>
+  <div
+    className="map-wrapper"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      id="map"
+      style={
+        Object {
+          "cursor": "default",
+        }
+      }
+    />
+  </div>
+</ImageMap>
+`;

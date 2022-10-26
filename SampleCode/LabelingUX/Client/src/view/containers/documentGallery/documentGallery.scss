@@ -1,0 +1,19 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.document-gallery-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .document-gallery-toolbar {
+        margin: 8px 32px 8px 16px;
+        display: flex;
+        flex: 0 48px;
+    }
+
+    .document-gallery-list {
+        display: flex;
+        flex-grow: 1;
+        height: 0;
+    }
+}

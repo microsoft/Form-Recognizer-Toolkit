@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> Rendering should render correctly when it's on homePage 1`] = `
+<Fragment>
+  <div
+    aria-busy={false}
+    aria-hidden={false}
+    className="main"
+  >
+    <div
+      className="sr-only"
+      role="status"
+    >
+      <span
+        key="loaded"
+      >
+        Page is loaded
+      </span>
+    </div>
+    <div
+      className="page-container"
+    />
+    <Footer />
+  </div>
+</Fragment>
+`;
+
+exports[`<Layout /> Rendering should render correctly when there is a loading layer on Layout 1`] = `
+<Fragment>
+  <div
+    aria-busy={true}
+    aria-hidden={true}
+    className="main"
+  >
+    <div
+      className="sr-only"
+      role="status"
+    >
+      <span
+        key="loading"
+      >
+        Page is loading
+      </span>
+    </div>
+    <div
+      className="page-container"
+    />
+    <Footer />
+  </div>
+  <LoadingOverlay
+    message="Loading..."
+  />
+</Fragment>
+`;

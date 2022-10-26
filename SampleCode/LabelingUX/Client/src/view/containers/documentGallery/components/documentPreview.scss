@@ -1,0 +1,45 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.documentcard-overlay {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background: rgba(243, 242, 241, 0.8);
+}
+
+.documentcard-status-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 4px;
+    font-size: 16px;
+    color: $ms-color-themePrimary;
+}
+
+.documentcard-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 7px;
+    margin-right: 4px;
+}
+
+.documentcard-delete-icon {
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    margin-right: 3px;
+    color: $ms-color-gray130;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 4px 0 0 0;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+        color: $ms-color-themePrimary;
+    }
+}

@@ -1,0 +1,12 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.label-list {
+    overflow: auto;
+    height: 100%;
+    .item-separator {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid $ms-color-gray30;
+        margin: 0;
+    }
+}

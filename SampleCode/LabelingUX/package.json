@@ -1,0 +1,31 @@
+{
+    "name": "samplelabelingux",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node Server/server.ts",
+        "server": "nodemon Server/server.ts",
+        "client": "npm run start --prefix Client",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.15",
+        "ts-node": "^10.9.1",
+        "tslib": "^2.4.0",
+        "typescript": "4.7.4"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/node": "^18.7.14",
+        "concurrently": "^7.4.0",
+        "prettier": "2.5.1"
+    }
+}

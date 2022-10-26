@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnalyzeProgressBar /> Rendering should render correctly 1`] = `
+<div
+  className="analyze-progress-bar"
+>
+  <section
+    className="progress-details"
+  >
+    <article
+      className="progress-title"
+    >
+      &lt;title&gt;
+    </article>
+    <article
+      className="progress-subtitle"
+    >
+      &lt;subtitle&gt;
+    </article>
+  </section>
+  <StyledProgressIndicatorBase />
+</div>
+`;

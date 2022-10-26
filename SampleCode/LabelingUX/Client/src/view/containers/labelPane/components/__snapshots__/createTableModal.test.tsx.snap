@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateTableModal /> Rendering renders correctly 1`] = `
+<MessageModal
+  actionButtonDisabled={true}
+  actionButtonText="Create"
+  body={
+    <Stack
+      className="create-table-modal-body"
+      grow={1}
+      tokens={
+        Object {
+          "childrenGap": 12,
+        }
+      }
+    >
+      <StyledTextFieldBase
+        autoComplete="off"
+        id="name-textfield"
+        label="Name"
+        onChange={[Function]}
+        onGetErrorMessage={
+          [MockFunction] {
+            "calls": Array [
+              Array [
+                "",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        placeholder="Name your table"
+        required={true}
+        value=""
+      />
+      <Stack
+        tokens={
+          Object {
+            "childrenGap": 4,
+          }
+        }
+      >
+        <HorizontalChoiceGroup
+          label="Table type"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "key": "dynamic",
+                "text": "Dynamic",
+              },
+              Object {
+                "key": "fixed",
+                "text": "Fixed",
+              },
+            ]
+          }
+          required={true}
+          selectedKey="dynamic"
+        />
+        <HorizontalChoiceGroup
+          disabled={true}
+          label="Header type"
+          onChange={[Function]}
+          options={
+            Array [
+              Object {
+                "key": "column",
+                "text": "Column",
+              },
+              Object {
+                "key": "row",
+                "text": "Row",
+              },
+            ]
+          }
+          required={true}
+          selectedKey=""
+        />
+      </Stack>
+      <Stack
+        className="table-description-container"
+        horizontalAlign="center"
+        tokens={
+          Object {
+            "childrenGap": 8,
+          }
+        }
+      >
+        <Text>
+          Use dynamic tables to extract variable count of values (rows) for a given set of fields (columns).
+        </Text>
+        <Memo(Image)
+          height={200}
+          imageFit={4}
+          src="/images/customModels/dynamic-table.png"
+          width={650}
+        />
+      </Stack>
+    </Stack>
+  }
+  isOpen={true}
+  onActionButtonClick={[Function]}
+  onClose={[Function]}
+  title="Create table field"
+  width={780}
+/>
+`;

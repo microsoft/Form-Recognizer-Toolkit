@@ -1,0 +1,47 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.label-item {
+    padding: 5px 8px;
+    color: $ms-color-gray130;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $ms-color-gray20;
+    }
+
+    .label-item-entry {
+        display: grid;
+        grid-template-columns: 24px 24px 1fr 24px;
+        align-items: center;
+    }
+
+    .label-item-result {
+        display: grid;
+        grid-template-columns: 24px 1fr 24px;
+        align-items: center;
+    }
+
+    .label-item-value {
+        padding: 6px 0;
+        cursor: pointer;
+
+        .label-item-text {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .label-item-icon {
+        font-size: 16px;
+    }
+
+    .no-select {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    }
+}

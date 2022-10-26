@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableView /> Rendering should match snapshot, when it is open 1`] = `
+<Modal
+  body={
+    <div
+      className="table-scrollable-container"
+    >
+      <table
+        className="table-view"
+      >
+        <tbody>
+          <tr>
+            <th
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  PhoneNumber
+                </span>
+              </Stack>
+            </th>
+            <th
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  Name
+                </span>
+              </Stack>
+            </th>
+          </tr>
+          <tr>
+            <td
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  123-456-789
+                </span>
+              </Stack>
+            </td>
+            <td
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  Lee
+                </span>
+              </Stack>
+            </td>
+          </tr>
+          <tr>
+            <td
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  987-654-321
+                </span>
+              </Stack>
+            </td>
+            <td
+              colSpan={1}
+              rowSpan={1}
+            >
+              <Stack
+                horizontal={true}
+                tokens={
+                  Object {
+                    "childrenGap": 5,
+                  }
+                }
+                wrap={true}
+              >
+                <span>
+                  Wang
+                </span>
+              </Stack>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  }
+  buttonGroup={null}
+  containerClassName="table-view-container"
+  footer={null}
+  header={
+    <div
+      className="table-title"
+    >
+      Table
+    </div>
+  }
+  isDraggable={true}
+  isOpen={true}
+  onClose={[MockFunction]}
+  onDismiss={[MockFunction]}
+  scrollableContentClassName="table-view-scrollable-content"
+/>
+`;
+
+exports[`<TableView /> Rendering should match snapshot, when tableToView is null 1`] = `
+<Modal
+  body={
+    <div
+      className="table-scrollable-container"
+    >
+      <table
+        className="table-view"
+      >
+        <tbody />
+      </table>
+    </div>
+  }
+  buttonGroup={null}
+  containerClassName="table-view-container"
+  footer={null}
+  header={
+    <div
+      className="table-title"
+    >
+      Table
+    </div>
+  }
+  isDraggable={true}
+  isOpen={false}
+  onClose={[MockFunction]}
+  onDismiss={[MockFunction]}
+  scrollableContentClassName="table-view-scrollable-content"
+/>
+`;

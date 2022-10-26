@@ -1,0 +1,548 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's renaming 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <StyledTextFieldBase
+      autoComplete="off"
+      componentRef={
+        Object {
+          "current": null,
+        }
+      }
+      defaultValue="mockField"
+      id="rename-textfield"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onGetErrorMessage={[Function]}
+      onKeyDown={[Function]}
+      styles={
+        Object {
+          "fieldGroup": Object {
+            "height": 24,
+          },
+        }
+      }
+    />
+    <MenuButton
+      hasSubType={true}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="string"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockField
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's selectionMark field 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockSelectionMark
+    </Text>
+    <MenuButton
+      hasSubType={false}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="selectionMark"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockSelectionMark
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+  <div
+    className="label-item-result label-item-value"
+  >
+    <div />
+    <Stack
+      horizontal={true}
+      tokens={
+        Object {
+          "childrenGap": 6,
+        }
+      }
+      verticalAlign="center"
+    >
+      <FontIcon
+        className="label-item-icon"
+        iconName="CheckboxComposite"
+      />
+      <Text
+        className="label-item-text"
+      >
+        selected
+      </Text>
+    </Stack>
+    <DeleteButton
+      onClick={[Function]}
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's signature field 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockSignature
+    </Text>
+    <MenuButton
+      hasSubType={false}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="signature"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockSignature
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+  <div
+    className="label-item-result label-item-value"
+  >
+    <div />
+    <FontIcon
+      className="label-item-icon"
+      iconName="WhiteBoardApp16"
+    />
+    <DeleteButton
+      onClick={[Function]}
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's string field 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockField
+    </Text>
+    <MenuButton
+      hasSubType={true}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="string"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockField
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+  <div
+    className="label-item-result label-item-value"
+  >
+    <div />
+    <Text
+      className="label-item-text"
+    >
+      abc
+    </Text>
+    <DeleteButton
+      onClick={[Function]}
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's string region field 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockField
+    </Text>
+    <MenuButton
+      hasSubType={true}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="string"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockField
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+  <div
+    className="label-item-result label-item-value"
+  >
+    <div />
+    <FontIcon
+      className="label-item-icon"
+      iconName="SingleColumnEdit"
+    />
+    <DeleteButton
+      onClick={[Function]}
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when it's table field 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockTable
+    </Text>
+    <MenuButton
+      hasSubType={false}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="array"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockTable
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+  <div
+    className="label-item-result label-item-value"
+  >
+    <div />
+    <FontIcon
+      className="label-item-icon"
+      iconName="Table"
+    />
+    <DeleteButton
+      onClick={[Function]}
+    />
+  </div>
+</Stack>
+`;
+
+exports[`<LabelItem /> Rendering should match snapshot, when there's no label 1`] = `
+<Stack
+  className="label-item"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="label-item-entry no-select"
+  >
+    <div>
+      <Icon
+        iconName="GlobalNavButton"
+      />
+    </div>
+    <FontIcon
+      iconName="CircleFill"
+      style={
+        Object {
+          "color": "purple",
+          "fontSize": 16,
+        }
+      }
+    />
+    <Text
+      variant="medium"
+    >
+      mockField
+    </Text>
+    <MenuButton
+      hasSubType={true}
+      onDeleteField={[Function]}
+      onRenameField={[Function]}
+      onSwitchSubType={[Function]}
+      subType="string"
+    />
+    <MessageModal
+      actionButtonText="Yes"
+      body={
+        <Text
+          variant="medium"
+        >
+          <Text>
+            Are you sure you want to rename 
+            <b>
+              mockField
+            </b>
+             to 
+            <b />
+            ? All labels and regions assigned to this field will be changed thoroughly
+          </Text>
+        </Text>
+      }
+      isLoading={false}
+      isOpen={false}
+      onActionButtonClick={[Function]}
+      onClose={[Function]}
+      onDismiss={[Function]}
+      rejectButtonText="No"
+      title="Rename Field"
+    />
+  </div>
+</Stack>
+`;

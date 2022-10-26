@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LayerFilter /> Rendering should render correctly 1`] = `
+<CustomizedIconButton
+  iconProps={
+    Object {
+      "iconName": "MapLayers",
+    }
+  }
+  menuProps={
+    Object {
+      "ariaLabel": "Show extracted",
+      "directionalHint": 6,
+      "items": Array [
+        Object {
+          "canCheck": true,
+          "checked": true,
+          "iconProps": Object {
+            "iconName": "TextField",
+          },
+          "key": "text",
+          "text": "Text",
+        },
+        Object {
+          "canCheck": true,
+          "checked": true,
+          "iconProps": Object {
+            "iconName": "Table",
+          },
+          "key": "tables",
+          "text": "Tables",
+        },
+        Object {
+          "canCheck": true,
+          "checked": true,
+          "iconProps": Object {
+            "iconName": "CheckboxComposite",
+          },
+          "key": "selectionMarks",
+          "text": "Selection marks",
+        },
+      ],
+      "onItemClick": [Function],
+      "styles": Object {
+        "title": Object {
+          "background": "transparent",
+          "borderBottom": "1px solid #edebe9",
+          "fontSize": 12,
+          "fontWeight": 600,
+          "padding": 10,
+        },
+      },
+      "title": "Show extracted",
+    }
+  }
+  styles={
+    Object {
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+      },
+    }
+  }
+  title="Choose extracted object to display"
+/>
+`;

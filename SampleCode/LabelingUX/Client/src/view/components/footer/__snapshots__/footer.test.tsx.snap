@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Rendering should render correctly 1`] = `
+<footer
+  className="footer-container"
+>
+  <p
+    className="copyright-year"
+  >
+    © Microsoft 2022
+  </p>
+</footer>
+`;

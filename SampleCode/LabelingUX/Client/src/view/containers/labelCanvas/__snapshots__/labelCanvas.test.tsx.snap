@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelCanvas /> Rendering should match snapshot, when current document is analyzing 1`] = `
+<div
+  className="label-canvas"
+>
+  <div
+    className="label-canvas-command-bar"
+  >
+    <DrawRegionButton
+      checked={false}
+      disabled={true}
+      onClick={[Function]}
+    />
+    <LayerFilter
+      checkStates={
+        Object {
+          "selectionMarks": true,
+          "tables": true,
+          "text": true,
+        }
+      }
+      disabled={true}
+      onItemClick={[Function]}
+    />
+  </div>
+  <div
+    className="label-canvas-image-map"
+  >
+    <Connect(WithCustomModelLabel)
+      currentDocument={
+        Object {
+          "currentPage": 25,
+          "name": "test",
+          "numPages": 100,
+          "states": Object {
+            "analyzingStatus": "Analyzing",
+            "loadingStatus": "Loaded",
+          },
+          "thumbnail": "",
+          "type": "pdf",
+          "url": "<url>",
+        }
+      }
+      drawRegionMode={false}
+      featureStyler={[Function]}
+      imageAngle={0}
+      imageHeight={0}
+      imageUri="<imageUrl>"
+      imageWidth={0}
+      initLayoutMap={true}
+      onMapReady={[Function]}
+      setImageMap={[Function]}
+    />
+    <div
+      className="label-canvas-overlay"
+    >
+      <AnalyzeProgressBar
+        subtitle="test"
+        title="Running analysis:"
+      />
+    </div>
+  </div>
+  <div
+    className="label-canvas-control-bar"
+  >
+    <div
+      className="label-canvas-page-control"
+    >
+      <PageControl
+        currentPage={25}
+        disabled={true}
+        numPages={100}
+        onNextClick={[Function]}
+        onPageChange={[Function]}
+        onPreviousClick={[Function]}
+      />
+    </div>
+    <div
+      className="label-canvas-tool-bar"
+    >
+      <ImageMapToolbar
+        disabled={true}
+        onRotateClick={[Function]}
+        onZoomInClick={[Function]}
+        onZoomOutClick={[Function]}
+        onZoomToFitClick={[Function]}
+        rotateAngle={0}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LabelCanvas /> Rendering should render correctly 1`] = `
+<div
+  className="label-canvas"
+>
+  <div
+    className="label-canvas-command-bar"
+  >
+    <DrawRegionButton
+      checked={false}
+      disabled={true}
+      onClick={[Function]}
+    />
+    <LayerFilter
+      checkStates={
+        Object {
+          "selectionMarks": true,
+          "tables": true,
+          "text": true,
+        }
+      }
+      disabled={true}
+      onItemClick={[Function]}
+    />
+  </div>
+  <div
+    className="label-canvas-image-map"
+  >
+    <Connect(WithCustomModelLabel)
+      currentDocument={null}
+      drawRegionMode={false}
+      featureStyler={[Function]}
+      imageAngle={0}
+      imageHeight={0}
+      imageUri="<imageUrl>"
+      imageWidth={0}
+      initLayoutMap={true}
+      onMapReady={[Function]}
+      setImageMap={[Function]}
+    />
+  </div>
+  <div
+    className="label-canvas-control-bar"
+  >
+    <div
+      className="label-canvas-page-control"
+    >
+      <PageControl
+        disabled={true}
+        onNextClick={[Function]}
+        onPageChange={[Function]}
+        onPreviousClick={[Function]}
+      />
+    </div>
+    <div
+      className="label-canvas-tool-bar"
+    >
+      <ImageMapToolbar
+        disabled={true}
+        onRotateClick={[Function]}
+        onZoomInClick={[Function]}
+        onZoomOutClick={[Function]}
+        onZoomToFitClick={[Function]}
+        rotateAngle={0}
+      />
+    </div>
+  </div>
+</div>
+`;

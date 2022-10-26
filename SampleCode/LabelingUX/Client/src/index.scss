@@ -1,0 +1,58 @@
+@import "~@fluentui/react/dist/sass/References";
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.react-split-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .gutter {
+        background-color: $ms-color-gray10;
+        border-right: 1px solid $ms-color-gray30;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+    .gutter.gutter-horizontal {
+        cursor: col-resize;
+    }
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

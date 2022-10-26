@@ -1,0 +1,3269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when a header is renaming 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="CUSTOMER#"
+            onDoubleClick={[Function]}
+          >
+            <Stack
+              horizontalAlign="center"
+              verticalAlign="center"
+            >
+              <StyledTextFieldBase
+                autoComplete="off"
+                className="rename-textfield"
+                componentRef={
+                  Object {
+                    "current": null,
+                  }
+                }
+                defaultValue="CUSTOMER#"
+                onBlur={[Function]}
+                onGetErrorMessage={[Function]}
+                onKeyDown={[Function]}
+                styles={
+                  Object {
+                    "fieldGroup": Object {
+                      "width": 120,
+                    },
+                    "root": Object {
+                      "padding": 12,
+                    },
+                  }
+                }
+              />
+            </Stack>
+          </th>
+          <th
+            className="general-header"
+            key="LICNESE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="LICNESE#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="TERMS"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="TERMS"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="row-index-header"
+            key="0"
+          >
+            #0
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            13267
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+    <CustomizedIconButton
+      iconProps={
+        Object {
+          "iconName": "Add",
+        }
+      }
+      id="add-row-button"
+      onClick={[Function]}
+    />
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b>
+            CUSTOMER#
+          </b>
+           to 
+          <b>
+            MockNewName
+          </b>
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when inserting a column to dynamic table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="CUSTOMER#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="CUSTOMER#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="insert"
+          >
+            <Stack
+              horizontalAlign="center"
+              verticalAlign="center"
+            >
+              <StyledTextFieldBase
+                autoComplete="off"
+                className="insert-textfield"
+                componentRef={
+                  Object {
+                    "current": null,
+                  }
+                }
+                onBlur={[Function]}
+                onGetErrorMessage={[Function]}
+                onKeyDown={[Function]}
+                styles={
+                  Object {
+                    "fieldGroup": Object {
+                      "width": 120,
+                    },
+                    "root": Object {
+                      "padding": 12,
+                    },
+                  }
+                }
+              />
+            </Stack>
+          </th>
+          <th
+            className="general-header"
+            key="LICNESE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="LICNESE#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="TERMS"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="TERMS"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="row-index-header"
+            key="0"
+          >
+            #0
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            13267
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="insert"
+          />
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+    <CustomizedIconButton
+      iconProps={
+        Object {
+          "iconName": "Add",
+        }
+      }
+      id="add-row-button"
+      onClick={[Function]}
+    />
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when inserting a column to fixed row table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="abc"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="abc"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="insert"
+          >
+            <Stack
+              horizontalAlign="center"
+              verticalAlign="center"
+            >
+              <StyledTextFieldBase
+                autoComplete="off"
+                className="insert-textfield"
+                componentRef={
+                  Object {
+                    "current": null,
+                  }
+                }
+                onBlur={[Function]}
+                onGetErrorMessage={[Function]}
+                onKeyDown={[Function]}
+                styles={
+                  Object {
+                    "fieldGroup": Object {
+                      "width": 120,
+                    },
+                    "root": Object {
+                      "padding": 12,
+                    },
+                  }
+                }
+              />
+            </Stack>
+          </th>
+          <th
+            className="general-header"
+            key="def"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="def"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="general-header"
+            key="DATE"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="DATE"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            130
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="insert"
+          />
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+        <tr
+          key="1"
+        >
+          <th
+            className="general-header"
+            key="INVOICE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="INVOICE#"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="insert"
+          />
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when inserting a row to fixed row table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="abc"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="abc"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="def"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="def"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="general-header"
+            key="DATE"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="DATE"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            130
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+        <tr
+          key="insert"
+        >
+          <th
+            className="general-header"
+            key="insert"
+          >
+            <Stack
+              horizontalAlign="center"
+              verticalAlign="center"
+            >
+              <StyledTextFieldBase
+                autoComplete="off"
+                className="insert-textfield"
+                componentRef={
+                  Object {
+                    "current": null,
+                  }
+                }
+                onBlur={[Function]}
+                onGetErrorMessage={[Function]}
+                onKeyDown={[Function]}
+                styles={
+                  Object {
+                    "fieldGroup": Object {
+                      "width": 120,
+                    },
+                    "root": Object {
+                      "padding": 12,
+                    },
+                  }
+                }
+              />
+            </Stack>
+          </th>
+          <td
+            className="table-cell"
+            key="0"
+          />
+          <td
+            className="table-cell"
+            key="1"
+          />
+        </tr>
+        <tr
+          key="1"
+        >
+          <th
+            className="general-header"
+            key="INVOICE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="INVOICE#"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when it's dynamic table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="CUSTOMER#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="CUSTOMER#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="LICNESE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="LICNESE#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="TERMS"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="TERMS"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="row-index-header"
+            key="0"
+          >
+            #0
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            13267
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+    <CustomizedIconButton
+      iconProps={
+        Object {
+          "iconName": "Add",
+        }
+      }
+      id="add-row-button"
+      onClick={[Function]}
+    />
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when it's fixed column table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="BILL TO"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="BILL TO"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="general-header"
+            key="addr"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="addr"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            NEW
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when it's fixed row table 1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="abc"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="abc"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="def"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="def"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="general-header"
+            key="DATE"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="DATE"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            130
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+        <tr
+          key="1"
+        >
+          <th
+            className="general-header"
+            key="INVOICE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameRow",
+                      "onClick": [Function],
+                      "text": "Rename row",
+                    },
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="INVOICE#"
+            />
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;
+
+exports[`<TableLabelItem /> Rendering should match snapshot, when labels include label type of region  1`] = `
+<Stack
+  className="table-label-item"
+  grow={1}
+>
+  <Stack
+    className="table-body-container"
+    disableShrink={true}
+    grow={1}
+  >
+    <table
+      className="table-body"
+    >
+      <thead>
+        <tr>
+          <th
+            className="empty-header"
+          />
+          <th
+            className="general-header"
+            key="CUSTOMER#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="CUSTOMER#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="LICNESE#"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="LICNESE#"
+            />
+          </th>
+          <th
+            className="general-header"
+            key="TERMS"
+            onDoubleClick={[Function]}
+          >
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "renameColumn",
+                      "onClick": [Function],
+                      "text": "Rename column",
+                    },
+                    Object {
+                      "key": "insertColumn",
+                      "onClick": [Function],
+                      "text": "Insert column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteColumn",
+                      "onClick": [Function],
+                      "text": "Delete column",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "subType",
+                      "subMenuProps": Object {
+                        "items": Array [
+                          Object {
+                            "canCheck": true,
+                            "checked": true,
+                            "key": "string",
+                            "onClick": [Function],
+                            "text": "string",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "number",
+                            "onClick": [Function],
+                            "text": "number",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "date",
+                            "onClick": [Function],
+                            "text": "date",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "time",
+                            "onClick": [Function],
+                            "text": "time",
+                          },
+                          Object {
+                            "canCheck": true,
+                            "checked": false,
+                            "key": "integer",
+                            "onClick": [Function],
+                            "text": "integer",
+                          },
+                        ],
+                      },
+                      "text": "Sub type",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="TERMS"
+            />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <th
+            className="row-index-header"
+            key="0"
+          >
+            #0
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            13267
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+        <tr
+          key="1"
+        >
+          <th
+            className="row-index-header"
+            key="0"
+          >
+            #1
+          </th>
+          <td
+            className="table-cell"
+            key="1"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          >
+            <FontIcon
+              className="label-item-icon"
+              iconName="SingleColumnEdit"
+            />
+            <CustomizedIconButton
+              className="delete-cell-button"
+              iconProps={
+                Object {
+                  "iconName": "Cancel",
+                }
+              }
+              onClick={[Function]}
+              styles={
+                Object {
+                  "icon": Object {
+                    "fontSize": 11,
+                  },
+                  "root": Object {
+                    "height": 20,
+                    "width": 20,
+                  },
+                  "rootHovered": Object {
+                    "backgroundColor": "#deecf9",
+                  },
+                  "rootPressed": Object {
+                    "backgroundColor": "#c7e0f4",
+                  },
+                }
+              }
+            />
+          </td>
+          <td
+            className="table-cell"
+            key="2"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+          <td
+            className="table-cell"
+            key="3"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="gridcell"
+          />
+        </tr>
+      </tbody>
+    </table>
+    <CustomizedIconButton
+      iconProps={
+        Object {
+          "iconName": "Add",
+        }
+      }
+      id="add-row-button"
+      onClick={[Function]}
+    />
+  </Stack>
+  <MessageModal
+    actionButtonText="Yes"
+    body={
+      <Text
+        variant="medium"
+      >
+        <Text>
+          Are you sure you want to rename 
+          <b />
+           to 
+          <b />
+          ? All labels and regions assigned to this field will be changed thoroughly.
+        </Text>
+      </Text>
+    }
+    isLoading={false}
+    isOpen={false}
+    onActionButtonClick={[Function]}
+    onClose={[Function]}
+    rejectButtonText="No"
+    title="Rename Field"
+  />
+</Stack>
+`;

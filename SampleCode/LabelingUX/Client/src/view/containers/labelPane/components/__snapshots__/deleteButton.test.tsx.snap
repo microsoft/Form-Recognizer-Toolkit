@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeleteButton /> Rendering should match snapshot, when delete button is disabled 1`] = `
+<CustomizedIconButton
+  disabled={true}
+  iconProps={
+    Object {
+      "iconName": "Cancel",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "icon": Object {
+        "fontSize": 14,
+      },
+      "root": Object {
+        "height": 24,
+        "width": 24,
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+      },
+    }
+  }
+  title="Delete"
+/>
+`;
+
+exports[`<DeleteButton /> Rendering should match snapshot, when delete button is enabled 1`] = `
+<CustomizedIconButton
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "Cancel",
+    }
+  }
+  onClick={[MockFunction]}
+  styles={
+    Object {
+      "icon": Object {
+        "fontSize": 14,
+      },
+      "root": Object {
+        "height": 24,
+        "width": 24,
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+      },
+    }
+  }
+  title="Delete"
+/>
+`;

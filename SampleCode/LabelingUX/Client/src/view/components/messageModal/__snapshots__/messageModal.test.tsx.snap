@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageModal /> Rendering should match snapshot, when it is loading 1`] = `
+<Modal
+  body={
+    <div>
+      Hello World
+    </div>
+  }
+  buttonGroup={
+    <React.Fragment>
+      <CustomizedPrimaryButton
+        disabled={false}
+        onClick={[MockFunction]}
+        text="Done"
+      />
+      <CustomizedDefaultButton
+        onClick={[MockFunction]}
+        text="Cancel"
+      />
+    </React.Fragment>
+  }
+  footer={<div />}
+  header={
+    <Text
+      variant="xLarge"
+    >
+      &lt;title&gt;
+    </Text>
+  }
+  isLoading={true}
+  isOpen={true}
+  onClose={[MockFunction]}
+  width={700}
+/>
+`;
+
+exports[`<MessageModal /> Rendering should match snapshot, when there is rejectButtonText 1`] = `
+<Modal
+  body={
+    <div>
+      Hello World
+    </div>
+  }
+  buttonGroup={
+    <React.Fragment>
+      <CustomizedPrimaryButton
+        disabled={false}
+        onClick={[MockFunction]}
+        text="Done"
+      />
+      <CustomizedDefaultButton
+        onClick={[MockFunction]}
+        text="No"
+      />
+    </React.Fragment>
+  }
+  footer={<div />}
+  header={
+    <Text
+      variant="xLarge"
+    >
+      &lt;title&gt;
+    </Text>
+  }
+  isOpen={true}
+  onClose={[MockFunction]}
+  width={700}
+/>
+`;
+
+exports[`<MessageModal /> Rendering should match snapshot, when there's no action button 1`] = `
+<Modal
+  body={
+    <div>
+      Hello World
+    </div>
+  }
+  buttonGroup={
+    <React.Fragment>
+      <CustomizedDefaultButton
+        onClick={[MockFunction]}
+        text="Cancel"
+      />
+    </React.Fragment>
+  }
+  footer={<div />}
+  header={
+    <Text
+      variant="xLarge"
+    >
+      &lt;title&gt;
+    </Text>
+  }
+  isOpen={true}
+  onClose={[MockFunction]}
+  width={700}
+/>
+`;
+
+exports[`<MessageModal /> Rendering should render correctly 1`] = `
+<Modal
+  body={
+    <div>
+      Hello World
+    </div>
+  }
+  buttonGroup={
+    <React.Fragment>
+      <CustomizedPrimaryButton
+        disabled={false}
+        onClick={[MockFunction]}
+        text="Done"
+      />
+      <CustomizedDefaultButton
+        onClick={[MockFunction]}
+        text="Cancel"
+      />
+    </React.Fragment>
+  }
+  footer={<div />}
+  header={
+    <Text
+      variant="xLarge"
+    >
+      &lt;title&gt;
+    </Text>
+  }
+  isOpen={true}
+  onClose={[MockFunction]}
+  width={700}
+/>
+`;

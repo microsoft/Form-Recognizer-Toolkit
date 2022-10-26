@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuButton /> Rendering should render correctly 1`] = `
+<CustomizedIconButton
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "MoreVertical",
+    }
+  }
+  menuProps={
+    Object {
+      "directionalHint": 6,
+      "items": Array [
+        Object {
+          "disabled": true,
+          "iconProps": Object {
+            "iconName": "DoubleBookmark",
+          },
+          "key": "subType",
+          "subMenuProps": Object {
+            "items": Array [
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "string",
+                "onClick": [Function],
+                "text": "string",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "number",
+                "onClick": [Function],
+                "text": "number",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "date",
+                "onClick": [Function],
+                "text": "date",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "time",
+                "onClick": [Function],
+                "text": "time",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "integer",
+                "onClick": [Function],
+                "text": "integer",
+              },
+            ],
+          },
+          "text": "Sub type",
+        },
+        Object {
+          "disabled": false,
+          "iconProps": Object {
+            "iconName": "Rename",
+          },
+          "key": "rename",
+          "onClick": [MockFunction],
+          "subMenuProps": undefined,
+          "text": "Rename",
+        },
+        Object {
+          "disabled": false,
+          "iconProps": Object {
+            "iconName": "Delete",
+          },
+          "key": "delete",
+          "onClick": [MockFunction],
+          "subMenuProps": undefined,
+          "text": "Delete",
+          "title": "Delete",
+        },
+      ],
+    }
+  }
+  styles={
+    Object {
+      "icon": Object {
+        "fontSize": 14,
+      },
+      "menuIcon": Object {
+        "height": 0,
+        "margin": 0,
+        "overflow": "hidden",
+        "width": 0,
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+      },
+      "rootHasMenu": Object {
+        "height": 24,
+        "width": 24,
+      },
+    }
+  }
+  title="Open menu"
+/>
+`;
+
+exports[`<MenuButton /> Rendering should render correctly, when there's sub type 1`] = `
+<CustomizedIconButton
+  disabled={false}
+  iconProps={
+    Object {
+      "iconName": "MoreVertical",
+    }
+  }
+  menuProps={
+    Object {
+      "directionalHint": 6,
+      "items": Array [
+        Object {
+          "disabled": false,
+          "iconProps": Object {
+            "iconName": "DoubleBookmark",
+          },
+          "key": "subType",
+          "subMenuProps": Object {
+            "items": Array [
+              Object {
+                "canCheck": true,
+                "checked": true,
+                "key": "string",
+                "onClick": [Function],
+                "text": "string",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "number",
+                "onClick": [Function],
+                "text": "number",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "date",
+                "onClick": [Function],
+                "text": "date",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "time",
+                "onClick": [Function],
+                "text": "time",
+              },
+              Object {
+                "canCheck": true,
+                "checked": false,
+                "key": "integer",
+                "onClick": [Function],
+                "text": "integer",
+              },
+            ],
+          },
+          "text": "Sub type",
+        },
+        Object {
+          "disabled": false,
+          "iconProps": Object {
+            "iconName": "Rename",
+          },
+          "key": "rename",
+          "onClick": [MockFunction],
+          "subMenuProps": undefined,
+          "text": "Rename",
+        },
+        Object {
+          "disabled": false,
+          "iconProps": Object {
+            "iconName": "Delete",
+          },
+          "key": "delete",
+          "onClick": [MockFunction],
+          "subMenuProps": undefined,
+          "text": "Delete",
+          "title": "Delete",
+        },
+      ],
+    }
+  }
+  styles={
+    Object {
+      "icon": Object {
+        "fontSize": 14,
+      },
+      "menuIcon": Object {
+        "height": 0,
+        "margin": 0,
+        "overflow": "hidden",
+        "width": 0,
+      },
+      "rootDisabled": Object {
+        "backgroundColor": "transparent",
+      },
+      "rootHasMenu": Object {
+        "height": 24,
+        "width": 24,
+      },
+    }
+  }
+  title="Open menu"
+/>
+`;

@@ -1,0 +1,36 @@
+.table-view-container {
+    max-height: 85vh;
+    max-width: 85vw;
+    width: auto;
+    height: auto;
+
+    .table-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .table-scrollable-container {
+        display: flex;
+        flex-flow: column;
+        flex-grow: 1;
+        min-height: 0;
+        overflow: auto;
+
+        .table-view {
+            border-collapse: collapse;
+            td,
+            th {
+                border: 2px solid #8d8d8d;
+                max-width: 400px;
+                padding: 0.5rem 1rem;
+            }
+            td:empty::after {
+                content: "\00a0";
+            }
+        }
+    }
+
+    .table-view-scrollable-content {
+        max-height: 65vh;
+    }
+}

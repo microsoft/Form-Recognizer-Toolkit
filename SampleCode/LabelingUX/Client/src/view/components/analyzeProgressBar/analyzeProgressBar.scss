@@ -1,0 +1,30 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.analyze-progress-bar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 30%;
+    gap: 10px;
+    opacity: 1;
+
+    .progress-details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .progress-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .progress-subtitle {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            color: $ms-color-gray120;
+        }
+    }
+}
