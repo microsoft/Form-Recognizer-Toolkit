@@ -307,7 +307,7 @@ exports[`<LabelPane /> Rendering should match snapshot, when table pane is open 
           definition={
             Object {
               "fieldFormat": "not-specified",
-              "fieldKey": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+              "fieldKey": "DynamicTable/abc_object",
               "fieldType": "object",
               "fields": Array [
                 Object {
@@ -335,7 +335,7 @@ exports[`<LabelPane /> Rendering should match snapshot, when table pane is open 
               "fieldKey": "DynamicTable/abc",
               "fieldType": "array",
               "fields": null,
-              "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+              "itemType": "DynamicTable/abc_object",
             }
           }
           onClickCell={[Function]}
@@ -451,7 +451,7 @@ exports[`<LabelPane /> Rendering should match snapshot, when table pane is open 
           definition={
             Object {
               "fieldFormat": "not-specified",
-              "fieldKey": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+              "fieldKey": "FixedRowTable_object",
               "fieldType": "object",
               "fields": Array [
                 Object {
@@ -476,12 +476,12 @@ exports[`<LabelPane /> Rendering should match snapshot, when table pane is open 
                 Object {
                   "fieldFormat": "not-specified",
                   "fieldKey": "abc",
-                  "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+                  "fieldType": "FixedRowTable_object",
                 },
                 Object {
                   "fieldFormat": "not-specified",
                   "fieldKey": "def",
-                  "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+                  "fieldType": "FixedRowTable_object",
                 },
               ],
               "itemType": null,
