@@ -10,11 +10,6 @@ import {
 import { SharedColors } from "@fluentui/react";
 import { FeatureCategory } from "view/components/imageMap/contracts";
 
-export const mockDynamicTableFieldUUID_0 = "0b53a58a-3345-37db-e525-2c43c370bbc7";
-export const mockFixedRowTableFieldUUID_0 = "f4009382-976c-1d1d-ca9d-4db42d5d9eac";
-export const mockFixedRowTableFieldUUID_1 = "cd309d8e-1fd7-335f-e60c-3909c781556a";
-export const mockFixedColumnTableFieldUUID_0 = "b7085826-ef9a-656d-d26e-567fd5a6ccb9";
-
 export const mockFields = [
     {
         fieldKey: "Address",
@@ -35,7 +30,7 @@ export const mockFields = [
         fieldKey: "DynamicTable/abc",
         fieldType: "array",
         fieldFormat: "not-specified",
-        itemType: mockDynamicTableFieldUUID_0,
+        itemType: "DynamicTable/abc_object",
         fields: null,
     },
     {
@@ -46,12 +41,12 @@ export const mockFields = [
         fields: [
             {
                 fieldKey: "abc",
-                fieldType: mockFixedRowTableFieldUUID_0,
+                fieldType: "FixedRowTable_object",
                 fieldFormat: "not-specified",
             },
             {
                 fieldKey: "def",
-                fieldType: mockFixedRowTableFieldUUID_1,
+                fieldType: "FixedRowTable_object",
                 fieldFormat: "not-specified",
             },
         ],
@@ -65,7 +60,7 @@ export const mockFields = [
         fields: [
             {
                 fieldKey: "addr",
-                fieldType: mockFixedColumnTableFieldUUID_0,
+                fieldType: "FixedColumnTable_object",
                 fieldFormat: "not-specified",
             },
         ],
@@ -199,83 +194,10 @@ export const mockFixedColumnTableDefinition = {
     ],
 };
 
-export const mockDynamicTableDefinition_0 = {
-    fieldKey: mockDynamicTableFieldUUID_0,
-    fieldType: "object",
-    fieldFormat: "not-specified",
-    itemType: null,
-    fields: [
-        {
-            fieldKey: "CUSTOMER#",
-            fieldType: "number",
-            fieldFormat: "not-specified",
-        },
-        {
-            fieldKey: "LICNESE#",
-            fieldType: "number",
-            fieldFormat: "not-specified",
-        },
-        {
-            fieldKey: "TERMS",
-            fieldType: "string",
-            fieldFormat: "not-specified",
-        },
-    ],
-};
-export const mockFixedRowTableDefinition_0 = {
-    fieldKey: mockFixedRowTableFieldUUID_0,
-    fieldType: "object",
-    fieldFormat: "not-specified",
-    fields: [
-        {
-            fieldKey: "DATE",
-            fieldType: "date",
-            fieldFormat: "not-specified",
-        },
-        {
-            fieldKey: "INVOICE#",
-            fieldType: "number",
-            fieldFormat: "not-specified",
-        },
-    ],
-};
-
-export const mockFixedRowTableDefinition_1 = {
-    fieldKey: mockFixedRowTableFieldUUID_1,
-    fieldType: "object",
-    fieldFormat: "not-specified",
-    fields: [
-        {
-            fieldKey: "DATE",
-            fieldType: "date",
-            fieldFormat: "not-specified",
-        },
-        {
-            fieldKey: "INVOICE#",
-            fieldType: "number",
-            fieldFormat: "not-specified",
-        },
-    ],
-};
-
-export const mockFixedColumnTableDefinition_0 = {
-    fieldKey: mockFixedColumnTableFieldUUID_0,
-    fieldType: "object",
-    fieldFormat: "not-specified",
-    fields: [
-        {
-            fieldKey: "BILL TO",
-            fieldType: "string",
-            fieldFormat: "not-specified",
-        },
-    ],
-};
-
 export const mockDefinitions = {
-    [mockDynamicTableFieldUUID_0]: mockDynamicTableDefinition_0,
-    [mockFixedRowTableFieldUUID_0]: mockFixedRowTableDefinition_0,
-    [mockFixedRowTableFieldUUID_1]: mockFixedRowTableDefinition_1,
-    [mockFixedColumnTableFieldUUID_0]: mockFixedColumnTableDefinition_0,
+    [mockDynamicTableDefinition.fieldKey]: mockDynamicTableDefinition,
+    [mockFixedRowTableDefinition.fieldKey]: mockFixedRowTableDefinition,
+    [mockFixedColumnTableDefinition.fieldKey]: mockFixedColumnTableDefinition,
 } as Definitions;
 
 export const mockDynamicTableLabels = [

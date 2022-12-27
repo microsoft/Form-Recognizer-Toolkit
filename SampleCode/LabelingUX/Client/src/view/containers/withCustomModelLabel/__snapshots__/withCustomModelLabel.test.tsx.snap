@@ -55,7 +55,7 @@ exports[`withCustomModelLabel Rendering should render correctly 1`] = `
           "fieldKey": "DynamicTable/abc",
           "fieldType": "array",
           "fields": null,
-          "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+          "itemType": "DynamicTable/abc_object",
         },
         Object {
           "fieldFormat": "not-specified",
@@ -65,12 +65,12 @@ exports[`withCustomModelLabel Rendering should render correctly 1`] = `
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "abc",
-              "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+              "fieldType": "FixedRowTable_object",
             },
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "def",
-              "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+              "fieldType": "FixedRowTable_object",
             },
           ],
           "itemType": null,
@@ -84,7 +84,7 @@ exports[`withCustomModelLabel Rendering should render correctly 1`] = `
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "addr",
-              "fieldType": "b7085826-ef9a-656d-d26e-567fd5a6ccb9",
+              "fieldType": "FixedColumnTable_object",
             },
           ],
           "itemType": null,
@@ -177,7 +177,7 @@ exports[`withCustomModelLabel Rendering should render correctly with InlineLabel
           "fieldKey": "DynamicTable/abc",
           "fieldType": "array",
           "fields": null,
-          "itemType": "0b53a58a-3345-37db-e525-2c43c370bbc7",
+          "itemType": "DynamicTable/abc_object",
         },
         Object {
           "fieldFormat": "not-specified",
@@ -187,12 +187,12 @@ exports[`withCustomModelLabel Rendering should render correctly with InlineLabel
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "abc",
-              "fieldType": "f4009382-976c-1d1d-ca9d-4db42d5d9eac",
+              "fieldType": "FixedRowTable_object",
             },
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "def",
-              "fieldType": "cd309d8e-1fd7-335f-e60c-3909c781556a",
+              "fieldType": "FixedRowTable_object",
             },
           ],
           "itemType": null,
@@ -206,7 +206,7 @@ exports[`withCustomModelLabel Rendering should render correctly with InlineLabel
             Object {
               "fieldFormat": "not-specified",
               "fieldKey": "addr",
-              "fieldType": "b7085826-ef9a-656d-d26e-567fd5a6ccb9",
+              "fieldType": "FixedColumnTable_object",
             },
           ],
           "itemType": null,
