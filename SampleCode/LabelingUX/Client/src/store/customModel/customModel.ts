@@ -458,19 +458,20 @@ export const insertTableField = createAsyncThunk<
             const assetService = new CustomModelAssetService();
             const updatedFields = [...fields];
             const updatedDefinitions = { ...definitions };
-            const objectName = `${tableFieldKey}_object`;
+            const originTableFieldIndex = fields.findIndex((field) => field.fieldKey === tableFieldKey);
+            const originTableField: any = fields[originTableFieldIndex];
+            const objectName = originTableField.itemType || originTableField.fields[0].fieldType;
             const insertField: any = {
                 fieldKey,
                 fieldType: fieldLocation === FieldLocation.field ? objectName : FieldType.String,
                 fieldFormat: FieldFormat.NotSpecified,
             };
-            const tableFieldIndex = fields.findIndex((field) => field.fieldKey === tableFieldKey);
 
             if (fieldLocation === FieldLocation.field) {
-                const insertedFields = (fields[tableFieldIndex] as any).fields.slice();
+                const insertedFields = originTableField.fields.slice();
                 insertedFields.splice(index, 0, insertField);
-                const updatedTableField = { ...fields[tableFieldIndex], fields: insertedFields };
-                updatedFields.splice(tableFieldIndex, 1, updatedTableField);
+                const updatedTableField = { ...originTableField, fields: insertedFields };
+                updatedFields.splice(originTableFieldIndex, 1, updatedTableField);
             } else {
                 const insertedFields = definitions[objectName].fields.slice();
                 insertedFields.splice(index, 0, insertField);
