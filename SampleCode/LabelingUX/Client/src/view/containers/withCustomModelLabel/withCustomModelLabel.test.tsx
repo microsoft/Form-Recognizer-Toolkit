@@ -139,6 +139,21 @@ describe("withCustomModelLabel", () => {
             expect(mockImageMap.addDrawnRegionFeatures).toBeCalledTimes(1);
         });
 
+        it("should redraw label features, when colorForFields prop change", () => {
+            const props = { ...baseProps, colorForFields: [], labels };
+            const wrapper = shallow(<WithCustomModelLabel {...props} />);
+            const instance = wrapper.instance() as any;
+            instance.setImageMap(mockImageMap);
+
+            wrapper.setProps({ colorForFields: mockColorForFields });
+            expect(mockSetLabelValueCandidates).toBeCalledTimes(1);
+            expect(mockSetLabelValueCandidates).toBeCalledWith([]);
+            expect(mockImageMap.removeAllLabelFeatures).toBeCalledTimes(1);
+            expect(mockImageMap.removeAllDrawnRegionFeature).toBeCalledTimes(1);
+            expect(mockImageMap.addLabelFeatures).toBeCalledTimes(1);
+            expect(mockImageMap.addDrawnRegionFeatures).toBeCalledTimes(1);
+        });
+
         it("should clear label features, when switch to not-labeled document.", () => {
             const notLabeledDocument = {
                 ...currentDocument,
