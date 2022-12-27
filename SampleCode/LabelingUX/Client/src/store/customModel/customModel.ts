@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk, isAnyOf } from "@reduxjs/toolkit";
-import { v4 as uuidv4 } from "uuid";
 
 import { ApplicationState } from "store";
 import {
@@ -27,8 +26,6 @@ import {
     HeaderType,
     TableType,
     VisualizationHint,
-    ObjectField,
-    PrimitiveField,
 } from "models/customModels";
 import { CustomModelAssetService } from "services/assetService/customModelAssetService";
 import { setDocumentPrediction } from "store/predictions/predictions";
@@ -124,82 +121,46 @@ export const addTableField = createAsyncThunk<
             const { fields, definitions } = customModel;
             const assetService = new CustomModelAssetService();
 
-            // To create 2x2 table
-            const tableCellsSquare = 2;
+            const getTableFields = (headerType: HeaderType, fieldType) =>
+                new Array(2).fill(null).map((_, index) => ({
+                    fieldKey: headerType === HeaderType.column ? `COLUMN${index + 1}` : `ROW${index + 1}`,
+                    fieldType,
+                    fieldFormat: FieldFormat.NotSpecified,
+                }));
 
-            const getTableFields = (headerType: HeaderType, fieldType: FieldType): PrimitiveField[] =>
-                Array(tableCellsSquare)
-                    .fill(null)
-                    .map((_, index) => {
-                        const objectName = uuidv4();
-                        return {
-                            fieldKey: headerType === HeaderType.column ? `COLUMN${index + 1}` : `ROW${index + 1}`,
-                            fieldType: fieldType === FieldType.Object ? (objectName as FieldType) : fieldType,
-                            fieldFormat: FieldFormat.NotSpecified,
-                        };
-                    });
-
-            const getDynamicTableDefinitions = (objectName: string): Definitions => {
-                const definitions: Definitions = {
-                    [objectName]: {
-                        fieldKey: objectName,
-                        fieldType: FieldType.Object,
-                        fieldFormat: FieldFormat.NotSpecified,
-                        fields: getTableFields(HeaderType.column, FieldType.String),
-                    },
-                };
-
-                return definitions;
-            };
-
-            const getFixedTableDefinitions = (tableFields: PrimitiveField[], headerType: HeaderType): Definitions => {
-                const definitions: Definitions = {};
-                const definitionFields = getTableFields(headerType, FieldType.String);
-                tableFields.forEach((tableField) => {
-                    const objectName = tableField.fieldType;
-
-                    definitions[objectName] = {
-                        fieldKey: objectName,
-                        fieldType: FieldType.Object,
-                        fieldFormat: FieldFormat.NotSpecified,
-                        fields: definitionFields,
-                    };
-                });
-
-                return definitions;
-            };
-
+            const objectName = `${fieldKey}_object`;
             let field: any = { fieldKey, fieldFormat: FieldFormat.NotSpecified };
-            let newDefinitions: Definitions = {};
+            let definition: any = {
+                fieldKey: objectName,
+                fieldType: FieldType.Object,
+                fieldFormat: FieldFormat.NotSpecified,
+            };
 
             if (tableType === TableType.dynamic) {
-                const objectName = uuidv4();
                 field = { ...field, fieldType: FieldType.Array, itemType: objectName };
-                newDefinitions = getDynamicTableDefinitions(objectName);
+                definition = { ...definition, fields: getTableFields(HeaderType.column, FieldType.String) };
             } else {
                 if (headerType === HeaderType.column) {
-                    const tableFields = getTableFields(HeaderType.row, FieldType.Object);
                     field = {
                         ...field,
                         fieldType: FieldType.Object,
-                        fields: tableFields,
+                        fields: getTableFields(HeaderType.row, objectName),
                         visualizationHint: VisualizationHint.Vertical,
                     };
-                    newDefinitions = getFixedTableDefinitions(tableFields, HeaderType.column);
+                    definition = { ...definition, fields: getTableFields(HeaderType.column, FieldType.String) };
                 } else {
-                    const tableFields = getTableFields(HeaderType.column, FieldType.Object);
                     field = {
                         ...field,
                         fieldType: FieldType.Object,
-                        fields: tableFields,
+                        fields: getTableFields(HeaderType.column, objectName),
                         visualizationHint: VisualizationHint.Horizontal,
                     };
-                    newDefinitions = getFixedTableDefinitions(tableFields, HeaderType.row);
+                    definition = { ...definition, fields: getTableFields(HeaderType.row, FieldType.String) };
                 }
             }
 
             const updatedFields = fields.concat(field);
-            const updatedDefinitions = { ...definitions, ...newDefinitions };
+            const updatedDefinitions = { ...definitions, [objectName]: definition };
 
             await assetService.updateFields(updatedFields, updatedDefinitions);
             return { fields: updatedFields, definitions: updatedDefinitions };
@@ -318,11 +279,8 @@ export const deleteField = createAsyncThunk<
         }
         if (targetField.fields) {
             // Delete fixed table cell definitions.
-            targetField.fields
-                .map((field) => field.fieldType)
-                .forEach((obj) => {
-                    delete updatedDefinitions[obj];
-                });
+            const fieldTypesToDelete = targetField.fields.map((field) => field.fieldType);
+            fieldTypesToDelete.forEach((fieldType) => delete updatedDefinitions[fieldType]);
         }
 
         await Promise.all([
@@ -339,6 +297,7 @@ export const renameField = createAsyncThunk<
     {
         fields: Field[];
         labels: Labels;
+        definitions: Definitions;
     },
     { fieldKey: string; newName: string },
     { rejectValue: any }
@@ -371,22 +330,45 @@ export const renameField = createAsyncThunk<
         allLabels = { ...allLabels, ...updatedLabels };
 
         // Update fields.
+        const newObjectName = `${newName}_object`;
         const originFieldIndex = fields.findIndex((field) => field.fieldKey === fieldKey);
         const originField: any = fields[originFieldIndex];
         const updatedField = {
             ...originField,
+            ...(originField.itemType && { itemType: newObjectName }),
+            ...(originField.fields && {
+                fields: originField.fields.map((field) => ({ ...field, fieldType: newObjectName })),
+            }),
             fieldKey: newName,
         };
         const updatedFields = [...fields];
         updatedFields.splice(originFieldIndex, 1, updatedField);
 
-        // Field, SelectionMark, Signature haven't own definitions properties, no need to update definitions.
+        // Update definitions.
+        const updatedDefinitions = { ...definitions };
+        if (originField.itemType) {
+            // For dynamic table.
+            updatedDefinitions[newObjectName] = {
+                ...updatedDefinitions[originField.itemType],
+                fieldKey: newObjectName,
+            };
+            delete updatedDefinitions[originField.itemType];
+        }
+        if (originField.fields) {
+            // For fixed table.
+            const originFieldTypes = originField.fields.map((field) => field.fieldType);
+            updatedDefinitions[newObjectName] = {
+                ...updatedDefinitions[originFieldTypes[0]],
+                fieldKey: newObjectName,
+            };
+            originFieldTypes.forEach((fieldType) => delete updatedDefinitions[fieldType]);
+        }
 
         await Promise.all([
-            assetService.updateFields(updatedFields, definitions),
+            assetService.updateFields(updatedFields, updatedDefinitions),
             assetService.updateDocumentLabels(updatedLabels),
         ]);
-        return { fields: updatedFields, labels: allLabels };
+        return { fields: updatedFields, labels: allLabels, definitions: updatedDefinitions };
     } catch (err) {
         return rejectWithValue(err);
     }
@@ -437,21 +419,12 @@ export const deleteTableField = createAsyncThunk<
                 // Update fields.
                 const tableFields = originTableField.fields.filter((field) => field.fieldKey !== fieldKey);
                 updatedFields.splice(originTableFieldIndex, 1, { ...originTableField, fields: tableFields });
-
-                const fieldToBeRemoved = originTableField.fields.find((field) => field.fieldKey === fieldKey);
-                const definitionKeyToBeRemoved = fieldToBeRemoved.fieldType;
-                delete updatedDefinitions[definitionKeyToBeRemoved];
             } else {
                 // Update definitions.
-                const fieldDefinitionNames = originTableField.itemType
-                    ? [originTableField.itemType]
-                    : originTableField.fields.map((field) => field.fieldType);
-
-                fieldDefinitionNames.forEach((name) => {
-                    const definition = { ...definitions[name] };
-                    const updatedFields = definition.fields.filter((field) => field.fieldKey !== fieldKey);
-                    updatedDefinitions[name] = { ...definition, fields: updatedFields };
-                });
+                const objectName = originTableField.itemType || originTableField.fields[0].fieldType;
+                const definition = { ...definitions[objectName] };
+                const definitionFields = definition.fields.filter((field) => field.fieldKey !== fieldKey);
+                updatedDefinitions[objectName] = { ...definition, fields: definitionFields };
             }
 
             await Promise.all([
@@ -485,41 +458,23 @@ export const insertTableField = createAsyncThunk<
             const assetService = new CustomModelAssetService();
             const updatedFields = [...fields];
             const updatedDefinitions = { ...definitions };
-            const objectName = uuidv4();
+            const objectName = `${tableFieldKey}_object`;
             const insertField: any = {
                 fieldKey,
                 fieldType: fieldLocation === FieldLocation.field ? objectName : FieldType.String,
                 fieldFormat: FieldFormat.NotSpecified,
             };
             const tableFieldIndex = fields.findIndex((field) => field.fieldKey === tableFieldKey);
-            const tableField: any = fields[tableFieldIndex];
 
             if (fieldLocation === FieldLocation.field) {
                 const insertedFields = (fields[tableFieldIndex] as any).fields.slice();
                 insertedFields.splice(index, 0, insertField);
                 const updatedTableField = { ...fields[tableFieldIndex], fields: insertedFields };
                 updatedFields.splice(tableFieldIndex, 1, updatedTableField);
-
-                const templateFieldType = tableField.fields[0].fieldType;
-                const definitionFieldsTemplate = updatedDefinitions[templateFieldType];
-                const insertDefinition: ObjectField = {
-                    fieldKey: objectName,
-                    fieldType: FieldType.Object,
-                    fields: definitionFieldsTemplate.fields,
-                    fieldFormat: FieldFormat.NotSpecified,
-                };
-                updatedDefinitions[objectName] = insertDefinition;
             } else {
-                const fieldDefinitionNames = tableField.itemType
-                    ? [tableField.itemType]
-                    : tableField.fields.map((field) => field.fieldType);
-                fieldDefinitionNames.forEach((name) => {
-                    const definition = { ...definitions[name] };
-                    const updatedFields = [...updatedDefinitions[name].fields];
-                    updatedFields.splice(index, 0, insertField);
-
-                    updatedDefinitions[name] = { ...definition, fields: updatedFields };
-                });
+                const insertedFields = definitions[objectName].fields.slice();
+                insertedFields.splice(index, 0, insertField);
+                updatedDefinitions[objectName] = { ...definitions[objectName], fields: insertedFields };
             }
 
             await assetService.updateFields(updatedFields, updatedDefinitions);
@@ -588,17 +543,12 @@ export const renameTableField = createAsyncThunk<
                 updatedFields.splice(originTableFieldIndex, 1, { ...originTableField, fields: tableFields });
             } else {
                 // Update definitions.
-                const fieldDefinitionNames = originTableField.itemType
-                    ? [originTableField.itemType]
-                    : originTableField.fields.map((field) => field.fieldType);
-
-                fieldDefinitionNames.forEach((name) => {
-                    const definition = { ...definitions[name] };
-                    const updatedFields = updatedDefinitions[name].fields.map((field) => {
-                        return field.fieldKey === fieldKey ? { ...field, fieldKey: newName } : field;
-                    });
-                    updatedDefinitions[name] = { ...definition, fields: updatedFields };
-                });
+                const objectName = originTableField.itemType || originTableField.fields[0].fieldType;
+                const definition = { ...definitions[objectName] };
+                const definitionFields = definition.fields.map((field) =>
+                    field.fieldKey === fieldKey ? { ...field, fieldKey: newName } : field
+                );
+                updatedDefinitions[objectName] = { ...definition, fields: definitionFields };
             }
 
             await Promise.all([
@@ -884,11 +834,6 @@ const customModel = createSlice({
                 const { name, analyzeResponse } = action.payload;
                 state.orders[name] = buildRegionOrders(analyzeResponse.analyzeResult);
             })
-            .addCase(renameField.fulfilled, (state, action) => {
-                const { fields, labels } = action.payload;
-                state.fields = fields;
-                state.labels = labels;
-            })
             .addMatcher(isAnyOf(insertTableField.fulfilled, addTableField.fulfilled), (state, action) => {
                 const { fields, definitions } = action.payload;
                 state.fields = fields;
@@ -906,7 +851,12 @@ const customModel = createSlice({
                 }
             )
             .addMatcher(
-                isAnyOf(renameTableField.fulfilled, deleteField.fulfilled, deleteTableField.fulfilled),
+                isAnyOf(
+                    renameField.fulfilled,
+                    renameTableField.fulfilled,
+                    deleteField.fulfilled,
+                    deleteTableField.fulfilled
+                ),
                 (state, action) => {
                     const { fields, labels, definitions } = action.payload;
                     state.fields = fields;

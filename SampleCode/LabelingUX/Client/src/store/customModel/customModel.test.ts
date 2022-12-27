@@ -17,6 +17,9 @@ import {
     mockDefinitions,
     mockAddedField,
     mockDocuments,
+    mockFixedRowTableField,
+    mockFixedRowTableDefinition,
+    mockFixedColumnTableDefinition,
     mockStringLabelValueCandidates,
     mockSelectionMarkLabelValueCandidates,
     mockRegionLabelValueCandidates,
@@ -27,19 +30,13 @@ import {
     mockSetColorForFieldsByNamePayload,
     mockSetColorForFieldsByNameResult,
     mockFixedColumnTableField,
-    mockFixedColumnTableDefinition_0,
-    mockFixedRowTableField,
-    mockFixedRowTableDefinition_0,
     mockDynamicTableField,
-    mockDynamicTableDefinition_0,
-    mockFixedRowTableFieldUUID_0,
+    mockDynamicTableDefinition,
 } from "utils/test";
-
 import {
     mockLayoutV3_0_3_AnalyzeResult,
     mockLayoutV3_0_3_AnalyzeResponse,
 } from "utils/test/mockAnalyzeData/v3_0_3_mockAnalyzeData";
-
 import {
     reducer,
     initialState,
@@ -67,7 +64,6 @@ import {
     switchTableFieldsSubType,
     deleteLabelByName,
 } from "./customModel";
-
 import {
     FieldType,
     FieldFormat,
@@ -77,21 +73,11 @@ import {
     LabelValueCandidate,
     Label,
     LabelType,
-    ObjectField,
-    PrimitiveField,
-    Definitions,
 } from "models/customModels";
 import { FeatureCategory } from "view/components/imageMap/contracts";
 import { setDocumentPrediction } from "store/predictions/predictions";
-import * as uuid from "uuid";
 
 jest.mock("services/assetService/customModelAssetService");
-jest.mock("uuid", () => {
-    return {
-        __esModule: true,
-        ...jest.requireActual("uuid"),
-    };
-});
 
 describe("customModel", () => {
     const mockStore = configureMockStore(getDefaultMiddleware());
@@ -343,88 +329,50 @@ describe("customModel", () => {
             ["fixed row table", TableType.fixed, HeaderType.row],
             ["fixed column table", TableType.fixed, HeaderType.column],
         ])("should create addTableField action (%s)", (_, tableType, headerType) => {
-            const mockUUID = "mock-uuid";
-            jest.spyOn(uuid, "v4").mockReturnValue(mockUUID);
             const fieldKey = mockNewFieldName;
-            // To create 2x2 table
-            const tableCellsSquare = 2;
 
-            const getTableFields = (headerType: HeaderType, fieldType: FieldType): PrimitiveField[] =>
-                Array(tableCellsSquare)
-                    .fill(null)
-                    .map((_, index) => {
-                        const objectName = mockUUID;
-                        return {
-                            fieldKey: headerType === HeaderType.column ? `COLUMN${index + 1}` : `ROW${index + 1}`,
-                            fieldType: fieldType === FieldType.Object ? (objectName as FieldType) : fieldType,
-                            fieldFormat: FieldFormat.NotSpecified,
-                        };
-                    });
+            const getTableFields = (headerType: HeaderType, fieldType) =>
+                new Array(2).fill(null).map((_, index) => ({
+                    fieldKey: headerType === HeaderType.column ? `COLUMN${index + 1}` : `ROW${index + 1}`,
+                    fieldType,
+                    fieldFormat: FieldFormat.NotSpecified,
+                }));
 
-            const getDynamicTableDefinitions = (objectName: string): Definitions => {
-                const definitions: Definitions = {
-                    [objectName]: {
-                        fieldKey: objectName,
-                        fieldType: FieldType.Object,
-                        fieldFormat: FieldFormat.NotSpecified,
-                        fields: getTableFields(HeaderType.column, FieldType.String),
-                    },
-                };
-
-                return definitions;
-            };
-
-            const getFixedTableDefinitions = (tableFields: PrimitiveField[], headerType: HeaderType): Definitions => {
-                const definitions: Definitions = {};
-                const definitionFields = getTableFields(headerType, FieldType.String);
-                tableFields.forEach((tableField) => {
-                    const objectName = tableField.fieldType;
-
-                    definitions[objectName] = {
-                        fieldKey: objectName,
-                        fieldType: FieldType.Object,
-                        fieldFormat: FieldFormat.NotSpecified,
-                        fields: definitionFields,
-                    };
-                });
-
-                return definitions;
-            };
-
+            const objectName = `${fieldKey}_object`;
             let field: any = { fieldKey, fieldFormat: FieldFormat.NotSpecified };
-            let newDefinitions: Definitions = {};
-
+            let definition: any = {
+                fieldKey: objectName,
+                fieldType: FieldType.Object,
+                fieldFormat: FieldFormat.NotSpecified,
+            };
             if (tableType === TableType.dynamic) {
-                const objectName = mockUUID;
                 field = { ...field, fieldType: FieldType.Array, itemType: objectName };
-                newDefinitions = getDynamicTableDefinitions(objectName);
+                definition = { ...definition, fields: getTableFields(HeaderType.column, FieldType.String) };
             } else {
                 if (headerType === HeaderType.column) {
-                    const tableFields = getTableFields(HeaderType.row, FieldType.Object);
                     field = {
                         ...field,
                         fieldType: FieldType.Object,
-                        fields: tableFields,
+                        fields: getTableFields(HeaderType.row, objectName),
                         visualizationHint: VisualizationHint.Vertical,
                     };
-                    newDefinitions = getFixedTableDefinitions(tableFields, HeaderType.column);
+                    definition = { ...definition, fields: getTableFields(HeaderType.column, FieldType.String) };
                 } else {
-                    const tableFields = getTableFields(HeaderType.column, FieldType.Object);
                     field = {
                         ...field,
                         fieldType: FieldType.Object,
-                        fields: tableFields,
+                        fields: getTableFields(HeaderType.column, objectName),
                         visualizationHint: VisualizationHint.Horizontal,
                     };
-                    newDefinitions = getFixedTableDefinitions(tableFields, HeaderType.row);
+                    definition = { ...definition, fields: getTableFields(HeaderType.row, FieldType.String) };
                 }
             }
 
             const expectedFields = mockFields.concat(field);
-            const expectedDefinitions = { ...mockDefinitions, ...newDefinitions };
+            const expectedDefinitions = { ...mockDefinitions, [objectName]: definition };
 
             const arg = { fieldKey, tableType, headerType };
-            const store = mockStore({ customModel: statesWithProject });
+            const store = mockStore({ customModel: statesWithProject, feature: { isOnPrem: false } });
             const expectedActions = [
                 {
                     type: addTableField.pending.type,
@@ -485,8 +433,12 @@ describe("customModel", () => {
             });
         });
 
-        it("should create renameField action", () => {
-            const renamedField: any = mockFields[0];
+        it.each([
+            ["rename field", 0],
+            ["rename dynamic table", 3],
+            ["rename fixed table", 4],
+        ])("should create renameField action (%s)", (_, fieldIndex: any) => {
+            const renamedField: any = mockFields[fieldIndex];
 
             // Rename labels.
             const updatedDocLabels = mockDocumentLabels.slice();
@@ -505,42 +457,64 @@ describe("customModel", () => {
             };
 
             // Rename fields.
-
             const expectedFields = [...mockFields];
-            const originFieldIndex = mockFields.findIndex((field) => field.fieldKey === renamedField.fieldKey);
-            const originField: any = mockFields[originFieldIndex];
+            const newObjectName = `${mockNewFieldName}_object`;
             const updatedField = {
-                ...originField,
+                ...renamedField,
+                ...(renamedField.itemType && { itemType: newObjectName }),
+                ...(renamedField.fields && {
+                    fields: renamedField.fields.map((field) => ({ ...field, fieldType: newObjectName })),
+                }),
                 fieldKey: mockNewFieldName,
             };
 
-            expectedFields.splice(0, 1, updatedField);
+            expectedFields.splice(fieldIndex, 1, updatedField);
+
+            // Rename definitions.
+            const expectedDefinitions = { ...mockDefinitions };
+            if (renamedField.itemType) {
+                expectedDefinitions[newObjectName] = {
+                    ...expectedDefinitions[renamedField.itemType],
+                    fieldKey: newObjectName,
+                };
+                delete expectedDefinitions[renamedField.itemType];
+            }
+            if (renamedField.fields) {
+                // Update fields and definition for fixed table.
+                const targetFieldType = renamedField.fields[0].fieldType;
+                expectedDefinitions[newObjectName] = {
+                    ...expectedDefinitions[targetFieldType],
+                    fieldKey: newObjectName,
+                };
+                delete expectedDefinitions[targetFieldType];
+            }
 
             const store = mockStore({
                 customModel: statesWithProject,
                 documents: { documents: mockDocuments },
+                feature: { isOnPrem: false },
             });
             const expectedActions = [
                 {
                     type: renameField.pending.type,
-                    meta: { arg: { fieldKey: renamedField.fieldKey, newName: mockNewFieldName } },
+                    meta: { arg: { fieldKey: mockFields[fieldIndex].fieldKey, newName: mockNewFieldName } },
                 },
                 {
                     type: renameField.fulfilled.type,
-                    payload: { fields: expectedFields, labels: expectedLabels },
+                    payload: { fields: expectedFields, labels: expectedLabels, definitions: expectedDefinitions },
                 },
             ];
             return store
-                .dispatch(renameField({ fieldKey: renamedField.fieldKey, newName: mockNewFieldName }))
+                .dispatch(renameField({ fieldKey: mockFields[fieldIndex].fieldKey, newName: mockNewFieldName }))
                 .then(() => {
                     expect(store.getActions()).toMatchObject(expectedActions);
                 });
         });
 
         it.each([
-            ["assign subtype to dynamic table", mockDynamicTableField, mockDynamicTableDefinition_0],
-            ["assign subtype to fixed row table", mockFixedRowTableField, mockFixedRowTableDefinition_0],
-            ["assign subtype to fixed column table", mockFixedColumnTableField, mockFixedColumnTableDefinition_0],
+            ["assign subtype to dynamic table", mockDynamicTableField, mockDynamicTableDefinition],
+            ["assign subtype to fixed row table", mockFixedRowTableField, mockFixedRowTableDefinition],
+            ["assign subtype to fixed column table", mockFixedColumnTableField, mockFixedColumnTableDefinition],
         ])("should create switchTableFieldsSubType action (%s)", (_, tableField: any, tableDefinition: any) => {
             const newSubType = FieldType.Number;
             const headerField = tableDefinition.fields[0];
@@ -599,7 +573,7 @@ describe("customModel", () => {
             const deletedField: any =
                 fieldLocation === FieldLocation.field
                     ? mockFixedRowTableField.fields[0]
-                    : mockFixedRowTableDefinition_0.fields[0];
+                    : mockFixedRowTableDefinition.fields[0];
 
             // Rename labels.
             const isTargetLabel = (label) =>
@@ -663,48 +637,28 @@ describe("customModel", () => {
             ["insert field", FieldLocation.field],
             ["insert definition", FieldLocation.definition],
         ])("should create insertTableField action (%s)", (_, fieldLocation: any) => {
-            jest.spyOn(uuid, "v4").mockReturnValue(mockFixedRowTableFieldUUID_0);
             const tableFieldKey = mockFixedRowTableField.fieldKey;
             const insertIndex = 1;
 
             const expectedFields = [...mockFields];
             const expectedDefinitions = { ...mockDefinitions };
-            const objectName = mockFixedRowTableFieldUUID_0;
+            const objectName = `${tableFieldKey}_object`;
             const insertField: any = {
                 fieldKey: mockNewFieldName,
                 fieldType: fieldLocation === FieldLocation.field ? objectName : FieldType.String,
                 fieldFormat: FieldFormat.NotSpecified,
             };
             const tableFieldIndex = mockFields.findIndex((field) => field.fieldKey === tableFieldKey);
-            const tableField: any = mockFields[tableFieldIndex];
 
             if (fieldLocation === FieldLocation.field) {
                 const insertedFields = (mockFields[tableFieldIndex] as any).fields.slice();
                 insertedFields.splice(insertIndex, 0, insertField);
                 const updatedTableField = { ...mockFields[tableFieldIndex], fields: insertedFields };
                 expectedFields.splice(tableFieldIndex, 1, updatedTableField);
-
-                const templateFieldType = tableField.fields[0].fieldType;
-                const definitionFieldsTemplate = expectedDefinitions[templateFieldType];
-                const insertDefinition: ObjectField = {
-                    fieldKey: objectName,
-                    fieldType: FieldType.Object,
-                    fields: definitionFieldsTemplate.fields,
-                    fieldFormat: FieldFormat.NotSpecified,
-                };
-                expectedDefinitions[objectName] = insertDefinition;
             } else {
-                const fieldDefinitionNames = tableField.itemType
-                    ? [tableField.itemType]
-                    : tableField.fields.map((field) => field.fieldType);
-
-                fieldDefinitionNames.forEach((name) => {
-                    const definition = { ...mockDefinitions[name] };
-                    const updatedFields = [...expectedDefinitions[name].fields];
-                    updatedFields.splice(insertIndex, 0, insertField);
-
-                    expectedDefinitions[name] = { ...definition, fields: updatedFields };
-                });
+                const insertedFields = mockDefinitions[objectName].fields.slice();
+                insertedFields.splice(insertIndex, 0, insertField);
+                expectedDefinitions[objectName] = { ...mockDefinitions[objectName], fields: insertedFields };
             }
 
             const store = mockStore({ customModel: statesWithProject });
@@ -732,7 +686,7 @@ describe("customModel", () => {
             const renamedField: any =
                 fieldLocation === FieldLocation.field
                     ? mockFixedRowTableField.fields[0]
-                    : mockFixedRowTableDefinition_0.fields[0];
+                    : mockFixedRowTableDefinition.fields[0];
 
             // Rename labels.
             const isTargetLabel = (label) =>
@@ -766,19 +720,12 @@ describe("customModel", () => {
                 expectedFields.splice(originTableFieldIndex, 1, { ...originTableField, fields: tableFields });
             } else {
                 // Update definitions.
-                const fieldDefinitionNames = originTableField.itemType
-                    ? [originTableField.itemType]
-                    : originTableField.fields.map((field) => field.fieldType);
-
-                fieldDefinitionNames.forEach((name) => {
-                    const definition = { ...mockDefinitions[name] };
-                    const updatedFields = expectedDefinitions[name].fields.map((field) => {
-                        return field.fieldKey === renamedField.fieldKey
-                            ? { ...field, fieldKey: mockNewFieldName }
-                            : field;
-                    });
-                    expectedDefinitions[name] = { ...definition, fields: updatedFields };
-                });
+                const objectName = originTableField.itemType || originTableField.fields[0].fieldType;
+                const definition = { ...mockDefinitions[objectName] };
+                const definitionFields = definition.fields.map((field) =>
+                    field.fieldKey === renamedField.fieldKey ? { ...field, fieldKey: mockNewFieldName } : field
+                );
+                expectedDefinitions[objectName] = { ...definition, fields: definitionFields };
             }
 
             const store = mockStore({
@@ -1028,6 +975,7 @@ describe("customModel", () => {
         it.each([
             ["deleteField", deleteField],
             ["deleteTableField", deleteTableField],
+            ["renameField", renameField],
             ["renameTableField", renameTableField],
         ])("should handle %s.fulfilled and .rejected", (_, action) => {
             // Test .fulfilled.
@@ -1044,23 +992,6 @@ describe("customModel", () => {
 
             // Test .rejected.
             state = reducer(statesWithProject, { type: action.rejected.type, payload: mockError });
-            expect(state.labelError).toBe(mockError);
-        });
-
-        it("should handle renameField.fulfilled and .rejected", () => {
-            // Test .fulfilled.
-            let state = reducer(
-                { ...statesWithProject, fields: [], labels: {}, definitions: {} },
-                {
-                    type: renameField.fulfilled.type,
-                    payload: { fields: mockFields, labels: mockLabels },
-                }
-            );
-            expect(state.fields).toEqual(mockFields);
-            expect(state.labels).toEqual(mockLabels);
-
-            // Test .rejected.
-            state = reducer(statesWithProject, { type: renameField.rejected.type, payload: mockError });
             expect(state.labelError).toBe(mockError);
         });
 
