@@ -123,18 +123,14 @@ export const withCustomModelLabel = (ImageMapComponent) => {
         }
 
         public componentDidUpdate(prevProps: any) {
-            const { currentDocument, labels, hoveredLabelName } = this.props;
-            if (prevProps.currentDocument !== currentDocument && currentDocument) {
-                this.setState({ showInlineLabelMenu: false });
-                this.clearSelectedFeatures();
-                this.clearLabels();
-                this.clearRegions();
-                if (labels[currentDocument.name]?.length > 0) {
-                    this.drawLabels(currentDocument.currentPage);
-                }
-            }
+            const { currentDocument, labels, hoveredLabelName, colorForFields } = this.props;
+            const shouldRedrawLabels =
+                currentDocument &&
+                (prevProps.currentDocument !== currentDocument ||
+                    prevProps.labels !== labels ||
+                    prevProps.colorForFields !== colorForFields);
 
-            if (prevProps.labels !== labels && currentDocument) {
+            if (shouldRedrawLabels) {
                 this.setState({ showInlineLabelMenu: false });
                 this.clearSelectedFeatures();
                 this.clearLabels();
