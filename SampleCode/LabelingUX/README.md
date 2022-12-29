@@ -131,26 +131,28 @@ If everything works as described above, you are ready to start labeling.
 ## Using Labeling UX
 
 (left pane, middle pane, right pane) introduction
+(canvas for rendering...)
+(label pane for rendering all fields and the label value...)
 
 To label a document consists of three main actions:
 
 - Creating fields
 - Specify the content with bounding boxes or region for a field
-- Assigning the specified bounding boxes or region to a field
+- Assigning the specified bounding boxes or region to a field or table cell
 
 In the this section, how each action could be performed with one or several approaches using Labeling UX application will be elaborated.
 
-Also, besides simple field labeling (i.e. field, selection mark and signature), what table labeling is and how table labeling can be performed is explained in this section as well.
+Notice that table labeling is more complex and will be explained in a separate topic at the end of this section.
 
-### Ways to specify bounding boxes or a region to a field or table cell
+### Ways to specify value or a region to a field or table cell
 
 With `ocr.json` provided for the document you would like to label, Labeling UX application is able to get the bounding box and the content value for all the text, selection marks and tables. There are several approaches to specify which bounding boxes or region in the document you would like to label.
 
-#### Specify bounding boxes
+#### Specify value through bounding boxes
 
 ##### Click on the text/selection marks
 
-You could click on the bounding box of the text (which should be with light-yellow background) or selection mark (which should be with pink border). The text being clicked should change into green background and the selection mark being clicked should be with pink background, which means it is selected.
+You could click on the bounding box of the text (which should be with light-yellow background) or selection mark (which should be with pink border). The text being clicked should change into green background while the selection mark being clicked should turn with pink background, which means it is selected.
 
 You could continue clicking on another bounding box to specify multiple words/selection marks in your selection. Notice that for selection marks, each selection marks field only allows single selection mark to be assigned.
 
@@ -196,7 +198,9 @@ In Labeling UX application, there are four types of field:
 - **Signature**: allow assigned with "Region"
 - **Table**: perform table labeling (table labeling will be explained in the next sub-section)
 
-There are two approaches to assign a field, as described below.
+There are two approaches to create a field, as described below.
+
+Notice that as mentioned earlier, since table field creation and table labeling is more complex and different from other labeling of other field type, it will be explained separately in its own sub-section.
 
 #### Create a new field by clicking on "+" button
 
@@ -214,39 +218,43 @@ This will not only create a new field but also assign the label you just select 
 
 [the gif]
 
-### Introduction of table field and how to create one
-
-Besides assigning value directly to a field as the value of the field. You can create a table field with the numbers of row and column that fit the content of your document and assign value to the table cell accordingly. There are two kinds of table: Fixed table and dynamic table, which suit for different scenarios.
-
-#### Fix table
-
-#### Dynamic table
-
 ### Assign label to field
 
 #### Directly click on the field in pop-up (not applicable for table labeling)
 
 #### Click on the field in the right label pane
 
-#### Assign label to a table cell
-
 ### Inspect and modify labels and fields
 
 #### Inspect text, signature, selection mark fields
 
-#### Inspect table fields
+#### Update a label
 
-#### Delete labels
+#### Delete label
 
 #### Rename/delete field
 
 #### Specify sub type of the field
+
+### Table field creation and table labeling
+
+Besides assigning value directly to a field as the value of the field. You can create a table field with the numbers of row and column that fit the content of your document and assign value to the table cell accordingly. There are two kinds of table: Fixed table and dynamic table, which suit for different scenarios.
+
+#### Create a fixed table
+
+If the table you would like to label is with fixed numbers of row and column, it is suitable to use fixed table.
+
+#### Create a dynamic table
 
 #### Modify the content of a table field
 
 ##### Insert and delete column/row
 
 ##### Rename column/row
+
+#### Assign label to a table cell
+
+#### Inspect table fields
 
 ##### Delete label for table cell
 
