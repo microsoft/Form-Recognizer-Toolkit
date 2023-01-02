@@ -65,6 +65,8 @@ In order to experience Labeling UX project, you will need to:
    - Corresponding `.ocr.json` files for these documents.
    - (Optional) If you already have the `.labels.json` files for corresponding documents or `fields.json` file for your labeled documents. You could add these files into `data` folder as well.
 
+Notice that (you should provide documents with similar format)
+
 > ---
 > **Note:**
 >
@@ -198,7 +200,7 @@ Notice that only one region can be assigned to a field or table cell.
 In order to label a document, you need to create label keys and assign the label value to a label key.
 In Labeling UX application, there are four types of label key:
 
-- **Field**: for string, number, date, time and integer (all text with light-yellow background)
+- **Field**: for string, number, date, time and integer
 - **Selection Mark**: allow assigned with a single selection mark (bounding box with pink border) or a region
 - **Signature**: allow assigned with "Region"
 - **Table**: perform table labeling (table labeling will be explained in the next sub-section)
@@ -207,7 +209,9 @@ There are two approaches to create a field, as described below.
 
 Notice that as mentioned earlier, since table field creation and table labeling is more complex and different from other labeling of other field type, it will be explained separately in its own sub-section.
 
-#### Create a new field by clicking on "+" button
+#### Create a new label key by clicking on "+" button
+
+The below action applies for label key of type "Field", "Selection mark" and "Signature", creation of label key of type "Table" will be explained in a separate sub-section below.
 
 At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
 
@@ -227,13 +231,25 @@ This will not only create a new label key but also assign the label value you ju
 
 After you have the label key created and label value specified, you can now assign the label value to the corresponding label key.
 
+The below is the applicable type of label value that can be assigned to each type of label key.
+
+- **Field**:
+  - Bounding boxes of text (with light-yellow background)
+  - Bounding boxes of selection mark (with pink border)
+  - Single draw region
+- **Selection Mark**:
+  - Single bounding box of selection mark (with pink border)
+  - Single draw region
+- **Signature**:
+  - Single draw region
+
 #### Directly click on the field in pop-up (not applicable for table labeling)
 
 After specifying label value through bounding boxes or region, a pop-up will be displayed next to the bounding boxes/region. Below the text field, a list of label keys should be displayed. Directly click on the label key you would like to assign the label value you just selected/drew to. After clicking on a label key, you should see the label value rendered in label pane.
 
 [the gif for assigning label value to a label key using pop-up]
 
-Notice that the list will filter out all the non-applicable label key. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with bounding box of text, since these three types of label key can not be assigned with text.
+Notice that the list of label key in pop-up would filter out all the non-applicable label keys. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with bounding box of text, since these three types of label key can not be assigned with text.
 
 #### Click on the field in the right label pane
 
@@ -243,39 +259,171 @@ After specifying label value, you can click on the label key you would like to a
 
 Notice that if the label key you click on is not applicable to the label value you specified. There will be a "Label assignment warning" message modal which provide simple instruction on what label value is applicable for this label key.
 
-### Inspect and modify labels and fields
+### Inspect and modify labels
 
-#### Inspect text, signature, selection mark fields
+After assigning label, there will be times when you want to inspect labels and possibly modify the labels you assigned. In this section, how labels can be inspected and modified is being described.
 
-#### Update a label
+#### Inspect label of type "field", "signature", and "selection mark"
 
-#### Delete label
+To inspect a label of type "field", "signature", and "selection mark", simply hover on the label key in label pane. The corresponding label value will be highlighted with thicker border. You can also tell the value by the different color for each label key.
 
-#### Rename/delete field
+[the gif for hovering on label key]
 
-#### Specify sub type of the field
+#### Update label value to a label key
 
-### Table field creation and table labeling
+(to correct, if using different, will be overwrite)
+For "field" type label key which is using bounding boxes to specify label value, you are able to add more label value to a label key simply by selecting additional text with bounding boxes and assign to the label key through clicking the label key in pop-up or label pane. This action will not overwrite the label value you previously assigned but add the newly-selected value and merge with the original one.
 
-Besides assigning value directly to a field as the value of the field. You can create a table field with the numbers of row and column that fit the content of your document and assign value to the table cell accordingly. There are two kinds of table: Fixed table and dynamic table, which suit for different scenarios.
+[the gif for add more label value to a label key]
 
-#### Create a fixed table
+#### Delete label value
 
-If the table you would like to label is with fixed numbers of row and column, it is suitable to use fixed table.
+If you would like re-select/re-draw a label value, you can delete the label value you originally assigned to a label key simply by clicking on the "x" icon on the right of label value.
 
-#### Create a dynamic table
+[the gif for label value deletion]
 
-#### Modify the content of a table field
+#### Rename a label key
 
-##### Insert and delete column/row
+This action applies for all types of label key, which are "Field", "Selection mark", "Signature" and "Table".
+
+To rename a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Rename" option. Click on the "Rename" option and entering new name for label key. (Hit "Esc" if you don't want to rename the label key) After entering the new name, hit "Enter", then a confirmation modal will be displayed. After clicking "Yes" button in the modal, and the label key should be display with the new name.
+
+[the gif for renaming a label key]
+
+#### Delete label key
+
+This action applies for all types of label key, which are "Field", "Selection mark", "Signature" and "Table".
+
+To delete a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Delete" option. Click on "Delete" and a confirmation modal will be displayed.
+
+> --
+> **Notice that deleting a label key will also delete all the label value assigned to this label key in all your documents.**
+>
+> ---
+
+[the gif for deleting a label key]
+
+#### Assign sub type of the label key
+
+This action applies for only label key of type "Field". For label key with type "Selection mark", "Signature" and "Table". "Sub type" option will be disabled.
+
+To assign sub type for a label key. Click on the three-dot icon on the right of label key and a menu will show with "Sub type" option. Hover on "Sub type" and a menu of all sub type option will be displayed. Click on the sub type that suit your label value.
+
+[the gif for assigning sub type for a label key]
+
+### Table labeling
+
+With the content above, we have discussed how label of type "Field", "Selection mark" and "Signature" has being covered. In this section, we will discuss a separate topic we have mentioned several times earlier, which is table labeling.
+
+Besides assigning label value directly to a label key. You can create a table label key with rows and columns that fit the content of your document and assign label values to each table cell accordingly.
+
+#### Type of table field
+
+There are a few terms you need to know before start creating a label key of type "Table", which will be elaborated below.
+
+##### Fixed table v.s. Dynamic table
+
+If the table you would like to label is with fixed numbers of row and column with their name of each column and row being specified, it is suitable to use fixed table.
+
+[the screen shot for a fixed table example]
+
+Otherwise, if the table you would like to label is dynamic rows, for example, a list of purchase item with their own product name, quantity and total price, it is suitable to use fixed table.
+
+[the screen shot for a dynamic table example]
+
+##### What does "header type" means?
+
+(question: difference between fixed row and fixed column)
+
+#### Creating a "Table" label field
+
+Click on the "+" button at the top of label pane and select table and select "Table". A "Create table field" modal will be display. Enter the name of this label field (label key), which will be the name of this table. and select the table type, header type(if it is a fixed table). Then click "Create" button on the bottom-right corner of the modal. The label pane should now display the newly created table label key.
+
+[the gif for creating a table label field]
+
+#### Open and close table label pane
+
+To open the table label pane for a created label key with type of "Table", click on the table label key in label pane.
+
+To close the table label pane, click on the "x" icon on the top-right corner of table label pane.
+
+[the gif of opening and close table label pane]
+
+#### Modify the column/row of a table field
+
+After you created a label key of type "Table", open the table label pane, the default content of the table field should be displayed. Next we will introduce how you could modify the table into the one that suit your usage.
 
 ##### Rename column/row
 
+Click on the name of column or row and a option menu should be displayed. Select "Rename" and type in the new name then hit "Enter". (Hit "Esc" if you do not want to rename the column/row) A confirmation modal should be displayed. After clicking on "Yes", the column/row should be renamed.
+
+[the gif for renaming column and row in a default fixed table]
+
+##### Insert column/row and add row
+
+For a fixed table, you can insert a column/row, whereas for a dynamic table, you can insert a column and add a rows at the bottom of the table.
+
+The newly inserted column/row will be located on the right/directly below the column/row you clicked on, while the newly added row will be appended at the bottom of the table.
+
+To insert a row/column, click on the name of column/row or and select "Insert" in menu options. Type in the name for the inserting column/row and hit "Enter". (Hit "Esc" if you do not want to insert a new column/row.) The new column should be created with the name you assigned.
+
+[the gif for inserting row and column in a fixed table]
+
+To add a new row in dynamic table, simply click on the "+" icon at the bottom-left corner of the table.
+
+[the gif for adding a row in dynamic table]
+
+##### Delete column/row
+
+For a fixed table, you can delete a column/row, whereas for a dynamic table, you can delete a row.
+
+To delete a row/column, click on the name of column/row or and select "Delete" in menu options. A confirmation modal should be displayed. After clicking on "Yes", the column/row should be deleted.
+
+[the gif for deleting a column/row in a fixed table]
+
+##### Assign sub type for column/row
+
+For a fixed table with header type of column, you can assign sub type for each column, whereas for a fixed table with header type of row, you can assign sub type for each row. For a dynamic table, you can assign sub type for each column.
+
+To delete a row/column, click on the name of column/row or and hover on "Sub type" in menu options. The sub type options will be displayed, and you could select the sub type you would like to assign for this column/row.
+
 #### Assign label value to a table cell
 
-#### Inspect table fields
+For any table cell, we can assign the value of text with bounding boxes, selection marks with bounding boxes, or draw region.
 
-##### Delete label value for table cell
+With the table field content opened, specify the label value as described earlier with bounding boxes or drawn region on your document, then click on the table cell of which the column and the row you would like to assign the label value to.
+
+[the gif of assign label value to a label cell]
+
+#### Inspect the label value of a table cell
+
+To inspect a label value for a table cell, hover on the table cell you would like to inspect in table label pane. The corresponding label value will be highlighted with thicker border on your document. 
+
+[the gif for hovering on table cell to inspect table label value]
+
+#### Modify label value of a table cell
+
+After assigning label value to a table cell, similar to modifying label value of label key of type "Field", "Selection mark" and "Signature", you can modify the label value by either updating or deleting the label value.
+
+##### Update label value to a table cell
+
+If you have bounding boxes of value assigned to a table cell, you could select more bounding boxes and their value to this table cell.
+
+If it is a table cell with value specified by bounding boxes and you are now specifying a value with region drawn, the original value from bounding boxes will be overwritten with the new drawing region.
+
+If it is a table cell with value specified by region and you are  now specifying a value with bounding boxes, the original drawing region value will be overwritten with the new value of the new value from bounding box.
+
+[the git for update label value to a table cell]
+
+##### Delete the label value for a table cell
+
+If you would like to delete the label value for a table cell, hover on the table cell and there should be a "x" icon displayed on the top-right corner of the table cell. Click on the icon to delete the label value for this table cell.
+
+[the gif for delete label value for a table cell]
+
+### Continue labeling another document
+
+After finishing labeling for one document, you could now switch to another document and label the new document assigning label value to all the label keys you have created when labeling first document.
 
 ---
 
