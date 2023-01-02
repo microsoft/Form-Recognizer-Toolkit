@@ -16,6 +16,8 @@ You are welcome to bring up any encountered issues. Microsoft Azure Form Recogni
 
 (node version, typeScript version, VS code extension(can ref onBoarding guide and FOTT))
 
+### (Clone the repository and switch to Sample Label UX)
+
 ### Install node packages
 
 #### Install server's node packages
@@ -133,22 +135,25 @@ If everything works as described above, you are ready to start labeling.
 (left pane, middle pane, right pane) introduction
 (canvas for rendering...)
 (label pane for rendering all fields and the label value...)
+[the screenshot of three pane]
+
+(key value pair relationship for field and label explain)
 
 To label a document consists of three main actions:
 
-- Creating fields
-- Specify the content with bounding boxes or region for a field
-- Assigning the specified bounding boxes or region to a field or table cell
+- Creating label key
+- Specify the label value with bounding boxes or region
+- Assigning the specified label value to a label key
 
 In the this section, how each action could be performed with one or several approaches using Labeling UX application will be elaborated.
 
 Notice that table labeling is more complex and will be explained in a separate topic at the end of this section.
 
-### Ways to specify value or a region to a field or table cell
+### Ways to specify label value
 
-With `ocr.json` provided for the document you would like to label, Labeling UX application is able to get the bounding box and the content value for all the text, selection marks and tables. There are several approaches to specify which bounding boxes or region in the document you would like to label.
+With `ocr.json` provided for the document you would like to label, Labeling UX application is able to get the bounding boxes and the content value for all the text, selection marks and tables. There are several approaches to specify label value in your document.
 
-#### Specify value through bounding boxes
+#### Specify label value through bounding boxes
 
 ##### Click on the text/selection marks
 
@@ -168,7 +173,7 @@ While selecting multiple bounding boxes for text, besides clicking on all boundi
 
 ##### Press "Shift" and drag the cursor to perform group selection
 
-To perform a group selection, press "Shift" key and drag the cursor to specify the area in which all text you would like to selected.
+To perform a group selection, press "Shift" key and drag the "+" cursor to specify the area in which all text you would like to selected.
 
 You can also press "Shift" key and drag the cursor to the area of selected bounding box to perform unselecting.
 
@@ -176,7 +181,7 @@ You can also press "Shift" key and drag the cursor to the area of selected bound
 
 #### Use "Region" tool to specify an area
 
-Click on the "Region" button on the top-left corner of middle canvas pane to enter region-drawing mode. Drag the cursor on the document to draw the region you would like to label.
+Click on the "Region" button on the top-left corner of middle canvas pane to enter region-drawing mode. Drag the "+" cursor on the document to draw the region you would like to label.
 
 To modify the area of a drawn region, hover on the corner of drawn region and drag the vertex.
 
@@ -188,10 +193,10 @@ Notice that only one region can be assigned to a field or table cell.
 
 [the gif]
 
-### How to create a field?
+### How to create a label key?
 
-In order to label a document, we need to create fields and assign the content value as well as the bounding box/region to it.
-In Labeling UX application, there are four types of field:
+In order to label a document, you need to create label keys and assign the label value to a label key.
+In Labeling UX application, there are four types of label key:
 
 - **Field**: for string, number, date, time and integer (all text with light-yellow background)
 - **Selection Mark**: allow assigned with a single selection mark (bounding box with pink border) or a region
@@ -204,7 +209,7 @@ Notice that as mentioned earlier, since table field creation and table labeling 
 
 #### Create a new field by clicking on "+" button
 
-At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of field you would like to create. Then, type the name of the field and hit "Enter". The field should now be created and displayed on the label pane.
+At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
 
 [the gif]
 
@@ -212,17 +217,31 @@ At the top label pane, which is the right pane of the application, there is a "+
 
 Note: This approach is not applicable for table labeling.
 
-After selecting bounding boxes or finishing drawing a region, a pop-up will be displayed next to the bounding boxes/region. Enter the name of the field in the text input area of the pop-up and click on the type of field you would like to create.
+After selecting bounding boxes or finishing drawing a region, a pop-up will be displayed next to the bounding boxes/region. Enter the name of the label key in the text field of the pop-up and click on the type of label key you would like to create.
 
-This will not only create a new field but also assign the label you just select to this newly created field, as shown in the GIF below.
+This will not only create a new label key but also assign the label value you just selected to this newly created label key, as shown in the GIF below.
 
 [the gif]
 
 ### Assign label to field
 
+After you have the label key created and label value specified, you can now assign the label value to the corresponding label key.
+
 #### Directly click on the field in pop-up (not applicable for table labeling)
 
+After specifying label value through bounding boxes or region, a pop-up will be displayed next to the bounding boxes/region. Below the text field, a list of label keys should be displayed. Directly click on the label key you would like to assign the label value you just selected/drew to. After clicking on a label key, you should see the label value rendered in label pane.
+
+[the gif for assigning label value to a label key using pop-up]
+
+Notice that the list will filter out all the non-applicable label key. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with bounding box of text, since these three types of label key can not be assigned with text.
+
 #### Click on the field in the right label pane
+
+After specifying label value, you can click on the label key you would like to assign the label value to in the label pane. After clicking on a label key, you should see the label value rendered in label pane.
+
+[the gif for assigning label value by click on label key in label pane]
+
+Notice that if the label key you click on is not applicable to the label value you specified. There will be a "Label assignment warning" message modal which provide simple instruction on what label value is applicable for this label key.
 
 ### Inspect and modify labels and fields
 
@@ -252,11 +271,11 @@ If the table you would like to label is with fixed numbers of row and column, it
 
 ##### Rename column/row
 
-#### Assign label to a table cell
+#### Assign label value to a table cell
 
 #### Inspect table fields
 
-##### Delete label for table cell
+##### Delete label value for table cell
 
 ---
 
