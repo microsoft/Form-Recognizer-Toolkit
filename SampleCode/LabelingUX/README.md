@@ -8,15 +8,30 @@ You are welcome to bring up any encountered issues. Microsoft Azure Form Recogni
 
 ### Feature preview
 
-[the gif for overall labeling process]
+Labeling UX provide a user-friendly tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can also label a table with customized name of every column/row.
+
+[the gif for overall labeling process, including creating label key, assign label to different type of label key, label value with region, table labeling]
 
 ## Getting Started
 
 ### Prerequisites
 
+To run Labeling UX application, it requires:
+
+(**to confirm)
+
+- NodeJS version
+- TypeScript version
+- Git
+- Visual Studio Code is recommended with following extension
+
 (node version, typeScript version, VS code extension(can ref onBoarding guide and FOTT))
 
-### (Clone the repository and switch to Sample Label UX)
+### Clone the repository to your local machine
+
+```sh
+git clone https://github.com/microsoft/Form-Recognizer-Toolkit.git
+```
 
 ### Install node packages
 
@@ -25,6 +40,7 @@ You are welcome to bring up any encountered issues. Microsoft Azure Form Recogni
 Run the below command under root folder to install node packages for Server
 
 ```sh
+cd Form-Recognizer-Toolkit/SampleCode/LabelingUX
 npm i
 ```
 
@@ -48,8 +64,9 @@ npm run dev
 
 You should see "Compiled successfully!" in your CLI, and the application should automatically open in your default browser with URL : <http://localhost:3000/label>
 
-Now, Labeling UX application should look like this:
-[The screenshot]
+Now, since we have not set up input data, the Labeling UX application should look like this:
+
+[The screenshot of empty labeling UX application]
 
 ---
 
@@ -134,20 +151,29 @@ If everything works as described above, you are ready to start labeling.
 
 ## Using Labeling UX
 
-(left pane, middle pane, right pane) introduction
-(canvas for rendering...)
-(label pane for rendering all fields and the label value...)
-[the screenshot of three pane]
+Before starting the detailed tutorial regarding how to label your document. Let's have a quick tour of the Labeling UX application. Labeling UX application basically consist of three pane:
 
-(key value pair relationship for field and label explain)
+- **Label Canvas** (Middle part of application)
+  This is where you perform specifying label value and inspect label value of your document.
+  On the top-left corner of label canvas, there is a "Region" button, which provide you to draw region for specifying label value of an area in the document.
+  On the top right corner, there is a layer filter icon which allows you to toggle "Text", "Table" and "Selection mark" layer.
+  On the bottom-center, there is a page control tool which allow you to switch to a different page of document.
+  On the bottom-right corner, there is a set of tool for you to zoom in/zoom-out/zoom to fit and rotate the document.
+- **Document gallery** (left pane)
+  This is where all the thumbnails of your documents would be displayed. By clicking on thumbnail of document, you can switch the document rendered in the label canvas.
+  While hovering on the thumbnail of your document, a "Delete" icon would be displayed. If you would like to delete the document, you could click on the icon. Notice that the document and its corresponding `ocr.json` and `labels.json` will be deleted as well.
+- **Label Pane** (right pane)
+  This is where you can create label key and view all the label key you have created as well as assigning label value to a label key or inspect the label value of a label key.
 
-To label a document consists of three main actions:
+[the screenshot of three pane and framed there location]
+
+To label a document is to assign key-value pairs for a document. For example, if there is text `Due date: 12/15/2021` in your document, you might want to create a label key `Due date` and assign label value `12/15/2021` to it. With that said, to label a document consists of three main actions:
 
 - Creating label key
-- Specify the label value with bounding boxes or region
+- Specify the label value
 - Assigning the specified label value to a label key
 
-In the this section, how each action could be performed with one or several approaches using Labeling UX application will be elaborated.
+In this section, how each action could be performed with one or several approaches using Labeling UX application will be elaborated.
 
 Notice that table labeling is more complex and will be explained in a separate topic at the end of this section.
 
@@ -165,13 +191,13 @@ You could continue clicking on another bounding box to specify multiple words/se
 
 To unselect, simply click on a selected bounding box (with background in green or pink) again.
 
-[the gif]
+[the gif for selecting bounding boxes and unselect via clicking bounding box, for both text and selection marks]
 
 ##### Perform multiple bounding box selection by mouse down and swiping through the text
 
 While selecting multiple bounding boxes for text, besides clicking on all bounding boxes one by one, we can also perform multiple selection by continuous mouse down and swipe through all the text you want to select.
 
-[the gif]
+[the gif of swiping to specify label value]
 
 ##### Press "Shift" and drag the cursor to perform group selection
 
@@ -179,7 +205,7 @@ To perform a group selection, press "Shift" key and drag the "+" cursor to speci
 
 You can also press "Shift" key and drag the cursor to the area of selected bounding box to perform unselecting.
 
-[the gif]
+[the gif of using shift key for group selection]
 
 #### Use "Region" tool to specify an area
 
@@ -193,7 +219,7 @@ To leave region-drawing mode, click on the "Region" button again.
 
 Notice that only one region can be assigned to a field or table cell.
 
-[the gif]
+[the gif for using drawing region to specify a label value]
 
 ### How to create a label key?
 
@@ -215,7 +241,7 @@ The below action applies for label key of type "Field", "Selection mark" and "Si
 
 At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
 
-[the gif]
+[the gif for creating new label key with "+" icon]
 
 #### Create a field and assign label through pop-up after label selection
 
@@ -225,7 +251,7 @@ After selecting bounding boxes or finishing drawing a region, a pop-up will be d
 
 This will not only create a new label key but also assign the label value you just selected to this newly created label key, as shown in the GIF below.
 
-[the gif]
+[the gif for creating label key in the pop up]
 
 ### Assign label to field
 
@@ -271,8 +297,11 @@ To inspect a label of type "field", "signature", and "selection mark", simply ho
 
 #### Update label value to a label key
 
-(to correct, if using different, will be overwrite)
 For "field" type label key which is using bounding boxes to specify label value, you are able to add more label value to a label key simply by selecting additional text with bounding boxes and assign to the label key through clicking the label key in pop-up or label pane. This action will not overwrite the label value you previously assigned but add the newly-selected value and merge with the original one.
+
+If a label key is assigned with value specified by bounding boxes and you are now specifying a value with region drawn, the original value from bounding boxes will be overwritten with the new drawing region.
+
+If a label key is assigned with value specified by region and you are now specifying a value with either another drawn region or bounding boxes, the original drawn region value will be overwritten with the new value of the new value from bounding box.
 
 [the gif for add more label value to a label key]
 
@@ -397,7 +426,7 @@ With the table field content opened, specify the label value as described earlie
 
 #### Inspect the label value of a table cell
 
-To inspect a label value for a table cell, hover on the table cell you would like to inspect in table label pane. The corresponding label value will be highlighted with thicker border on your document. 
+To inspect a label value for a table cell, hover on the table cell you would like to inspect in table label pane. The corresponding label value will be highlighted with thicker border on your document.
 
 [the gif for hovering on table cell to inspect table label value]
 
@@ -411,7 +440,7 @@ If you have bounding boxes of value assigned to a table cell, you could select m
 
 If it is a table cell with value specified by bounding boxes and you are now specifying a value with region drawn, the original value from bounding boxes will be overwritten with the new drawing region.
 
-If it is a table cell with value specified by region and you are  now specifying a value with bounding boxes, the original drawing region value will be overwritten with the new value of the new value from bounding box.
+If it is a table cell with value specified by region and you are now specifying a value with either bounding boxes or newly drawn region, the original drawn region will be overwritten with the new value of the new value from bounding box.
 
 [the git for update label value to a table cell]
 
@@ -429,7 +458,8 @@ After finishing labeling for one document, you could now switch to another docum
 
 ## What you will get after finish labeling in Labeling UX application
 
-(explain what fields.json and labels json is)
+After finishing labeling all your documents. There should be `labels.json` for each document you have labeled. `labels.json` stores the coordinates of and the text value of each label as well as the corresponding label key for each label value.
+Also, there should be a `fields.json` file. Which store the definition of all the label keys you created for labeling.
 
 ```markdown
 SampleLabelingUX
@@ -449,6 +479,8 @@ SampleLabelingUX
 │
 └───Client
 ```
+
+With all `labels.json` files and a `fields.json` file, your label result will be stored completely. You can use these files to further train a model or start labeling with a different set of documents and visit this set of label result later again.
 
 ---
 
