@@ -16,11 +16,11 @@ Labeling UX provide a user-friendly web application tool for you to label your d
 
 To get started, you would need to clone the repo and run the application on your local machine. Also, you would need to set up input data before you could start labeling.
 
-### Run Sample Label UX application
+### Run Labeling UX application
 
 #### Prerequisites
 
-Running Sample Labeling UX application requires [NodeJS and NPM](https://github.com/nodejs/Release).
+Running Labeling UX application requires [NodeJS and NPM](https://github.com/nodejs/Release).
 
 Required version of NodeJS : ^12.22.0 || ^14.17.0 || ^16.10.0 || >=17.0.0
 
@@ -112,7 +112,7 @@ SampleLabelingUX
 
 #### What you should see after successfully setting up input data
 
-After setting up input data, refresh the application webpage and you should see Sample Labeling UX application similar to the screenshot below, with thumbnails of your documents in the left pane and the first document in the canvas of middle pane.
+After setting up input data, refresh the application webpage and you should see Labeling UX application similar to the screenshot below, with thumbnails of your documents in the left pane and the first document in the canvas of middle pane.
 
 [The git for switch between document]
 
