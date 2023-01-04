@@ -21,6 +21,7 @@ To get started, you would need to clone the repo and run the application on your
 #### Prerequisites
 
 Running Sample Labeling UX application requires [NodeJS and NPM](https://github.com/nodejs/Release).
+
 Required version of NodeJS : ^12.22.0 || ^14.17.0 || ^16.10.0 || >=17.0.0
 
 For development, it is suggested to use TypeScript 4.7.4.
@@ -60,7 +61,7 @@ cd ..
 npm run dev
 ```
 
-You should see "Compiled successfully!" in your CLI, and the application should automatically open in your default browser with URL : <http://localhost:3000/label>
+You should see Compiled successfully!" in your CLI, and the application should automatically open in your default browser with URL : <http://localhost:3000/label>
 
 Now, since we have not set up input data, the Labeling UX application should look like this:
 
@@ -80,16 +81,11 @@ In order to experience Labeling UX project, you will need to:
    - Corresponding `.ocr.json` files for these documents.
    - (Optional) If you already have the `.labels.json` files for corresponding documents or `fields.json` file for your labeled documents. You could add these files into `data` folder as well.
 
-Notice that (you should provide documents with similar format)
-
-> ---
 > **Note:**
 >
 > - **You will need to provide `.ocr.json` files for corresponding documents to start labeling.**
   If you don't have `.ocr.json` files for the documents, check out the instruction at the end of this README -- "How to create `.ocr.json` file for your documents?".
 > - `.labels.json` files and `fields.json` file will be automatically generated when you start labeling your documents.
->
-> ---
 
 #### Input data illustration
 
@@ -120,7 +116,6 @@ After setting up input data, refresh the application webpage and you should see 
 
 [The git for switch between document]
 
-> --
 > **Note:**
 >
 > If you provide the correct corresponding `.ocr.json` files for your documents, your document rendered in the middle canvas pane should include:
@@ -128,20 +123,16 @@ After setting up input data, refresh the application webpage and you should see 
 > - Light-yellow background for all the text in your documents
 > - Table icon on the top-left corner for each table in your documents
 > - Pink border for all the selection marks in your documents
->
-> ---
 
 You should be able to toggle the layer filter to hide/show different layers as shown below.
 
 [toggle filter gif]
 
->--
+
 > **Reminder:**
 >
 > If you have added `ocr.json` file for your document, yet you are not able to see the light-yellow background for all the text nor tables icon on each table of your documents. Please check the naming for your `ocr.json` file. It should be **`<document_name>.<document_extension>.ocr.json`**. For example:
 > The name of `ocr.json` file for document named **`invoiceA.pdf`** should be **`invoiceA.pdf.ocr.json`**
->
->---
 
 If everything works as described above, you are ready to start labeling.
 
@@ -323,10 +314,7 @@ This action applies for all types of label key, which are "Field", "Selection ma
 
 To delete a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Delete" option. Click on "Delete" and a confirmation modal will be displayed.
 
-> --
 > **Notice that deleting a label key will also delete all the label value assigned to this label key in all your documents.**
->
-> ---
 
 [the gif for deleting a label key]
 
