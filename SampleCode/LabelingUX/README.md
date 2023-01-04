@@ -2,40 +2,38 @@
 
 ## Introduction
 
-This open-source project aims to provide a sample template for data labeling.Users could implement other features based on this project, e.g., uploading data, or modifying the UI.
+This open-source project aims to provide a sample template for data labeling. Users could implement other features based on this project, e.g., uploading data, or modifying the UI.
 
 You are welcome to bring up any encountered issues. Microsoft Azure Form Recognizer team would update the source code periodically.
 
 ### Feature preview
 
-Labeling UX provide a user-friendly tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can also label a table with customized name of every column/row.
+Labeling UX provide a user-friendly web application tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can label a table with customized name of every column/row as well.
 
 [the gif for overall labeling process, including creating label key, assign label to different type of label key, label value with region, table labeling]
 
 ## Getting Started
 
-### Prerequisites
+To get started, you would need to clone the repo and run the application on your local machine. Also, you would need to set up input data before you could start labeling.
 
-To run Labeling UX application, it requires:
+### Run Sample Label UX application
 
-(**to confirm)
+#### Prerequisites
 
-- NodeJS version
-- TypeScript version
-- Git
-- Visual Studio Code is recommended with following extension
+Running Sample Labeling UX application requires [NodeJS and NPM](https://github.com/nodejs/Release).
+Required version of NodeJS : ^12.22.0 || ^14.17.0 || ^16.10.0 || >=17.0.0
 
-(node version, typeScript version, VS code extension(can ref onBoarding guide and FOTT))
+For development, it is suggested to use TypeScript 4.7.4.
 
-### Clone the repository to your local machine
+#### Clone the repository to your local machine
 
 ```sh
 git clone https://github.com/microsoft/Form-Recognizer-Toolkit.git
 ```
 
-### Install node packages
+#### Install node packages
 
-#### Install server's node packages
+##### Install server's node packages
 
 Run the below command under root folder to install node packages for Server
 
@@ -44,7 +42,7 @@ cd Form-Recognizer-Toolkit/SampleCode/LabelingUX
 npm i
 ```
 
-#### Install client's node packages
+##### Install client's node packages
 
 Run the command below to install node packages for Client
 
@@ -53,7 +51,7 @@ cd Client
 npm i
 ```
 
-### Start the application
+#### Start the application
 
 Switch back to root folder and start the server at port 4000, the client application at port 3000
 
@@ -66,11 +64,11 @@ You should see "Compiled successfully!" in your CLI, and the application should 
 
 Now, since we have not set up input data, the Labeling UX application should look like this:
 
-[The screenshot of empty labeling UX application]
+[The screenshot of empty labeling UX application with no document reminder modal]
 
 ---
 
-## Setting up input data
+### Setting up input data
 
 **All the labeling data will be read from and write into `Server/data`.**
 
@@ -93,7 +91,7 @@ Notice that (you should provide documents with similar format)
 >
 > ---
 
-### Input data illustration
+#### Input data illustration
 
 The input data should be similar as below:
 
@@ -116,7 +114,7 @@ SampleLabelingUX
 └───Client
 ```
 
-### What you should see after successfully setting up input data
+#### What you should see after successfully setting up input data
 
 After setting up input data, refresh the application webpage and you should see Sample Labeling UX application similar to the screenshot below, with thumbnails of your documents in the left pane and the first document in the canvas of middle pane.
 
