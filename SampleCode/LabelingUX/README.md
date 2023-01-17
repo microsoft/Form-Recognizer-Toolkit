@@ -73,13 +73,11 @@ Now, since we have not set up input data, the Labeling UX application should loo
 
 **All the labeling data will be read from and write into `Server/data`.**
 
-In order to experience Labeling UX project, you will need to:
+In order to experience Labeling UX project, you will need to add the files mentioned below in `Server/data` folder:
 
-1. Create a folder named `data` under `Server` folder.
-2. Inside `data` folder, add:
-   - Documents you would like to label. (Supported types of document for labeling: PDF, JPG, JPEG, PNG, TIFF, TIF)
-   - Corresponding `.ocr.json` files for these documents.
-   - (Optional) If you already have the `.labels.json` files for corresponding documents or `fields.json` file for your labeled documents. You could add these files into `data` folder as well.
+- Documents you would like to label. (Supported types of document for labeling: PDF, JPG, JPEG, PNG, TIFF, TIF)
+- Corresponding `.ocr.json` files for these documents.
+- (Optional) If you already have the `.labels.json` files for corresponding documents or `fields.json` file for your labeled documents. You could add these files into `data` folder as well.
 
 > **Note:**
 >
