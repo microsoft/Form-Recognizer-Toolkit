@@ -342,7 +342,7 @@ If the table you would like to label is with fixed numbers of row and column wit
 
 [the screen shot for a fixed table example]
 
-Otherwise, if the table you would like to label is dynamic rows, for example, a list of purchase item with their own product name, quantity and total price, it is suitable to use fixed table.
+Otherwise, if the table you would like to label is dynamic rows, for example, a list of purchase item with their own product name, quantity and total price, it is suitable to use dynamic table.
 
 [the screen shot for a dynamic table example]
 
@@ -376,7 +376,7 @@ Click on the name of column or row and a option menu should be displayed. Select
 
 ##### Insert column/row and add row
 
-For a fixed table, you can insert a column/row, whereas for a dynamic table, you can insert a column and add a rows at the bottom of the table.
+For a fixed table, you can insert a column/row, whereas for a dynamic table, you can insert a column and add a row at the bottom of the table.
 
 The newly inserted column/row will be located on the right/directly below the column/row you clicked on, while the newly added row will be appended at the bottom of the table.
 
@@ -390,7 +390,7 @@ To add a new row in dynamic table, simply click on the "+" icon at the bottom-le
 
 ##### Delete column/row
 
-For a fixed table, you can delete a column/row, whereas for a dynamic table, you can delete a row.
+For a fixed table, you can delete a column/row, whereas for a dynamic table, you can delete a column.
 
 To delete a row/column, click on the name of column/row or and select "Delete" in menu options. A confirmation modal should be displayed. After clicking on "Yes", the column/row should be deleted.
 
@@ -400,7 +400,7 @@ To delete a row/column, click on the name of column/row or and select "Delete" i
 
 For a fixed table with header type of column, you can assign sub type for each column, whereas for a fixed table with header type of row, you can assign sub type for each row. For a dynamic table, you can assign sub type for each column.
 
-To delete a row/column, click on the name of column/row or and hover on "Sub type" in menu options. The sub type options will be displayed, and you could select the sub type you would like to assign for this column/row.
+To assign sub type, click on the name of column/row or and hover on "Sub type" in menu options. The sub type options will be displayed, and you could select the sub type you would like to assign for this column/row.
 
 #### Assign label value to a table cell
 
