@@ -10,7 +10,8 @@ You are welcome to bring up any encountered issues. Microsoft Azure Form Recogni
 
 Labeling UX provide a user-friendly web application tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can label a table with customized name of every column/row as well.
 
-[the gif for overall labeling process, including creating label key, assign label to different type of label key, label value with region, table labeling]
+
+![Labeling UX_feature preview](https://user-images.githubusercontent.com/73906265/213135367-01cdfb79-f60a-45f2-86e3-cba2228452cf.gif)
 
 ## Getting Started
 
@@ -65,7 +66,7 @@ You should see Compiled successfully!" in your CLI, and the application should a
 
 Now, since we have not set up input data, the Labeling UX application should look like this:
 
-[The screenshot of empty labeling UX application with no document reminder modal]
+![Labeling UX_before set up labeling data](https://user-images.githubusercontent.com/73906265/213135625-ebf26724-f9aa-4f5b-a77d-826121f7fb15.png)
 
 ---
 
@@ -112,7 +113,7 @@ SampleLabelingUX
 
 After setting up input data, refresh the application webpage and you should see Labeling UX application similar to the screenshot below, with thumbnails of your documents in the left pane and the first document in the canvas of middle pane.
 
-[The git for switch between document]
+![Labeling UX_switch between documents](https://user-images.githubusercontent.com/73906265/213135758-6fbdf121-36c0-4388-aad2-e99afca94d22.gif)
 
 > **Note:**
 >
@@ -124,8 +125,7 @@ After setting up input data, refresh the application webpage and you should see 
 
 You should be able to toggle the layer filter to hide/show different layers as shown below.
 
-[toggle filter gif]
-
+![Labeling UX_toggle layer filter](https://user-images.githubusercontent.com/73906265/213135807-8224a530-d5dc-472d-b6b6-edda3cd3fc8a.gif)
 
 > **Reminder:**
 >
@@ -151,8 +151,8 @@ Before starting the detailed tutorial regarding how to label your document. Let'
   While hovering on the thumbnail of your document, a "Delete" icon would be displayed. If you would like to delete the document, you could click on the icon. Notice that the document and its corresponding `ocr.json` and `labels.json` will be deleted as well.
 - **Label Pane** (right pane)
   This is where you can create label key and view all the label key you have created as well as assigning label value to a label key or inspect the label value of a label key.
-
-[the screenshot of three pane and framed there location]
+  
+![Sample Label UX_introduction of three pane](https://user-images.githubusercontent.com/73906265/213135865-791f1e8e-66c0-44ae-95f2-848cb104f52c.png)
 
 To label a document is to assign key-value pairs for a document. For example, if there is text `Due date: 12/15/2021` in your document, you might want to create a label key `Due date` and assign label value `12/15/2021` to it. With that said, to label a document consists of three main actions:
 
@@ -178,13 +178,13 @@ You could continue clicking on another bounding box to specify multiple words/se
 
 To unselect, simply click on a selected bounding box (with background in green or pink) again.
 
-[the gif for selecting bounding boxes and unselect via clicking bounding box, for both text and selection marks]
+![Labeling UX_click to select and unselect label value](https://user-images.githubusercontent.com/73906265/213136018-835e3e81-a023-413f-90a4-e829fc536611.gif)
 
 ##### Perform multiple bounding box selection by mouse down and swiping through the text
 
 While selecting multiple bounding boxes for text, besides clicking on all bounding boxes one by one, we can also perform multiple selection by continuous mouse down and swipe through all the text you want to select.
 
-[the gif of swiping to specify label value]
+![Labeling UX_swipe to select label](https://user-images.githubusercontent.com/73906265/213136081-d6f0674e-7d51-4e2f-a189-f45254aed1ac.gif)
 
 ##### Press "Shift" and drag the cursor to perform group selection
 
@@ -192,7 +192,7 @@ To perform a group selection, press "Shift" key and drag the "+" cursor to speci
 
 You can also press "Shift" key and drag the cursor to the area of selected bounding box to perform unselecting.
 
-[the gif of using shift key for group selection]
+![Labeling UX_shift and drag to select label](https://user-images.githubusercontent.com/73906265/213136144-b9f6bdfd-b72d-4447-abdc-7a6ff1ac96cb.gif)
 
 #### Use "Region" tool to specify an area
 
@@ -206,7 +206,7 @@ To leave region-drawing mode, click on the "Region" button again.
 
 Notice that only one region can be assigned to a field or table cell.
 
-[the gif for using drawing region to specify a label value]
+![Labeling UX_draw region to specify label value](https://user-images.githubusercontent.com/73906265/213136199-773ecd3f-7880-4838-808f-31e6b6c06cba.gif)
 
 ### How to create a label key?
 
@@ -228,7 +228,7 @@ The below action applies for label key of type "Field", "Selection mark" and "Si
 
 At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
 
-[the gif for creating new label key with "+" icon]
+![Labeling UX_create label key by +](https://user-images.githubusercontent.com/73906265/213136253-88080464-690f-42b0-bd1c-659d736e8b5f.gif)
 
 #### Create a field and assign label through pop-up after label selection
 
@@ -238,7 +238,7 @@ After selecting bounding boxes or finishing drawing a region, a pop-up will be d
 
 This will not only create a new label key but also assign the label value you just selected to this newly created label key, as shown in the GIF below.
 
-[the gif for creating label key in the pop up]
+![Labeling UX_create and assign label with inlineLabelMenu](https://user-images.githubusercontent.com/73906265/213136299-af617afe-a3c6-4d14-ac91-052bcb4f7a4d.gif)
 
 ### Assign label to field
 
@@ -260,7 +260,7 @@ The below is the applicable type of label value that can be assigned to each typ
 
 After specifying label value through bounding boxes or region, a pop-up will be displayed next to the bounding boxes/region. Below the text field, a list of label keys should be displayed. Directly click on the label key you would like to assign the label value you just selected/drew to. After clicking on a label key, you should see the label value rendered in label pane.
 
-[the gif for assigning label value to a label key using pop-up]
+![Labeling UX_assign label with inlineLabelMenu](https://user-images.githubusercontent.com/73906265/213136462-bfb5ab67-e9ad-4368-9455-8ff46a97da22.gif)
 
 Notice that the list of label key in pop-up would filter out all the non-applicable label keys. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with bounding box of text, since these three types of label key can not be assigned with text.
 
@@ -268,7 +268,7 @@ Notice that the list of label key in pop-up would filter out all the non-applica
 
 After specifying label value, you can click on the label key you would like to assign the label value to in the label pane. After clicking on a label key, you should see the label value rendered in label pane.
 
-[the gif for assigning label value by click on label key in label pane]
+![Labeling UX_click on label pane to assign label value](https://user-images.githubusercontent.com/73906265/213136561-6851f57a-1016-462f-93bb-6302150b6f28.gif)
 
 Notice that if the label key you click on is not applicable to the label value you specified. There will be a "Label assignment warning" message modal which provide simple instruction on what label value is applicable for this label key.
 
@@ -280,7 +280,7 @@ After assigning label, there will be times when you want to inspect labels and p
 
 To inspect a label of type "field", "signature", and "selection mark", simply hover on the label key in label pane. The corresponding label value will be highlighted with thicker border. You can also tell the value by the different color for each label key.
 
-[the gif for hovering on label key]
+![Labeling UX_inspect label value](https://user-images.githubusercontent.com/73906265/213136626-aeb6ba8d-5695-43dd-b46e-31a951836176.gif)
 
 #### Update label value to a label key
 
@@ -290,13 +290,13 @@ If a label key is assigned with value specified by bounding boxes and you are no
 
 If a label key is assigned with value specified by region and you are now specifying a value with either another drawn region or bounding boxes, the original drawn region value will be overwritten with the new value of the new value from bounding box.
 
-[the gif for add more label value to a label key]
+![Labeling UX_update label value](https://user-images.githubusercontent.com/73906265/213136704-e70d6ef0-2c18-4fe0-be26-34465be0e6b7.gif)
 
 #### Delete label value
 
 If you would like re-select/re-draw a label value, you can delete the label value you originally assigned to a label key simply by clicking on the "x" icon on the right of label value.
 
-[the gif for label value deletion]
+![Labeling UX_delete label value](https://user-images.githubusercontent.com/73906265/213136768-689ed8c9-0b3c-492b-956b-104d3bccc441.gif)
 
 #### Rename a label key
 
@@ -304,7 +304,7 @@ This action applies for all types of label key, which are "Field", "Selection ma
 
 To rename a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Rename" option. Click on the "Rename" option and entering new name for label key. (Hit "Esc" if you don't want to rename the label key) After entering the new name, hit "Enter", then a confirmation modal will be displayed. After clicking "Yes" button in the modal, and the label key should be display with the new name.
 
-[the gif for renaming a label key]
+![Labeling UX_rename label key](https://user-images.githubusercontent.com/73906265/213136854-04ea4551-6d83-4508-9de9-99bf024304e0.gif)
 
 #### Delete label key
 
@@ -314,7 +314,7 @@ To delete a label key. Click on the three-dot icon on the right of label key and
 
 > **Notice that deleting a label key will also delete all the label value assigned to this label key in all your documents.**
 
-[the gif for deleting a label key]
+![Labeling UX_delete label key](https://user-images.githubusercontent.com/73906265/213136952-6b473afb-635b-483a-9ace-8bb903c1df62.gif)
 
 #### Assign sub type of the label key
 
@@ -322,7 +322,8 @@ This action applies for only label key of type "Field". For label key with type 
 
 To assign sub type for a label key. Click on the three-dot icon on the right of label key and a menu will show with "Sub type" option. Hover on "Sub type" and a menu of all sub type option will be displayed. Click on the sub type that suit your label value.
 
-[the gif for assigning sub type for a label key]
+![Labeling UX_assign sub type](https://user-images.githubusercontent.com/73906265/213137055-b845bf2c-2be4-4494-afc8-a32e4b68c7f9.gif)
+
 
 ### Table labeling
 
@@ -338,21 +339,19 @@ There are a few terms you need to know before start creating a label key of type
 
 If the table you would like to label is with fixed numbers of row and column with their name of each column and row being specified, it is suitable to use fixed table.
 
-[the screen shot for a fixed table example]
-
 Otherwise, if the table you would like to label is dynamic rows, for example, a list of purchase item with their own product name, quantity and total price, it is suitable to use dynamic table.
 
-[the screen shot for a dynamic table example]
+![Sample Label UX_fixed table v s  dynamic table](https://user-images.githubusercontent.com/73906265/213137130-0af91d93-4811-42ae-adf8-608f8d4fa4e7.png)
 
 ##### What does "header type" means?
 
-(question: difference between fixed row and fixed column)
+![Labeling UX_fixed table header type explain](https://user-images.githubusercontent.com/73906265/213137190-baa39005-3141-4372-ab82-9a01f1a2cde5.png)
 
 #### Creating a "Table" label field
 
 Click on the "+" button at the top of label pane and select table and select "Table". A "Create table field" modal will be display. Enter the name of this label field (label key), which will be the name of this table. and select the table type, header type(if it is a fixed table). Then click "Create" button on the bottom-right corner of the modal. The label pane should now display the newly created table label key.
 
-[the gif for creating a table label field]
+![Labeling UX_create fixed and dynamic tables](https://user-images.githubusercontent.com/73906265/213137247-023ec3ca-fbb0-47f4-beb4-1f37664fc59d.gif)
 
 #### Open and close table label pane
 
@@ -360,7 +359,7 @@ To open the table label pane for a created label key with type of "Table", click
 
 To close the table label pane, click on the "x" icon on the top-right corner of table label pane.
 
-[the gif of opening and close table label pane]
+![Labeling UX_open and close table view](https://user-images.githubusercontent.com/73906265/213137310-f958bc01-4047-4be9-afd2-fcf174a9403f.gif)
 
 #### Modify the column/row of a table field
 
@@ -370,7 +369,7 @@ After you created a label key of type "Table", open the table label pane, the de
 
 Click on the name of column or row and a option menu should be displayed. Select "Rename" and type in the new name then hit "Enter". (Hit "Esc" if you do not want to rename the column/row) A confirmation modal should be displayed. After clicking on "Yes", the column/row should be renamed.
 
-[the gif for renaming column and row in a default fixed table]
+![Labeling UX_rename column and row](https://user-images.githubusercontent.com/73906265/213137370-e10a96ae-b9b6-4bca-8f3d-7437923a6e6e.gif)
 
 ##### Insert column/row and add row
 
@@ -380,11 +379,11 @@ The newly inserted column/row will be located on the right/directly below the co
 
 To insert a row/column, click on the name of column/row or and select "Insert" in menu options. Type in the name for the inserting column/row and hit "Enter". (Hit "Esc" if you do not want to insert a new column/row.) The new column should be created with the name you assigned.
 
-[the gif for inserting row and column in a fixed table]
+![Labeling UX_insert column and row in fixed table](https://user-images.githubusercontent.com/73906265/213137477-514416b8-10ef-4318-9f53-c295b090f5f4.gif)
 
 To add a new row in dynamic table, simply click on the "+" icon at the bottom-left corner of the table.
 
-[the gif for adding a row in dynamic table]
+![Labeling UX_add row for dynamic table](https://user-images.githubusercontent.com/73906265/213137545-8b563fee-6bc1-4f35-95c4-3f760384e480.gif)
 
 ##### Delete column/row
 
@@ -392,7 +391,7 @@ For a fixed table, you can delete a column/row, whereas for a dynamic table, you
 
 To delete a row/column, click on the name of column/row or and select "Delete" in menu options. A confirmation modal should be displayed. After clicking on "Yes", the column/row should be deleted.
 
-[the gif for deleting a column/row in a fixed table]
+![Labeling UX_delete column and row](https://user-images.githubusercontent.com/73906265/213137606-f0e56296-5671-4176-86f1-e10c479c0473.gif)
 
 ##### Assign sub type for column/row
 
@@ -400,19 +399,21 @@ For a fixed table with header type of column, you can assign sub type for each c
 
 To assign sub type, click on the name of column/row or and hover on "Sub type" in menu options. The sub type options will be displayed, and you could select the sub type you would like to assign for this column/row.
 
+![Labeling UX_assign label value to table cell](https://user-images.githubusercontent.com/73906265/213137929-46842436-793c-4bb5-aab0-073c2bff8bc2.gif)
+
 #### Assign label value to a table cell
 
 For any table cell, we can assign the value of text with bounding boxes, selection marks with bounding boxes, or draw region.
 
 With the table field content opened, specify the label value as described earlier with bounding boxes or drawn region on your document, then click on the table cell of which the column and the row you would like to assign the label value to.
 
-[the gif of assign label value to a label cell]
+![Labeling UX_assign label value to table cell](https://user-images.githubusercontent.com/73906265/213138175-9c3c383b-b210-4873-a30c-7fb490bace0c.gif)
 
 #### Inspect the label value of a table cell
 
 To inspect a label value for a table cell, hover on the table cell you would like to inspect in table label pane. The corresponding label value will be highlighted with thicker border on your document.
 
-[the gif for hovering on table cell to inspect table label value]
+![Labeling UX_inspect table cell label value](https://user-images.githubusercontent.com/73906265/213138298-1be58325-e666-4b98-8385-af923a58fb23.gif)
 
 #### Modify label value of a table cell
 
@@ -426,13 +427,13 @@ If it is a table cell with value specified by bounding boxes and you are now spe
 
 If it is a table cell with value specified by region and you are now specifying a value with either bounding boxes or newly drawn region, the original drawn region will be overwritten with the new value of the new value from bounding box.
 
-[the git for update label value to a table cell]
+![Labeling UX_update table cell label value](https://user-images.githubusercontent.com/73906265/213138416-baa13a62-e5ea-4011-9f8a-fcdbdca642e4.gif)
 
 ##### Delete the label value for a table cell
 
 If you would like to delete the label value for a table cell, hover on the table cell and there should be a "x" icon displayed on the top-right corner of the table cell. Click on the icon to delete the label value for this table cell.
 
-[the gif for delete label value for a table cell]
+![Labeling UX_delete table cell label value](https://user-images.githubusercontent.com/73906265/213138477-6f83ba1b-d04b-409f-90ba-ba44849989c5.gif)
 
 ### Continue labeling another document
 
