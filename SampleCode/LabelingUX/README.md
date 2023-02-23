@@ -8,7 +8,7 @@ You are welcome to bring up any encountered issues. Microsoft Azure Form Recogni
 
 ### Feature preview
 
-Labeling UX provide a user-friendly web application tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can label a table with customized name of every column/row as well.
+Labeling UX is a user-friendly web application tool for you to label your document through creating label key and assigning the label value to each label key. There are several different types of label key, including "Field", "Selection mark", "Signature" and "Table". By using label key of type "Table", you can label a table with customized name of every column/row as well.
 
 
 ![Labeling UX_feature preview](https://user-images.githubusercontent.com/73906265/213135367-01cdfb79-f60a-45f2-86e3-cba2228452cf.gif)
@@ -55,14 +55,14 @@ npm i
 
 #### Start the application
 
-Switch back to root folder and start the server at port 4000, the client application at port 3000
+Run the command below to switch back to root folder and start the application, which runs the server at port 4000 and the client application at port 3000.
 
 ```sh
 cd ..
 npm run dev
 ```
 
-You should see Compiled successfully!" in your CLI, and the application should automatically open in your default browser with URL : <http://localhost:3000/label>
+Now, you should see "Compiled successfully!" in your terminal, and the application should automatically open in your default browser with URL : <http://localhost:3000/label>
 
 Now, since we have not set up input data, the Labeling UX application should look like this:
 
@@ -141,26 +141,28 @@ If everything works as described above, you are ready to start labeling.
 Before starting the detailed tutorial regarding how to label your document. Let's have a quick tour of the Labeling UX application. Labeling UX application basically consist of three pane:
 
 - **Label Canvas** (Middle part of application)
-  This is where you perform specifying label value and inspect label value of your document.
-  On the top-left corner of label canvas, there is a "Region" button, which provide you to draw region for specifying label value of an area in the document.
-  On the top right corner, there is a layer filter icon which allows you to toggle "Text", "Table" and "Selection mark" layer.
-  On the bottom-center, there is a page control tool which allow you to switch to a different page of document.
-  On the bottom-right corner, there is a set of tool for you to zoom in/zoom-out/zoom to fit and rotate the document.
+  - This is where you perform specifying label value and inspect label value of your document.
+  - On the top-left corner of label canvas, there is a "Region" button, which allow you to draw region for specifying label value of an area in the document.
+  - On the top right corner, there is a layer filter icon, which allows you to toggle "Text", "Table" and "Selection mark" layer.
+  - On the bottom-center, there is a page control tool, which allow you to switch to a different page of document.
+  - On the bottom-right corner, there is a set of tool for you to zoom in/zoom-out/zoom to fit and rotate the document.
 - **Document gallery** (left pane)
-  This is where all the thumbnails of your documents would be displayed. By clicking on thumbnail of document, you can switch the document rendered in the label canvas.
-  While hovering on the thumbnail of your document, a "Delete" icon would be displayed. If you would like to delete the document, you could click on the icon. Notice that the document and its corresponding `ocr.json` and `labels.json` will be deleted as well.
+  - This is where all the thumbnails of your documents would be displayed. 
+  - By clicking on thumbnail of document, you can switch the document rendered in the label canvas.
+  - While hovering on the thumbnail of your document, a "Delete" icon would be displayed for you to delete a document. Notice that the deletion will not only delete the document file but also delete its corresponding `ocr.json` and `labels.json from `Server/data` folder.
 - **Label Pane** (right pane)
-  This is where you can create label key and view all the label key you have created as well as assigning label value to a label key or inspect the label value of a label key.
+  - This is where all label keys and label values are displayed.
+  - You could create label key and assign label value to a label key in this pane.
   
 ![Sample Label UX_introduction of three pane](https://user-images.githubusercontent.com/73906265/213135865-791f1e8e-66c0-44ae-95f2-848cb104f52c.png)
 
 To label a document is to assign key-value pairs for a document. For example, if there is text `Due date: 12/15/2021` in your document, you might want to create a label key `Due date` and assign label value `12/15/2021` to it. With that said, to label a document consists of three main actions:
 
-- Creating label key
-- Specify the label value
+- Creating a label key
+- Specifying label value
 - Assigning the specified label value to a label key
 
-In this section, how each action could be performed with one or several approaches using Labeling UX application will be elaborated.
+In this section, how each action could be performed using Labeling UX application will be elaborated.
 
 Notice that table labeling is more complex and will be explained in a separate topic at the end of this section.
 
@@ -172,17 +174,17 @@ With `ocr.json` provided for the document you would like to label, Labeling UX a
 
 ##### Click on the text/selection marks
 
-You could click on the bounding box of the text (which should be with light-yellow background) or selection mark (which should be with pink border). The text being clicked should change into green background while the selection mark being clicked should turn with pink background, which means it is selected.
+You could click on the bounding box of the text (which is of light-yellow background) or selection mark (which is of pink border). The text being clicked should change into green background while the selection mark being clicked should turn with pink background, which means it is selected.
 
-You could continue clicking on another bounding box to specify multiple words/selection marks in your selection. Notice that for selection marks, each selection marks field only allows single selection mark to be assigned.
+You could continue clicking on another bounding box to specify multiple words/selection marks in your selection. Notice that for label key of selection mark type, only  single selection mark to be assigned to it.
 
-To unselect, simply click on a selected bounding box (with background in green or pink) again.
+To unselect, simply click on a selected bounding box again.
 
 ![Labeling UX_click to select and unselect label value](https://user-images.githubusercontent.com/73906265/213136018-835e3e81-a023-413f-90a4-e829fc536611.gif)
 
 ##### Perform multiple bounding box selection by mouse down and swiping through the text
 
-While selecting multiple bounding boxes for text, besides clicking on all bounding boxes one by one, we can also perform multiple selection by continuous mouse down and swipe through all the text you want to select.
+Besides clicking on all bounding boxes one by one, we can also perform multiple selection by continuously mouse down and swipe through all the text you would like to select.
 
 ![Labeling UX_swipe to select label](https://user-images.githubusercontent.com/73906265/213136081-d6f0674e-7d51-4e2f-a189-f45254aed1ac.gif)
 
@@ -200,11 +202,11 @@ Click on the "Region" button on the top-left corner of middle canvas pane to ent
 
 To modify the area of a drawn region, hover on the corner of drawn region and drag the vertex.
 
-To delete the region you drew, hover on the drawn region and there should be a "x" icon on the top-right corner of the region. Click on the "x" for region deletion.
+To delete the region you drew, hover on the drawn region. There should be a "x" icon on the top-right corner of the region. Click on the "x" for region deletion.
 
 To leave region-drawing mode, click on the "Region" button again.
 
-Notice that only one region can be assigned to a field or table cell.
+Notice that only one region can be assigned to a label key or table cell.
 
 ![Labeling UX_draw region to specify label value](https://user-images.githubusercontent.com/73906265/213136199-773ecd3f-7880-4838-808f-31e6b6c06cba.gif)
 
@@ -213,24 +215,22 @@ Notice that only one region can be assigned to a field or table cell.
 In order to label a document, you need to create label keys and assign the label value to a label key.
 In Labeling UX application, there are four types of label key:
 
-- **Field**: for string, number, date, time and integer
-- **Selection Mark**: allow assigned with a single selection mark (bounding box with pink border) or a region
-- **Signature**: allow assigned with "Region"
-- **Table**: perform table labeling (table labeling will be explained in the next sub-section)
+- **Field**: for labeling string, number, date, time and integer
+- **Selection Mark**: for label value with a single selection mark (bounding box with pink border) or a "Region"
+- **Signature**: for label value specified with single "Region"
+- **Table**: perform table labeling 
 
-There are two approaches to create a field, as described below.
-
-Notice that as mentioned earlier, since table field creation and table labeling is more complex and different from other labeling of other field type, it will be explained separately in its own sub-section.
+There are two approaches to create a label key, as described below.
 
 #### Create a new label key by clicking on "+" button
 
-The below action applies for label key of type "Field", "Selection mark" and "Signature", creation of label key of type "Table" will be explained in a separate sub-section below.
+The below action applies for label key of type "Field", "Selection mark" and "Signature". Creation of label key of type "Table" will be explained in a separate sub-section later.
 
-At the top label pane, which is the right pane of the application, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
+At the top label pane, there is a "+" button. Click on the button and choose which type of label key you would like to create. Then, type the name of the label key and hit "Enter". The label key should now be created and displayed on the label pane.
 
 ![Labeling UX_create label key by +](https://user-images.githubusercontent.com/73906265/213136253-88080464-690f-42b0-bd1c-659d736e8b5f.gif)
 
-#### Create a field and assign label through pop-up after label selection
+#### Create a new label key and assign label through pop-up after label being specified
 
 Note: This approach is not applicable for table labeling.
 
@@ -240,33 +240,33 @@ This will not only create a new label key but also assign the label value you ju
 
 ![Labeling UX_create and assign label with inlineLabelMenu](https://user-images.githubusercontent.com/73906265/213136299-af617afe-a3c6-4d14-ac91-052bcb4f7a4d.gif)
 
-### Assign label to field
+### Assign label value to a label key 
 
 After you have the label key created and label value specified, you can now assign the label value to the corresponding label key.
 
-The below is the applicable type of label value that can be assigned to each type of label key.
+The below is the applicable label value that can be assigned to each type of label key.
 
 - **Field**:
-  - Bounding boxes of text (with light-yellow background)
-  - Bounding boxes of selection mark (with pink border)
+  - Bounding boxes of text
+  - Bounding boxes of selection mark
   - Single draw region
 - **Selection Mark**:
-  - Single bounding box of selection mark (with pink border)
+  - Single bounding box of selection mark
   - Single draw region
 - **Signature**:
   - Single draw region
 
-#### Directly click on the field in pop-up (not applicable for table labeling)
+#### Click on the label keys in pop-up to assign label (not applicable for table labeling)
 
-After specifying label value through bounding boxes or region, a pop-up will be displayed next to the bounding boxes/region. Below the text field, a list of label keys should be displayed. Directly click on the label key you would like to assign the label value you just selected/drew to. After clicking on a label key, you should see the label value rendered in label pane.
+After specifying label value through bounding boxes or region, a pop-up will be displayed next to the bounding boxes/region, which include a list of applicable label keys you have created. Click on the label key you would like to assign the label value to.
 
 ![Labeling UX_assign label with inlineLabelMenu](https://user-images.githubusercontent.com/73906265/213136462-bfb5ab67-e9ad-4368-9455-8ff46a97da22.gif)
 
-Notice that the list of label key in pop-up would filter out all the non-applicable label keys. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with bounding box of text, since these three types of label key can not be assigned with text.
+Notice that the list of label key in the pop-up filter out all the inapplicable label keys. For example, the label key with type "table", "selection mark" and "signature" will not be displayed when you specify label value with text bounding boxes, since text is not allowed to assign to these three types of label key.
 
-#### Click on the field in the right label pane
+#### Click on the label key in the right label pane to assign label
 
-After specifying label value, you can click on the label key you would like to assign the label value to in the label pane. After clicking on a label key, you should see the label value rendered in label pane.
+After specifying label value, you can click on the label key you would like to assign the label value to in the label pane.
 
 ![Labeling UX_click on label pane to assign label value](https://user-images.githubusercontent.com/73906265/213136561-6851f57a-1016-462f-93bb-6302150b6f28.gif)
 
@@ -274,19 +274,19 @@ Notice that if the label key you click on is not applicable to the label value y
 
 ### Inspect and modify labels
 
-After assigning label, there will be times when you want to inspect labels and possibly modify the labels you assigned. In this section, how labels can be inspected and modified is being described.
+After assigning label, you might want to inspect and possibly modify the labels you have assigned. How these could be performed is described as below.
 
 #### Inspect label of type "field", "signature", and "selection mark"
 
-To inspect a label of type "field", "signature", and "selection mark", simply hover on the label key in label pane. The corresponding label value will be highlighted with thicker border. You can also tell the value by the different color for each label key.
+To inspect a label of type "field", "signature", and "selection mark", simply hover on the label key in label pane. The corresponding label value will be highlighted with thicker border. You could also distinguish the label value of different label key by colors.
 
 ![Labeling UX_inspect label value](https://user-images.githubusercontent.com/73906265/213136626-aeb6ba8d-5695-43dd-b46e-31a951836176.gif)
 
 #### Update label value to a label key
 
-For "field" type label key which is using bounding boxes to specify label value, you are able to add more label value to a label key simply by selecting additional text with bounding boxes and assign to the label key through clicking the label key in pop-up or label pane. This action will not overwrite the label value you previously assigned but add the newly-selected value and merge with the original one.
+For "field" type label key, of which label value with bounding boxes is assigned, you are able to add more label value to a label key simply by selecting additional text with bounding boxes and assign to the label key through clicking the label key in pop-up or label pane. This action will not overwrite the label value you previously assigned but add the newly-selected value and merge with the original one.
 
-If a label key is assigned with value specified by bounding boxes and you are now specifying a value with region drawn, the original value from bounding boxes will be overwritten with the new drawing region.
+If a label key is assigned with value specified by bounding boxes and you are now specifying a value with region drawn, the original value from bounding boxes will be overwritten.
 
 If a label key is assigned with value specified by region and you are now specifying a value with either another drawn region or bounding boxes, the original drawn region value will be overwritten with the new value of the new value from bounding box.
 
@@ -302,7 +302,7 @@ If you would like re-select/re-draw a label value, you can delete the label valu
 
 This action applies for all types of label key, which are "Field", "Selection mark", "Signature" and "Table".
 
-To rename a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Rename" option. Click on the "Rename" option and entering new name for label key. (Hit "Esc" if you don't want to rename the label key) After entering the new name, hit "Enter", then a confirmation modal will be displayed. After clicking "Yes" button in the modal, and the label key should be display with the new name.
+To rename a label key. Click on the three-dot icon on the right of the label key. Click on the "Rename" option and entering new name for label key. (Hit "Esc" if you don't want to rename the label key) After entering the new name, hit "Enter", then a confirmation modal will be displayed.
 
 ![Labeling UX_rename label key](https://user-images.githubusercontent.com/73906265/213136854-04ea4551-6d83-4508-9de9-99bf024304e0.gif)
 
@@ -310,7 +310,7 @@ To rename a label key. Click on the three-dot icon on the right of label key and
 
 This action applies for all types of label key, which are "Field", "Selection mark", "Signature" and "Table".
 
-To delete a label key. Click on the three-dot icon on the right of label key and a menu will show with the "Delete" option. Click on "Delete" and a confirmation modal will be displayed.
+To delete a label key. Click on the three-dot icon on the right of the label key. Click on "Delete" and a confirmation modal will be displayed.
 
 > **Notice that deleting a label key will also delete all the label value assigned to this label key in all your documents.**
 
@@ -318,38 +318,41 @@ To delete a label key. Click on the three-dot icon on the right of label key and
 
 #### Assign sub type of the label key
 
-This action applies for only label key of type "Field". For label key with type "Selection mark", "Signature" and "Table". "Sub type" option will be disabled.
+This action applies only to label key of type "Field". For label key with type "Selection mark", "Signature" and "Table", "Sub type" option will be disabled.
 
-To assign sub type for a label key. Click on the three-dot icon on the right of label key and a menu will show with "Sub type" option. Hover on "Sub type" and a menu of all sub type option will be displayed. Click on the sub type that suit your label value.
+To assign sub type for a label key. Click on the three-dot icon on the right of label key. Hover on "Sub type" and a menu of all sub type options will be displayed. Click on the sub type that suit your label value.
 
 ![Labeling UX_assign sub type](https://user-images.githubusercontent.com/73906265/213137055-b845bf2c-2be4-4494-afc8-a32e4b68c7f9.gif)
 
 
 ### Table labeling
 
-With the content above, we have discussed how label of type "Field", "Selection mark" and "Signature" has being covered. In this section, we will discuss a separate topic we have mentioned several times earlier, which is table labeling.
+We have discussed how label of type "Field", "Selection mark" and "Signature" can be created and assigned. In this section, we will discuss a separate topic, which is table labeling.
 
-Besides assigning label value directly to a label key. You can create a table label key with rows and columns that fit the content of your document and assign label values to each table cell accordingly.
+You could create a table label key with customized rows and columns that suit the content of your document and assign label values to each table cell accordingly.
 
 #### Type of table field
 
-There are a few terms you need to know before start creating a label key of type "Table", which will be elaborated below.
+There are a few terms you need to know before start creating a label key of type "Table".
 
 ##### Fixed table v.s. Dynamic table
 
-If the table you would like to label is with fixed numbers of row and column with their name of each column and row being specified, it is suitable to use fixed table.
+If the table you would like to label is with fixed numbers of row and column, it is suggested to use fixed table.
 
-Otherwise, if the table you would like to label is dynamic rows, for example, a list of purchase item with their own product name, quantity and total price, it is suitable to use dynamic table.
+Otherwise, if the table you would like to label is with different row count from on document to another, for example, a list of purchase items, it is suggested to use dynamic table.
 
 ![Sample Label UX_fixed table v s  dynamic table](https://user-images.githubusercontent.com/73906265/213137130-0af91d93-4811-42ae-adf8-608f8d4fa4e7.png)
 
 ##### What does "header type" means?
 
-![Labeling UX_fixed table header type explain](https://user-images.githubusercontent.com/73906265/213137190-baa39005-3141-4372-ab82-9a01f1a2cde5.png)
+As discussed above, you could specify the "Sub type" to a label key of type "Field". With the similar concept, you cound specify "Sub type" to a row/column of a table.
+
+If you choose header type as column, you could specify sub type for every column of the table you created, but not allowed to specify sub type for any row, and vice versa.
+
 
 #### Creating a "Table" label field
 
-Click on the "+" button at the top of label pane and select table and select "Table". A "Create table field" modal will be display. Enter the name of this label field (label key), which will be the name of this table. and select the table type, header type(if it is a fixed table). Then click "Create" button on the bottom-right corner of the modal. The label pane should now display the newly created table label key.
+Click on the "+" button at the top of label pane and select table and select "Table". A "Create table field" modal will be displayed. Enter the name (label key) of this table, and select the table type, header type (if it is a fixed table). Then click "Create" button on the bottom-right corner of the modal.
 
 ![Labeling UX_create fixed and dynamic tables](https://user-images.githubusercontent.com/73906265/213137247-023ec3ca-fbb0-47f4-beb4-1f37664fc59d.gif)
 
@@ -363,11 +366,11 @@ To close the table label pane, click on the "x" icon on the top-right corner of 
 
 #### Modify the column/row of a table field
 
-After you created a label key of type "Table", open the table label pane, the default content of the table field should be displayed. Next we will introduce how you could modify the table into the one that suit your usage.
+After you created a label key of type "Table", open the table label pane, the default content of the table label key should be displayed. Next we will introduce how you could modify the table into the one that suit your usage.
 
 ##### Rename column/row
 
-Click on the name of column or row and a option menu should be displayed. Select "Rename" and type in the new name then hit "Enter". (Hit "Esc" if you do not want to rename the column/row) A confirmation modal should be displayed. After clicking on "Yes", the column/row should be renamed.
+Click on the name of column or row and and select "Rename" in the option menu. Type in the new name then hit "Enter". (Hit "Esc" if you do not want to rename the column/row) A confirmation modal should be displayed. After clicking on "Yes", the column/row should be renamed.
 
 ![Labeling UX_rename column and row](https://user-images.githubusercontent.com/73906265/213137370-e10a96ae-b9b6-4bca-8f3d-7437923a6e6e.gif)
 
@@ -375,9 +378,7 @@ Click on the name of column or row and a option menu should be displayed. Select
 
 For a fixed table, you can insert a column/row, whereas for a dynamic table, you can insert a column and add a row at the bottom of the table.
 
-The newly inserted column/row will be located on the right/directly below the column/row you clicked on, while the newly added row will be appended at the bottom of the table.
-
-To insert a row/column, click on the name of column/row or and select "Insert" in menu options. Type in the name for the inserting column/row and hit "Enter". (Hit "Esc" if you do not want to insert a new column/row.) The new column should be created with the name you assigned.
+To insert a row/column, click on the name of column/row or and select "Insert" in menu options. Type in the name for the inserting column/row and hit "Enter". (Hit "Esc" if you do not want to insert a new column/row.)
 
 ![Labeling UX_insert column and row in fixed table](https://user-images.githubusercontent.com/73906265/213137477-514416b8-10ef-4318-9f53-c295b090f5f4.gif)
 
@@ -397,15 +398,15 @@ To delete a row/column, click on the name of column/row or and select "Delete" i
 
 For a fixed table with header type of column, you can assign sub type for each column, whereas for a fixed table with header type of row, you can assign sub type for each row. For a dynamic table, you can assign sub type for each column.
 
-To assign sub type, click on the name of column/row or and hover on "Sub type" in menu options. The sub type options will be displayed, and you could select the sub type you would like to assign for this column/row.
+To assign sub type, click on the name of column/row and hover on "Sub type" in menu options. The sub type options should be displayed and you could select the sub type you would like to assign for this column/row.
 
 ![Labeling UX_assign label value to table cell](https://user-images.githubusercontent.com/73906265/213137929-46842436-793c-4bb5-aab0-073c2bff8bc2.gif)
 
 #### Assign label value to a table cell
 
-For any table cell, we can assign the value of text with bounding boxes, selection marks with bounding boxes, or draw region.
+For any table cell, you could assign the label value of with bounding boxes or a single draw region.
 
-With the table field content opened, specify the label value as described earlier with bounding boxes or drawn region on your document, then click on the table cell of which the column and the row you would like to assign the label value to.
+With the table label pane opened, specify the label value as described earlier with bounding boxes or drawn region, then click on the table cell you would like to assign the label value to.
 
 ![Labeling UX_assign label value to table cell](https://user-images.githubusercontent.com/73906265/213138175-9c3c383b-b210-4873-a30c-7fb490bace0c.gif)
 
@@ -473,14 +474,11 @@ With all `labels.json` files and a `fields.json` file, your label result will be
 
 You can get the `ocr.json` file for your document with two approaches:
 
-1. Upload document to [Form Recognizer Studio Layout](https://formrecognizer.appliedai.azure.com/studio/layout) and analyze the document, download the JSON file by clicking on the download button in result pane.
+1. Upload document to [Form Recognizer Studio Layout](https://formrecognizer.appliedai.azure.com/studio/layout) and analyze the document, download the JSON file by clicking on the download button in result tab of analyze result pane (the pane on the right).
 
-    [the screenshot]
 
 2. Use [Form Recognizer SDKs](https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/get-started-v3-sdk-rest-api?pivots=programming-language-csharp) to analyze document with Layout API.
 
 After getting `ocr.json` file for your document, **it is important to rename the file with the naming convention in order for Labeling UX to correctly connect your document with its corresponding `ocr.json` file**.
 
-The naming convention for `ocr.json` file is **`<document name>.<document extension>.ocr.json`**
-
-The name of `ocr.json` file for document named **`invoiceA.pdf`** should be **`invoiceA.pdf.ocr.json`**
+The naming convention for `ocr.json` file is **`<document name>.<document extension>.ocr.json`**. For example, the name of `ocr.json` file for document named **`invoiceA.pdf`** should be **`invoiceA.pdf.ocr.json`**
