@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FieldLocation } from "store/customModel/customModel";
 
-import { FieldType, HeaderType } from "models/customModels";
+import { FieldType, HeaderType, Label } from "models/customModels";
 import {
     mockDynamicTableField,
     mockDynamicTableDefinition,
@@ -14,9 +14,11 @@ import {
     mockFixedRowTableLabels,
     mockTableRegionLabels,
     flushPromises,
+    mockNewDynamicTableLabels,
 } from "utils/test";
 import { TableLabelItem } from "./tableLabelItem";
 import { shallow } from "enzyme";
+import { getFieldKeyFromLabel } from "utils/customModel";
 
 jest.spyOn(global, "setTimeout");
 
@@ -70,6 +72,8 @@ describe("<TableLabelItem />", () => {
             onDeleteLabel: jest.fn(),
             onClickCell: jest.fn(),
             switchTableFieldsSubType: jest.fn(),
+            updateTableLabel: jest.fn(),
+            labelError: null,
         };
     });
 
@@ -152,12 +156,66 @@ describe("<TableLabelItem />", () => {
             expect(wrapper.state("dynamicRows")).toBe(1);
         });
 
-        it("should add one dynamic row, when add row button is clicked", () => {
+        it("should add one dynamic row, when insert row button is clicked", () => {
             const wrapper = shallow(<TableLabelItem {...baseProps} />);
-            const button = wrapper.find("#add-row-button");
-            button.simulate("click");
+            const mockTableLabel = Object.values(baseProps.tableLabels)[0] as Label;
+            const mockTableFieldKey = getFieldKeyFromLabel(mockTableLabel);
+            const expectedPayload = {
+                newLabel: [mockTableLabel],
+                tableFieldKey: mockTableFieldKey,
+            };
+            const button = wrapper.find("CustomizedActionButton").at(3) as any;
+            button.prop("menuProps").items[0].onClick();
 
+            expect(baseProps.updateTableLabel).toBeCalledTimes(1);
+            expect(baseProps.updateTableLabel).toBeCalledWith(expectedPayload);
             expect(wrapper.state("dynamicRows")).toBe(2); // Only one row in labels.
+        });
+
+        it("should not able to delete one dynamic row, when there is only on row left", () => {
+            const wrapper = shallow(<TableLabelItem {...baseProps} />);
+            const button = wrapper.find("CustomizedActionButton").at(3) as any;
+
+            expect(button.prop("menuProps").items[1].disabled).toBe(true);
+        });
+
+        it("should delete one dynamic row, when delete row button is clicked", () => {
+            const wrapper = shallow(<TableLabelItem {...baseProps} />);
+            const button = wrapper.find("CustomizedActionButton").at(3) as any;
+            wrapper.setState({
+                dynamicRows: 2,
+            });
+            const mockTableLabel = Object.values(baseProps.tableLabels)[0] as Label;
+            const mockTableFieldKey = getFieldKeyFromLabel(mockTableLabel);
+            const expectedPayload = {
+                newLabel: [],
+                tableFieldKey: mockTableFieldKey,
+            };
+            button.prop("menuProps").items[1].onClick();
+
+            expect(baseProps.updateTableLabel).toBeCalledTimes(1);
+            expect(baseProps.updateTableLabel).toBeCalledWith(expectedPayload);
+            expect(wrapper.state("dynamicRows")).toBe(1); // Only one row in labels.
+        });
+
+        it("should select the max value between internal state rows & store rows, when there is an label error", () => {
+            const props = {
+                ...baseProps,
+                tableLabels: arrayToObject([...mockDynamicTableLabels, ...mockNewDynamicTableLabels]),
+            };
+            const wrapper = shallow(<TableLabelItem {...props} />);
+
+            expect(wrapper.state("dynamicRows")).toBe(2);
+
+            // Delete 1 row and than dynamicRows in state is not aligned with labels in store, raise an error.
+            wrapper.setState({
+                dynamicRows: 1,
+            });
+            wrapper.setProps({
+                labelError: new Error(),
+            });
+
+            expect(wrapper.state("dynamicRows")).toBe(2);
         });
 
         it("should handle modal close, when modal onClose is triggered", async () => {

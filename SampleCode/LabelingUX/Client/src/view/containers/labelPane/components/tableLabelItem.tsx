@@ -11,8 +11,8 @@ import {
     FontIcon,
 } from "@fluentui/react";
 
-import { encodeLabelString } from "utils/customModel";
-import { FieldLocation, switchTableFieldsSubType } from "store/customModel/customModel";
+import { encodeLabelString, getFieldKeyFromLabel, getDynamicTableRowNumberFromLabel } from "utils/customModel";
+import { FieldLocation, switchTableFieldsSubType, updateTableLabel } from "store/customModel/customModel";
 import { Field, ObjectField, FieldType, Label, VisualizationHint, HeaderType, LabelType } from "models/customModels";
 import MessageModal from "view/components/messageModal/messageModal";
 import { connect, ConnectedProps } from "react-redux";
@@ -20,9 +20,11 @@ import { ApplicationState } from "store";
 
 import "./tableLabelItem.scss";
 
+type TableLabels = { [labelName: string]: Label };
+
 export interface ITableLabelItemProps {
     field: Field;
-    tableLabels: { [labelName: string]: Label };
+    tableLabels: TableLabels;
     definition: ObjectField;
     onDeleteField: (tableFieldKey, fieldKey, fieldLocation) => Promise<void>;
     onInsertField: (tableFieldKey, fieldKey, index, fieldLocation) => Promise<void>;
@@ -81,16 +83,41 @@ export class TableLabelItem extends React.PureComponent<
             this.setDynamicRows();
         }
     }
+    public componentDidUpdate(prevProps) {
+        const { tableLabels, labelError } = this.props;
+        if (
+            this.getDynamicRows(tableLabels) !== this.getDynamicRows(prevProps.tableLabels) ||
+            labelError !== prevProps.labelError
+        ) {
+            // Make sure that dynamicRows in state is aligned with labels in store, if they are not aligned, pick max value between them as current dynamicRows.
+            this.setState({
+                dynamicRows: Math.max(this.state.dynamicRows, this.getDynamicRows(tableLabels)),
+            });
+        }
+    }
+
+    private getRowNumbers = (tableLabels: TableLabels) =>
+        Object.keys(tableLabels).map((labelName) => parseInt(labelName.split("/")[1]) + 1);
+
+    private getDynamicRows = (tableLabels: TableLabels) => {
+        const rowNumbers = this.getRowNumbers(tableLabels);
+
+        return rowNumbers.length > 0 ? Math.max(...rowNumbers) : 1;
+    };
 
     private setDynamicRows = () => {
         const { tableLabels } = this.props;
-        const rowNumbers = Object.keys(tableLabels).map((labelName) => parseInt(labelName.split("/")[1]) + 1);
+        const rowNumbers = this.getRowNumbers(tableLabels);
 
         this.setState({ dynamicRows: rowNumbers.length > 0 ? Math.max(...rowNumbers) : 1 });
     };
 
     private addDynamicRow = () => {
         this.setState((prevState) => ({ dynamicRows: prevState.dynamicRows + 1 }));
+    };
+
+    private deleteDynamicRow = () => {
+        this.setState((prevState) => ({ dynamicRows: prevState.dynamicRows - 1 }));
     };
 
     private getInsertHeader = () => {
@@ -250,6 +277,93 @@ export class TableLabelItem extends React.PureComponent<
         );
     };
 
+    private replaceTableRowNumberFromLabel = (label: Label, replacement: number): string => {
+        const strings = label.label.split("/");
+        strings[1] = replacement.toString();
+        return strings.join("/");
+    };
+
+    private handleDynamicTableRowInsert = (tableFieldKey: string, rowNumber: number) => {
+        const { tableLabels, updateTableLabel } = this.props;
+        const tableLabelsValues = Object.values(tableLabels);
+        const labelsLessThanRowNumber = tableLabelsValues.filter(
+            (label) => getDynamicTableRowNumberFromLabel(label) <= rowNumber
+        );
+        const labelsGreaterThanRowNumber = tableLabelsValues
+            .filter((tableLabel) => getDynamicTableRowNumberFromLabel(tableLabel) > rowNumber)
+            .map((tableLabel) => ({
+                ...tableLabel,
+                label: this.replaceTableRowNumberFromLabel(
+                    tableLabel,
+                    getDynamicTableRowNumberFromLabel(tableLabel) + 1
+                ),
+            }));
+        const newLabel = [...labelsLessThanRowNumber, ...labelsGreaterThanRowNumber];
+
+        updateTableLabel({
+            tableFieldKey,
+            newLabel,
+        });
+
+        this.addDynamicRow();
+    };
+
+    private handleDynamicTableRowDelete = (tableFieldKey: string, rowNumber: number) => {
+        const { tableLabels, updateTableLabel } = this.props;
+        const tableLabelsValues = Object.values(tableLabels);
+        const labelsLessThanRowNumber = tableLabelsValues.filter(
+            (tableLabel) => getDynamicTableRowNumberFromLabel(tableLabel) < rowNumber
+        );
+        const labelsGreaterThanRowNumber = tableLabelsValues
+            .filter((tableLabel) => getDynamicTableRowNumberFromLabel(tableLabel) > rowNumber)
+            .map((tableLabel) => ({
+                ...tableLabel,
+                label: this.replaceTableRowNumberFromLabel(
+                    tableLabel,
+                    getDynamicTableRowNumberFromLabel(tableLabel) - 1
+                ),
+            }));
+        const newLabel = [...labelsLessThanRowNumber, ...labelsGreaterThanRowNumber];
+
+        updateTableLabel({
+            tableFieldKey,
+            newLabel,
+        });
+        this.deleteDynamicRow();
+    };
+
+    private getDynamicTableRowHeader = (currentRow: number) => {
+        const { tableLabels } = this.props;
+        const firstTableLabelValue = Object.values(tableLabels)[0];
+        const tableFieldKey = firstTableLabelValue ? getFieldKeyFromLabel(firstTableLabelValue) : "";
+        const onInsertClick = () => this.handleDynamicTableRowInsert(tableFieldKey, currentRow);
+        const onDeleteClick = () => this.handleDynamicTableRowDelete(tableFieldKey, currentRow);
+        const isDeleteDisabled = this.state.dynamicRows <= 1;
+
+        const menuProps: IContextualMenuProps = {
+            items: [
+                {
+                    key: "insertRow",
+                    text: "Insert row",
+                    onClick: onInsertClick,
+                },
+                {
+                    key: "deleteRow",
+                    text: "Delete row",
+                    onClick: onDeleteClick,
+                    disabled: isDeleteDisabled,
+                },
+            ],
+            directionalHint: DirectionalHint.bottomRightEdge,
+        };
+
+        return (
+            <th key={0} className="general-header">
+                <CommandButton text={`#${currentRow}`} menuProps={menuProps} styles={this.headerButtonStyles} />
+            </th>
+        );
+    };
+
     private getDynamicTableHeader = () => {
         const { insertingField } = this.state;
         const columns = this.props.definition.fields;
@@ -300,11 +414,7 @@ export class TableLabelItem extends React.PureComponent<
             for (let column = 0; column < columns.length + 1; column++) {
                 if (column === 0) {
                     // Row header.
-                    tableRow.push(
-                        <th key={column} className="row-index-header">
-                            {`#${row}`}
-                        </th>
-                    );
+                    tableRow.push(this.getDynamicTableRowHeader(row));
                 } else {
                     const columnName = encodeLabelString(columns[column - 1].fieldKey);
                     const fieldKey = encodeLabelString(field.fieldKey);
@@ -595,9 +705,6 @@ export class TableLabelItem extends React.PureComponent<
                         <thead>{tableHeader}</thead>
                         <tbody>{table}</tbody>
                     </table>
-                    {isDynamicTable && (
-                        <IconButton id="add-row-button" iconProps={{ iconName: "Add" }} onClick={this.addDynamicRow} />
-                    )}
                 </Stack>
                 <MessageModal
                     isOpen={isConfirmModalOpen}
@@ -614,9 +721,12 @@ export class TableLabelItem extends React.PureComponent<
     }
 }
 
-const mapState = (state: ApplicationState) => ({});
+const mapState = (state: ApplicationState) => ({
+    labelError: state.customModel.labelError,
+});
 const mapDispatch = {
     switchTableFieldsSubType,
+    updateTableLabel,
 };
 
 const connector = connect(mapState, mapDispatch);
