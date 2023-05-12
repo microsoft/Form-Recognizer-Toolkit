@@ -45,7 +45,9 @@ describe("StorageProvider", () => {
 
     it("should handle readBinary", async () => {
         await provider.readBinary(mockFilename);
-        expect(RequestHelper.getWithAutoRetry).toBeCalledWith(`${serverUrl}/files/${mockFilename}`);
+        expect(RequestHelper.getWithAutoRetry).toBeCalledWith(`${serverUrl}/files/${mockFilename}`, {
+            responseType: "arraybuffer",
+        });
     });
 
     it("should handle writeText", async () => {
