@@ -218,6 +218,24 @@ export const mockDynamicTableLabels = [
     },
 ];
 
+export const mockNewDynamicTableLabels = [
+    {
+        label: "DynamicTable~1abc/1/CUSTOMER#",
+        value: [
+            {
+                page: 1,
+                text: "13267",
+                boundingBoxes: [
+                    [
+                        0.8563411764705883, 0.18608181818181818, 0.8621529411764706, 0.18608181818181818,
+                        0.8621529411764706, 0.1929909090909091, 0.8563411764705883, 0.1929909090909091,
+                    ],
+                ],
+            },
+        ],
+    },
+];
+
 export const mockTableRegionLabels = [
     {
         label: "DynamicTable~1abc/1/CUSTOMER#",

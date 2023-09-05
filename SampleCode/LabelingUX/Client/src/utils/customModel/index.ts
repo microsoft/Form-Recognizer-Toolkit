@@ -60,6 +60,10 @@ export const getTableFieldKeyFromLabel = (label: Label, fieldLocation: FieldLoca
     return decodeLabelString(label.label.split("/")[labelIndex]);
 };
 
+export const getDynamicTableRowNumberFromLabel = (label: Label): number => {
+    return parseInt(label.label.split("/")[1]);
+};
+
 export const getAllDocumentLabels = async (
     labels: Labels,
     documents: IDocument[],

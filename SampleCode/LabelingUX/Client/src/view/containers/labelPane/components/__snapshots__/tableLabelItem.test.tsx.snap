@@ -229,10 +229,39 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when a header is re
           key="0"
         >
           <th
-            className="row-index-header"
+            className="general-header"
             key="0"
           >
-            #0
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="#0"
+            />
           </th>
           <td
             className="table-cell"
@@ -289,15 +318,6 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when a header is re
         </tr>
       </tbody>
     </table>
-    <CustomizedIconButton
-      iconProps={
-        Object {
-          "iconName": "Add",
-        }
-      }
-      id="add-row-button"
-      onClick={[Function]}
-    />
   </Stack>
   <MessageModal
     actionButtonText="Yes"
@@ -640,10 +660,39 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when inserting a co
           key="0"
         >
           <th
-            className="row-index-header"
+            className="general-header"
             key="0"
           >
-            #0
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="#0"
+            />
           </th>
           <td
             className="table-cell"
@@ -704,15 +753,6 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when inserting a co
         </tr>
       </tbody>
     </table>
-    <CustomizedIconButton
-      iconProps={
-        Object {
-          "iconName": "Add",
-        }
-      }
-      id="add-row-button"
-      onClick={[Function]}
-    />
   </Stack>
   <MessageModal
     actionButtonText="Yes"
@@ -2017,10 +2057,39 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when it's dynamic t
           key="0"
         >
           <th
-            className="row-index-header"
+            className="general-header"
             key="0"
           >
-            #0
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": true,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="#0"
+            />
           </th>
           <td
             className="table-cell"
@@ -2077,15 +2146,6 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when it's dynamic t
         </tr>
       </tbody>
     </table>
-    <CustomizedIconButton
-      iconProps={
-        Object {
-          "iconName": "Add",
-        }
-      }
-      id="add-row-button"
-      onClick={[Function]}
-    />
   </Stack>
   <MessageModal
     actionButtonText="Yes"
@@ -3108,10 +3168,39 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when labels include
           key="0"
         >
           <th
-            className="row-index-header"
+            className="general-header"
             key="0"
           >
-            #0
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="#0"
+            />
           </th>
           <td
             className="table-cell"
@@ -3170,10 +3259,39 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when labels include
           key="1"
         >
           <th
-            className="row-index-header"
+            className="general-header"
             key="0"
           >
-            #1
+            <CustomizedActionButton
+              menuProps={
+                Object {
+                  "directionalHint": 6,
+                  "items": Array [
+                    Object {
+                      "key": "insertRow",
+                      "onClick": [Function],
+                      "text": "Insert row",
+                    },
+                    Object {
+                      "disabled": false,
+                      "key": "deleteRow",
+                      "onClick": [Function],
+                      "text": "Delete row",
+                    },
+                  ],
+                }
+              }
+              styles={
+                Object {
+                  "root": Object {
+                    "fontWeight": "600",
+                    "height": "100%",
+                    "padding": 12,
+                  },
+                }
+              }
+              text="#1"
+            />
           </th>
           <td
             className="table-cell"
@@ -3233,15 +3351,6 @@ exports[`<TableLabelItem /> Rendering should match snapshot, when labels include
         </tr>
       </tbody>
     </table>
-    <CustomizedIconButton
-      iconProps={
-        Object {
-          "iconName": "Add",
-        }
-      }
-      id="add-row-button"
-      onClick={[Function]}
-    />
   </Stack>
   <MessageModal
     actionButtonText="Yes"

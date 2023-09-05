@@ -26,6 +26,9 @@ import {
     HeaderType,
     TableType,
     VisualizationHint,
+    ObjectField,
+    PrimitiveField,
+    Label,
 } from "models/customModels";
 import { CustomModelAssetService } from "services/assetService/customModelAssetService";
 import { setDocumentPrediction } from "store/predictions/predictions";
@@ -586,6 +589,39 @@ export const deleteLabelByField = createAsyncThunk<Labels, string, { rejectValue
     }
 );
 
+export const updateTableLabel = createAsyncThunk<
+    Labels,
+    { tableFieldKey: string; newLabel: Label[] },
+    { rejectValue: any }
+>(
+    "customModel/updateTableLabel",
+    async (args: { tableFieldKey: string; newLabel: Label[] }, { getState, rejectWithValue }) => {
+        try {
+            const { tableFieldKey, newLabel } = args;
+            const { customModel, documents } = getState() as ApplicationState;
+            const { labels } = customModel;
+            const assetService = new CustomModelAssetService();
+
+            if (documents.currentDocument === null) {
+                return labels;
+            }
+            // Update labels.
+            const remainingLabels = labels[documents.currentDocument.name].filter(
+                (label) => getFieldKeyFromLabel(label) !== tableFieldKey
+            );
+            const updatedDocumentLabels = { [documents.currentDocument.name]: [...remainingLabels, ...newLabel] };
+
+            const updatedLabels = { ...labels, ...updatedDocumentLabels };
+
+            await assetService.updateDocumentLabels(updatedDocumentLabels);
+
+            return updatedLabels;
+        } catch (err) {
+            return rejectWithValue(err);
+        }
+    }
+);
+
 export const assignLabel = createAsyncThunk<Labels, string, { rejectValue: any }>(
     "customModel/assignLabel",
     async (labelName: string, { getState, rejectWithValue }) => {
@@ -845,7 +881,8 @@ const customModel = createSlice({
                     assignLabel.fulfilled,
                     updateLabel.fulfilled,
                     deleteLabelByField.fulfilled,
-                    deleteLabelByLabel.fulfilled
+                    deleteLabelByLabel.fulfilled,
+                    updateTableLabel.fulfilled
                 ),
                 (state, action) => {
                     state.labels = action.payload;
@@ -880,7 +917,8 @@ const customModel = createSlice({
                     deleteLabelByLabel.rejected,
                     insertTableField.rejected,
                     assignLabel.rejected,
-                    updateLabel.rejected
+                    updateLabel.rejected,
+                    updateTableLabel.rejected
                 ),
                 (state, action) => {
                     state.labelError = action.payload;
