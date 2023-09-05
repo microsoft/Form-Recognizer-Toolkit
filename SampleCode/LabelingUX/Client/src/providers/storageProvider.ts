@@ -64,7 +64,7 @@ export class StorageProvider implements IStorageProvider {
     public async readBinary(filename: string, ignoreNotFound?: boolean): Promise<Buffer | undefined> {
         try {
             const api = `${serverUrl}/files/${filename}`;
-            const result = await getWithAutoRetry(api);
+            const result = await getWithAutoRetry(api, { responseType: "arraybuffer" });
 
             return result.data;
         } catch (exception) {
