@@ -6,16 +6,16 @@
 This repository contains example code snippets showing how Azure AI Document Intelligence can be used to get insights from documents.
 
 # Samples for Python SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/documentintelligence/azure-ai-documentintelligence/samples) for the samples using the latest SDK version.
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/documentintelligence/azure-ai-documentintelligence/samples) for the samples using the [latest SDK version](https://learn.microsoft.com/python/api/overview/azure/ai-documentintelligence-readme?view=azure-python-preview&preserve-view=true).
 
 # Samples for .NET SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.FormRecognizer_4.1.0-beta.1/sdk/formrecognizer/Azure.AI.FormRecognizer/samples/README.md#common-scenarios-samples-for-client-library-version-400) for the samples using the latest SDK version.
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/documentintelligence/Azure.AI.DocumentIntelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/dotnet/api/azure.ai.documentintelligence.documentintelligenceadministrationclient?view=azure-dotnet-preview&preserve-view=true).
 
 # Samples for Java SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-formrecognizer_4.1.0-beta.1/sdk/formrecognizer/azure-ai-formrecognizer/src/samples#examples) for the samples using the latest SDK version.
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/documentintelligence/azure-ai-documentintelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/java/api/overview/azure/ai-documentintelligence-readme?view=azure-java-preview&preserve-view=true).
 
 # Samples for JavaScript SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-js/tree/%40azure/ai-form-recognizer_4.1.0-beta.1/sdk/formrecognizer/ai-form-recognizer/samples/v4-beta) for the samples using the latest SDK version.
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/documentintelligence/ai-document-intelligence-rest) for the samples using the [latest SDK version](https://learn.microsoft.com/javascript/api/overview/azure/ai-document-intelligence-rest-readme?view=azure-node-preview&preserve-view=true).
 
 # Retrieval Augmented Generation (RAG) samples
 The Layout model provides various building blocks like tables, paragraphs, section headings, etc. that can enable different semantic chunking strategies of the document. With semantic chunking in Retrieval Augmented Generation (RAG), it will be more efficient in storage and retrieval, together with the benefits of improved relevance and enhanced interpretability. The following samples show how to use the Layout model to do semantic chunking and use the chunks to do RAG.
