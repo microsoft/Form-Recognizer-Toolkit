@@ -9,13 +9,13 @@ This repository contains example code snippets showing how Azure AI Document Int
 Refer to [this repo](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/documentintelligence/azure-ai-documentintelligence/samples) for the samples using the [latest SDK version](https://learn.microsoft.com/python/api/overview/azure/ai-documentintelligence-readme?view=azure-python-preview&preserve-view=true).
 
 # Samples for .NET SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/documentintelligence/Azure.AI.DocumentIntelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/dotnet/api/azure.ai.documentintelligence.documentintelligenceadministrationclient?view=azure-dotnet-preview&preserve-view=true).
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/documentintelligence/Azure.AI.DocumentIntelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/dotnet/api/azure.ai.documentintelligence.documentintelligenceadministrationclient).
 
 # Samples for Java SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/documentintelligence/azure-ai-documentintelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/java/api/overview/azure/ai-documentintelligence-readme?view=azure-java-preview&preserve-view=true).
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/documentintelligence/azure-ai-documentintelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/java/api/overview/azure/ai-documentintelligence-readme).
 
 # Samples for JavaScript SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/documentintelligence/ai-document-intelligence-rest) for the samples using the [latest SDK version](https://learn.microsoft.com/javascript/api/overview/azure/ai-document-intelligence-rest-readme?view=azure-node-preview&preserve-view=true).
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/documentintelligence/ai-document-intelligence-rest) for the samples using the [latest SDK version](https://learn.microsoft.com/javascript/api/overview/azure/ai-document-intelligence-rest-readme).
 
 # Retrieval Augmented Generation (RAG) samples
 The Layout model provides various building blocks like tables, paragraphs, section headings, etc. that can enable different semantic chunking strategies of the document. With semantic chunking in Retrieval Augmented Generation (RAG), it will be more efficient in storage and retrieval, together with the benefits of improved relevance and enhanced interpretability. The following samples show how to use the Layout model to do semantic chunking and use the chunks to do RAG.
