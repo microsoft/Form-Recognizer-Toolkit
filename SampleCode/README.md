@@ -9,7 +9,7 @@ This repository contains example code snippets showing how Azure AI Document Int
 Refer to [this repo](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/documentintelligence/azure-ai-documentintelligence/samples) for the samples using the [latest SDK version](https://learn.microsoft.com/python/api/overview/azure/ai-documentintelligence-readme?view=azure-python-preview&preserve-view=true).
 
 # Samples for .NET SDK
-Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/documentintelligence/Azure.AI.DocumentIntelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/dotnet/api/azure.ai.documentintelligence.documentintelligenceadministrationclient).
+Refer to [this repo](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/documentintelligence/Azure.AI.DocumentIntelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/en-us/dotnet/api/azure.ai.documentintelligence?view=azure-dotnet-preview).
 
 # Samples for Java SDK
 Refer to [this repo](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/documentintelligence/azure-ai-documentintelligence) for the samples using the [latest SDK version](https://learn.microsoft.com/java/api/overview/azure/ai-documentintelligence-readme).
