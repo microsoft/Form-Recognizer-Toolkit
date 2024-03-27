@@ -23,6 +23,7 @@ The Layout model provides various building blocks like tables, paragraphs, secti
 | File Name | Description |
 | --- | --- |
 | [sample_rag_langchain.ipynb](Python/sample_rag_langchain.ipynb) | Sample RAG notebook using Azure AI Document Intelligence as document loader, MarkdownHeaderSplitter and Azure AI Search as retriever in Langchain |
+| [sample_figure_understanding.ipynb](Python/sample_figure_understanding.ipynb) | Sample notebook showcasing how to crop the figures and send figure content (with its caption) to Azure Open AI GPT-4V model to understand the semantics. The figure description will be used to update the markdown output, which can be further used for [semantic chunking](https://aka.ms/doc-gen-ai). |
 
 
 # Pre/post processing samples
