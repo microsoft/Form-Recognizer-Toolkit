@@ -7,7 +7,7 @@
 # --------------------------------------------------------------------------
 
 """
-FILE: sample_identify_and_merge_cross_page_tales.py
+FILE: sample_identify_and_merge_cross_page_tables.py
 
 DESCRIPTION:
 
@@ -406,7 +406,7 @@ def identify_and_merge_cross_page_tables(input_file_path):
         print("=========================================================")
         start_idx = 0
         for merged_table in merged_table_list:
-            print(f"Merged result of table {", ".join([str(idx) for idx in merged_table["table_idx_list"]])}")
+            print(f"Merged result of table {', '.join([str(idx) for idx in merged_table['table_idx_list']])}")
             print("-----------------------------------------------------")
             print(merged_table["content"])
             print("-----------------------------------------------------")
