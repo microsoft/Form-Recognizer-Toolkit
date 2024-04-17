@@ -26,6 +26,13 @@ python sample_disambiguate_similar_characters.py [input_string]
 
 import re
 import sys
+from azure.ai.documentintelligence import DocumentIntelligenceClient
+
+document_intelligence_client = DocumentIntelligenceClient(
+    endpoint=endpoint, 
+    credential=AzureKeyCredential(key), 
+    headers={"x-ms-useragent":"sample-code-disambiguate-similar-characters"},
+)
 
 # Function to generate strings that can be confusing due to similar looking characters
 def generate_confusing_strings(input_string):
