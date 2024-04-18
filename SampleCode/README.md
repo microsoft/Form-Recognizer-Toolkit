@@ -23,7 +23,9 @@ The Layout model provides various building blocks like tables, paragraphs, secti
 | File Name | Description |
 | --- | --- |
 | [sample_rag_langchain.ipynb](Python/sample_rag_langchain.ipynb) | Sample RAG notebook using Azure AI Document Intelligence as document loader, MarkdownHeaderSplitter and Azure AI Search as retriever in Langchain |
+| [sample_identify_and_merge_cross_page_tables.ipynb](Python/sample_identify_and_merge_cross_page_tales.ipynb) and [sample_identify_and_merge_cross_page_tables.py](Python/sample_identify_and_merge_cross_page_tales.py) | Sample postprocessing script to identify and merge cross-page tables based on business rules. |
 | [sample_figure_understanding.ipynb](Python/sample_figure_understanding.ipynb) | Sample notebook showcasing how to crop the figures and send figure content (with its caption) to Azure Open AI GPT-4V model to understand the semantics. The figure description will be used to update the markdown output, which can be further used for [semantic chunking](https://aka.ms/doc-gen-ai). |
+
 
 
 # Pre/post processing samples
@@ -33,4 +35,3 @@ There are usually some pre/post processing steps that are needed to get the best
 | --- | --- |
 | [sample_disambiguate_similar_characters.ipynb](Python/sample_disambiguate_similar_characters.ipynb) and [sample_disambiguate_similar_characters.py](Python/sample_disambiguate_similar_characters.py) | Sample postprocessing script to disambiguate similar characters based on business rules. |
 | [sample_identify_cross_page_tables.ipynb](Python/sample_identify_cross_page_tables.ipynb) and [sample_identify_cross_page_tables.py](Python/sample_identify_cross_page_tables.py) | Sample postprocessing script to identify cross-page tables based on business rules. |
-| [sample_identify_and_merge_cross_page_tales.ipynb](Python/sample_identify_and_merge_cross_page_tales.ipynb) and [sample_identify_and_merge_cross_page_tales.py](Python/sample_identify_and_merge_cross_page_tales.py) | Sample postprocessing script to identify and merge cross-page tables based on business rules. |
