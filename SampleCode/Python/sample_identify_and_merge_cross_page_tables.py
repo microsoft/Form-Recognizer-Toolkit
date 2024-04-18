@@ -326,7 +326,7 @@ def identify_and_merge_cross_page_tables(input_file_path):
     document_intelligence_client = DocumentIntelligenceClient(
         endpoint=endpoint, 
         credential=AzureKeyCredential(key), 
-        headers={"x-ms-useragent":"sample-code-merge-cross-tables"},
+        headers={"x-ms-useragent":"sample-code-merge-cross-tables/1.0.0"},
     )
 
     file_path = input_file_path
