@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > Form Recognizer is now **Azure AI Document Intelligence**!   
- This repo has stopped updating on April 25, 2024. Please click [**the new repo**](https://github.com/Azure-Samples/document-intelligence-code-samples/tree/main) for more complete content.
+ This repo has stopped updating on April 26, 2024, please click new repo : [**Document Intelligence Code Samples**](https://github.com/Azure-Samples/document-intelligence-code-samples/tree/main).
 
 This repository contains example code snippets showing how Azure AI Document Intelligence can be used to get insights from documents.
 
