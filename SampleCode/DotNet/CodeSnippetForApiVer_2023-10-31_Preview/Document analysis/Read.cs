@@ -22,7 +22,7 @@ string key = "<AZURE_DOCUMENT_INTELLIGENCE_KEY>";
 var client = new DocumentIntelligenceClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 //sample document
-Uri fileUri = new Uri("<SAMPLE_DOCUMENT_URL>");
+Uri fileUri = new Uri("https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/rest-api/read.png");
 var content = new AnalyzeDocumentContent() { UrlSource = fileUri };
 
 Operation<AnalyzeResult> operation = await client.AnalyzeDocumentAsync(WaitUntil.Completed, "prebuilt-read", content);

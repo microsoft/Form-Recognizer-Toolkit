@@ -22,7 +22,7 @@ string key = "<AZURE_DOCUMENT_INTELLIGENCE_KEY>";
 var client = new DocumentIntelligenceClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 // sample document
-Uri fileUri = new("<SAMPLE_DOCUMENT_URL>");
+Uri fileUri = new("https://documentintelligence.ai.azure.com/documents/samples/prebuilt/mortgage-closing-disclosure.pdf");
 
 var content = new AnalyzeDocumentContent() { UrlSource = fileUri };
 
