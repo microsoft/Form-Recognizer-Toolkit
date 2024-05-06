@@ -1,7 +1,8 @@
 # Azure AI Document Intelligence Code Samples
 
 > [!NOTE]
-> Form Recognizer is now **Azure AI Document Intelligence**!
+> Form Recognizer is now **Azure AI Document Intelligence**!   
+ The sample code part of this repo has stopped updating on April 26, 2024, please select the new repo : [**Document Intelligence Code Samples**](https://github.com/Azure-Samples/document-intelligence-code-samples/tree/main).
 
 This repository contains example code snippets showing how Azure AI Document Intelligence can be used to get insights from documents.
 
