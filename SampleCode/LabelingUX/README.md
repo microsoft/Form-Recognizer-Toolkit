@@ -490,6 +490,8 @@ some important commands
 docker-compose down
 docker-compose build --no-cache
 docker-compose up
+//or
+docker run -p 3000:3000 client-app 
 // to debug
 docker run -it client-app sh
 ```
