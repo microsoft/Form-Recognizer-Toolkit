@@ -17,9 +17,9 @@ describe("StorageProvider", () => {
     let provider: IStorageProvider;
 
     beforeEach(() => {
-        jest.spyOn(RequestHelper, "getWithAutoRetry").mockResolvedValue(mockAxiosResponse);
-        jest.spyOn(RequestHelper, "putWithAutoRetry").mockResolvedValue(mockAxiosResponse);
-        jest.spyOn(RequestHelper, "deleteWithAutoRetry").mockResolvedValue(mockAxiosResponse);
+        // jest.spyOn(RequestHelper, "getWithAutoRetry").mockResolvedValue(mockAxiosResponse);
+        // jest.spyOn(RequestHelper, "putWithAutoRetry").mockResolvedValue(mockAxiosResponse);
+        // jest.spyOn(RequestHelper, "deleteWithAutoRetry").mockResolvedValue(mockAxiosResponse);
         provider = new StorageProvider();
     });
 

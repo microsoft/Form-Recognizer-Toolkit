@@ -26,8 +26,6 @@ import {
     HeaderType,
     TableType,
     VisualizationHint,
-    ObjectField,
-    PrimitiveField,
     Label,
 } from "models/customModels";
 import { CustomModelAssetService } from "services/assetService/customModelAssetService";

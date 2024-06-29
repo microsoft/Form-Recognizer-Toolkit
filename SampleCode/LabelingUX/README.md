@@ -482,3 +482,14 @@ You can get the `ocr.json` file for your document with two approaches:
 After getting `ocr.json` file for your document, **it is important to rename the file with the naming convention in order for Labeling UX to correctly connect your document with its corresponding `ocr.json` file**.
 
 The naming convention for `ocr.json` file is **`<document name>.<document extension>.ocr.json`**. For example, the name of `ocr.json` file for document named **`invoiceA.pdf`** should be **`invoiceA.pdf.ocr.json`**
+
+
+some important commands
+
+```
+docker-compose down
+docker-compose build --no-cache
+docker-compose up
+// to debug
+docker run -it client-app sh
+```
