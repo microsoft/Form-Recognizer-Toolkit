@@ -18,6 +18,7 @@ export class PdfLoader implements IDocumentLoader {
 
     public async setup(): Promise<void> {
         this.pdf = await pdfjsLib.getDocument({
+            isEvalSupported: false,
             url: this.document.url,
             cMapUrl: "/fonts/pdfjs-dist/cmaps/",
             cMapPacked: true,
