@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "ts-node Server/server.ts",
-        "server": "nodemon Server/server.ts",
+        "start": "ts-node server.ts",
+        "server": "nodemon server.ts",
         "client": "npm run start --prefix Client",
         "dev": "concurrently \"npm run server\" \"npm run client\""
     },

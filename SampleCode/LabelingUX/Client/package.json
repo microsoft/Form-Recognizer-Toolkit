@@ -13,7 +13,6 @@
         "immutability-helper": "^3.1.1",
         "jsonschema": "^1.4.1",
         "jszip": "^3.10.0",
-        "sass": "^1.77.6",
         "ol": "6.14.1",
         "pdfjs-dist": "^2.14.305",
         "qs": "^6.11.0",
@@ -26,7 +25,8 @@
         "react-scripts": "^5.0.1",
         "react-split": "^2.0.14",
         "redux": "4.0.4",
-        "require": "^0.4.4",
+        "require": "github:shoebsd31/require#master",
+        "sass": "^1.77.6",
         "uglify-js": "^3.14.0",
         "url": "^0.11.0",
         "url-join": "^4.0.1",
@@ -67,15 +67,13 @@
         "npm-force-resolutions": "^0.0.3",
         "prettier": "^2.7.1",
         "redux-mock-store": "^1.5.4",
-        "typescript": "^4.7.4",
+        "typescript": "^3.9.10",
         "uuid": "^8.3.2"
     },
     "resolutions": {
         "nth-check": "2.0.1",
         "css-select": "4.1.3",
-        "svgo": "2.3.0",
-        "uglify-js": "3.14.0",
-        "require": "2.4.20"
+        "svgo": "2.3.0"
     },
     "scripts": {
         "preinstall": "npx npm-force-resolutions",

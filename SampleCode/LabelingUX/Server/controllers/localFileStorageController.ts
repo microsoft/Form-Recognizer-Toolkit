@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import catchAsyncError from "../middlewares/catchAsyncError";
 import { readFile, readdir, writeFile, unlink } from "node:fs/promises";
 
-const dataLocation = "Server/data";
+const dataLocation = "./data";
 
 // Get file => /files/:fileName
 export const getFile = catchAsyncError(async (req: Request, res: Response, next: NextFunction) => {
