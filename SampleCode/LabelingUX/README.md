@@ -484,7 +484,7 @@ After getting `ocr.json` file for your document, **it is important to rename the
 The naming convention for `ocr.json` file is **`<document name>.<document extension>.ocr.json`**. For example, the name of `ocr.json` file for document named **`invoiceA.pdf`** should be **`invoiceA.pdf.ocr.json`**
 
 
-some important commands
+# Steps to run docker command for Client app
 
 ```
 docker-compose down
