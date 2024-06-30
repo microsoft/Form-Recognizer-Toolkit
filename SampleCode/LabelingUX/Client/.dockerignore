@@ -1,0 +1,38 @@
+# Node.js and npm
+node_modules
+npm-debug.log
+
+# Yarn
+yarn-error.log
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Webpack files
+.cache
+dist
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Miscellaneous
+.DS_Store
+*.swp
+*.swo
+.vscode
+.idea
+*.iml

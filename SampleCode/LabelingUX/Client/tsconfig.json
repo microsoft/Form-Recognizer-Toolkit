@@ -1,5 +1,6 @@
+//update this file to include the paths to the components, utils, and store folders
 {
-    "compilerOptions": {
+    "compilerOptions": {        
         "experimentalDecorators": true,
         "target": "es5",
         "allowJs": true,
@@ -18,7 +19,7 @@
         "skipLibCheck": true,
         "baseUrl": "src",
         "noFallthroughCasesInSwitch": true,
-        "downlevelIteration": true
+        "downlevelIteration": true,
     },
-    "include": ["src", "script"]
+    "include": ["./src", "script"]
 }
